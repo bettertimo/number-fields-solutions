@@ -6,3 +6,4 @@ This is a partial solution guide to the exercises from the book *Number Fields* 
 * [Chapter 1](https://bettertimo.com/wp-content/uploads/2022/06/Chapter-1.pdf)
 * [Chapter 2](https://bettertimo.com/wp-content/uploads/2022/06/Chapter-2.pdf)
 * [Chapter 3](https://bettertimo.com/wp-content/uploads/2022/06/Chapter-3.pdf)
+* [Chapter 4](https://bettertimo.com/wp-content/uploads/2022/06/Chapter-4.pdf)
