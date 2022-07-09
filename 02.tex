@@ -55,16 +55,16 @@ We have a bijection $\phi: \Gal(\QQ(\omega)/\QQ)\to\ZZ_m^{\times}$. For $\sigma\
 \subsection*{Exercise 2.8}
 
 (a) We know
-$\disc(\omega)=\pm p^{p-2}$ where $+$ holding if $p\equiv 1 \pmod{4}$. From the definition of discriminant $|\sigma_i(\alpha_j)|^2$, we know that $\sqrt{\disc(\omega)}=\sqrt{\pm p^{p-2}} \in \QQ(\omega)$. Also note $\sqrt{p^{p-1}} \in \ZZ \subset \QQ(\omega)$. So if $p\equiv 1 \pmod{4}$, then $\sqrt{p^{p-1}}/\sqrt{p^{p-2}} = \sqrt{p} \in \QQ(\omega)$. And if $p\equiv 3 \pmod{4}$, then $\sqrt{p^{p-1}}/i\sqrt{p^{p-2}} = -i\sqrt{p} \in \QQ(\omega)$, so $\sqrt{-p}\in\QQ(\omega)$.
+$\disc(\omega)=\pm p^{p-2}$ where $+$ holds iff $p\equiv 1 \pmod{4}$. Since $\sigma(\omega^k)\in\QQ(\omega)$ for each embedding of $\QQ(\omega)$ in $\CC$ and each $k\in\NN$, we have $\sqrt{\disc(\omega)}=\sqrt{\pm p^{p-2}} \in \QQ(\omega)$. Also note that $\sqrt{p^{p-1}} \in \ZZ \subset \QQ(\omega)$. So if $p\equiv 1 \pmod{4}$, then $\sqrt{p^{p-1}}/\sqrt{p^{p-2}} = \sqrt{p} \in \QQ(\omega)$. And if $p\equiv 3 \pmod{4}$, then $\sqrt{p^{p-1}}/\sqrt{-p^{p-2}} = -i\sqrt{p} \in \QQ(\omega)$, so $\sqrt{-p}\in\QQ(\omega)$.
 
-Consider $\sqrt{-3}$. In this case take $p=3$ and $\omega=e^{\frac{2\pi i}{3}}$. So $$\disc(\omega)=
+Consider $\sqrt{-3}$. In this case take $p=3$ and $\omega=e^{2\pi i/3}$. So $$\disc(\omega)=
 \begin{vmatrix}
 1 & \omega \\
 1 & \omega^2
 \end{vmatrix}^2
 =(\omega^2-\omega)^2=-3$$
-May check $\sqrt{-3}=-(\omega^2-\omega)=\omega-\omega^2$.
-On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{\frac{2\pi i}{5}}$. So $$\disc(\omega)=
+One may check that $\sqrt{-3}=-(\omega^2-\omega)=\omega-\omega^2$.
+On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{2\pi i/5}$. So $$\disc(\omega)=
 \begin{vmatrix}
 1 & \omega & \omega^2 & \omega^3 \\
 1 & \omega^2 & \omega^4 & \omega^6 \\
@@ -72,18 +72,18 @@ On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{\
 1 & \omega^4 & \omega^8 & \omega^{12} 
 \end{vmatrix}^2=(-5\omega^4+5\omega^3+5\omega^2-5\omega)^2=5^3
 $$
-So $(\omega^4-\omega^3-\omega^2+\omega)^2=5$. May check $\sqrt{5}=\omega^4-\omega^3-\omega^2+\omega$.
+This gives us $(\omega^4-\omega^3-\omega^2+\omega)^2=5$. One may check that $\sqrt{5}=\omega^4-\omega^3-\omega^2+\omega$.
 
-(b) $w=e^\frac{2\pi i}{8}=\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}i$. So $\QQ(\omega)=\QQ(\sqrt{2}(1+i)/2)$. Since $\omega^2=i$, we have $i\in\QQ(\omega$). Hence, $\sqrt{2}\in\QQ(\omega)$. 
+(b) $w=e^{2\pi i/8}=\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}i$. So $\QQ(\omega)=\QQ(\sqrt{2}(1+i)/2)$. Since $\omega^2=i$, we have $i\in\QQ(\omega$). Hence, $\sqrt{2}\in\QQ(\omega)$. 
 
-(c) Let $m=\sgn(m)2^ep_1p_2\cdots p_k$ be the prime factorization of $m$. If $p_i\equiv 3 \pmod{4}$, write $p_i=-(-p_i)$ so $-p_i\equiv 1 \pmod{4}$. So we may rewrite $m=(-1)^n2^ep_1p_2\cdots p_k$ where $p_i\equiv 1 \pmod{4}$.
+(c) Write $d:=\disc(\mathbb{A}\cap\QQ(\sqrt{m})$. We use $\QQ(\omega_k)$ to denote the $k$-th cyclotomic field for $k\in\NN$. Let $m=\sgn(m)2^ep_1p_2\cdots p_k$ be the prime factorization of $m$. If $p_i\equiv 3 \pmod{4}$, write $p_i=-(-p_i)$ where $-p_i\equiv 1 \pmod{4}$. So we may rewrite $m=(-1)^n2^ep_1p_2\cdots p_k$ where $p_i\equiv 1 \pmod{4}$ for all $i$.
 
 Note that if $p_i>0$, then $p_i\equiv 1 \pmod{4}$ and by (a) we know $\sqrt{p_i}\in\QQ(\omega_{p_i})$. And if $p_i<0$, then $-p_i\equiv 3 \pmod{4}$ and by (a) again we know $\sqrt{-(-p_i)}=\sqrt{p_i} \in\QQ(\omega_{-p_i})$. So in either case we have $\sqrt{p_i}\in\QQ(\omega_{|p_i|})$.
 
-We first assume $e=0$, i.e., $m$ is odd. If $n$ is even, then $m=p_1p_2\cdots p_k\equiv 1 \pmod{4}$. So $\disc(\Ocal_{\QQ\sqrt{m}})=m$, and we have
-$$\sqrt{m}=\sqrt{p_1p_2\cdots p_k}=\pm \sqrt{p_1}\cdots \sqrt{p_k}\in\QQ(\omega_{|m|})$$ where the $\pm$ depends on $\sgn(m)$ (consider $m=3\cdot7$ and $-5\cdot7$). And if $n$ is odd, then $m=-p_1p_2\cdots p_k\equiv 3 \pmod{4}$. So $\disc(\Ocal_{\QQ\sqrt{m}})=4m$. Since $\QQ(\sqrt{-1})=\QQ(\omega_4)\subset\QQ(\omega_{|4m|})$, we have $$\sqrt{m}=\sqrt{-p_1p_2\cdots p_k}\in\QQ(\omega_{|4m|})$$
+We first assume $e=0$, i.e., $m$ is odd. If $n$ is even, then $m=p_1p_2\cdots p_k\equiv 1 \pmod{4}$. So $d=m$, and we have
+$$\sqrt{m}=\sqrt{p_1p_2\cdots p_k}=\pm \sqrt{p_1}\cdots \sqrt{p_k}\in\QQ(\omega_{|m|})$$ where the $\pm$ depends on $\sgn(m)$ (consider $m=3\cdot7$ and $-5\cdot7$). And if $n$ is odd, then $m=-p_1p_2\cdots p_k\equiv 3 \pmod{4}$. So $d=4m$. Since $\QQ(\sqrt{-1})=\QQ(\omega_4)\subset\QQ(\omega_{|4m|})$, we have $$\sqrt{m}=\sqrt{-p_1p_2\cdots p_k}\in\QQ(\omega_{|4m|})$$
 
-On the other hand, if $e=1$, then $m\equiv 2\pmod{4}$, so $\disc(\Ocal_{\QQ\sqrt{m}})=4m$. By (b) we have $\sqrt{2}\in\QQ(\omega_8)\subset\QQ(\omega_{|4m|})$ and hence $\sqrt{m}\in\QQ(\omega_{|4m|})$.
+On the other hand, if $e=1$, then $m\equiv 2\pmod{4}$, so $d=4m$. By (b) we have $\sqrt{2}\in\QQ(\omega_8)\subset\QQ(\omega_{|4m|})$ and hence $\sqrt{m}\in\QQ(\omega_{|4m|})$.
  
 \subsection*{Exercise 2.9}
 
