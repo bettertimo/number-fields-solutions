@@ -12,7 +12,9 @@ If $\alpha\mid\gamma$ in $\ZZ[i]$. Write $\gamma=\alpha\beta$ where $\beta\in\ZZ
 
 \subsection*{Exercise 1.2}
 
-Let $\alpha\in\ZZ[i]$ be a unit, then $\alpha\mid 1$ in $\ZZ[i]$. By Ex 1.1, $\mathbf{N}(\alpha)\mid \mathbf{N}(1)=1$ in $\ZZ$. This forces $\mathbf{N}(\alpha)=1$. Conversely, note that $\mathbf{N}(a+bi)=a^2+b^2\geq 1$ for all $a+bi\in\ZZ[i]$. And the equality holds iff $(a,b)=(\pm1,0),(0,\pm1)$, i.e., $a+bi=\pm1,\pm i$. These four elements are all units in $\ZZ[i]$, and in fact, the only four.
+Let $\alpha\in\ZZ[i]$ be a unit, then $\alpha\mid 1$ in $\ZZ[i]$. By Ex 1.1, $\mathbf{N}(\alpha)\mid \mathbf{N}(1)=1$ in $\ZZ$. This forces $\mathbf{N}(\alpha)=1$ because from the definition of $\mathbf{N}$ we know its image is non-negative. Conversely, suppose $\mathbf{N}(\alpha)=\alpha\ovl{\alpha}=1$. This immediately implies $\alpha$ is a unit because we know $\ovl{\alpha}\in\ZZ[i]$.
+
+It's easy to see that $\mathbf{N}(a+bi)=a^2+b^2=1$ has only four integral solutions, namely, $(a,b)=(\pm1,0),(0,\pm1)$. The corresponding elements are $a+bi=\pm1,\pm i$. So these four are units in $\ZZ[i]$.
 
 \subsection*{Exercise 1.3}
 
@@ -85,7 +87,7 @@ $x=a\in\ZZ[i]$ is irreducible iff $|a|\equiv 3\pmod{4}$ is a rational prime. And
 
 Now, assume $a,b\neq 0$. We claim that $a+bi$ is irreducible iff $\mathbf{N}(a+bi)=a^2+b^2$ is a rational prime. Recall that $(\Leftarrow)$ has already been proven in Ex 1.3.
 
-$(\Rightarrow)$ Suppose $a+bi$ is irreducible. Then since we know from Ex 1.7 that $\ZZ[i]$ is a UFD, by factoring $a^2+b^2$ in $\ZZ$, we may write $(a+bi)(a-bi)=a^2+b^2=(a+bi)(c+di)(\jk)$ where $(a+bi)(c+di)$ is a rational prime $p$ of the form $4k+1$. (We know $p$ is of the form $4k+1$ and not $4k+3$ is because we've already shown that rational prime of the form $4k+3$ is irreducible. Note also that we indeed need the assumption that $a,b\neq 0$.) This means $a^2+b^2=c^2+d^2=p\equiv1\pmod{4}$ by Ex 1.8(c) and so we are done.
+$(\Rightarrow)$ Suppose $a+bi$ is irreducible. We may assume $a+bi\not\sim 1+i$ because this case is easy. Since we know from Ex 1.7 that $\ZZ[i]$ is a UFD, by factoring $a^2+b^2$ in $\ZZ$, we may write $(a+bi)(a-bi)=a^2+b^2=(a+bi)(c+di)(\jk)$ where $(a+bi)(c+di)$ is a rational prime $p$ of the form $4k+1$. (We know $p$ is of the form $4k+1$ and not $4k+3$ is because we've already shown that rational prime of the form $4k+3$ is irreducible. Note also that we indeed need the assumption that $a,b\neq 0$.) This means $a^2+b^2=c^2+d^2=p\equiv1\pmod{4}$ by Ex 1.8(c) and so we are done.
 
 \subsection*{Exercise 1.10}
 
@@ -97,9 +99,11 @@ See Ex 1.1 for analog.
 
 \subsection*{Exercise 1.12}
 
-Let $\alpha\in\ZZ[\omega]$ be a unit, then $\alpha\mid 1$ in $\ZZ[\omega]$. By Ex 1.11, $\mathbf{N}(\alpha)\mid \mathbf{N}(1)=1$ in $\ZZ$. This forces $\mathbf{N}(\alpha)=1$. Conversely, suppose $\mathbf{N}(a+b\omega)=a^2-ab+b^2=1$. By simple calculation it's easy to see that $(a,b)=(\pm1,0),(0,\pm1),(1,1),(-1,-1)$ are the solutions when $a,b=-1,0,1$. The corresponding elements are $\pm1,\pm\omega,1+\omega,-1-\omega$. And it's easy to see that these six are units in $\ZZ[\omega]$.
+Let $\alpha\in\ZZ[\omega]$ be a unit, then $\alpha\mid 1$ in $\ZZ[\omega]$. By Ex 1.11, $\mathbf{N}(\alpha)\mid \mathbf{N}(1)=1$ in $\ZZ$. This forces $\mathbf{N}(\alpha)=1$ because by Ex 1.10 we know the image of $\mathbf{N}$ is non-negative. Conversely, suppose $\mathbf{N}(\alpha)=\alpha\ovl{\alpha}=1$. This immediately implies $\alpha$ is a unit because we know $\ovl{\alpha}\in\ZZ[\omega]$.
 
-It's remaining to show $a^2-ab+b^2=1$ has no integral solutions when $|a|,|b|\geq 2$. This follows easily when $ab<0$, i.e., they have the different signs. So assume $a,b$ are both positive or both negative. In this case we have $|ab|=|a||b|=ab$. WLOG, we may also assume $|a|\geq |b|\geq 2$. Now the result follows by the observation that $$a^2-ab+b^2=|a|^2-|a||b|+|b|^2=|a|(|a|-|b|)+|b|^2\geq |b|^2\geq 4$$
+Consider $\mathbf{N}(a+b\omega)=a^2-ab+b^2=1$. WLOG, assume $|a|\geq|b|\geq0$. By a simple calculation it's easy to see that $(a,b)=(\pm1,0),(0,\pm1),(1,1),(-1,-1)$ are all of the integral solutions when $|b|\leq1$. The corresponding elements are $\pm1,\pm\omega,\pm\omega^2$. So these six are units in $\ZZ[i]$.
+
+It's remaining to show $a^2-ab+b^2=1$ has no integral solutions when $|b|\geq 2$. This follows easily when $ab<0$, i.e., they have the different signs. So assume $a,b$ are both positive or both negative. In this case we have $|ab|=|a||b|=ab$. Now the result follows by the observation that $$a^2-ab+b^2=|a|^2-|a||b|+|b|^2=|a|(|a|-|b|)+|b|^2\geq |b|^2\geq 4$$
 
 \subsection*{Exercise 1.13}
 
