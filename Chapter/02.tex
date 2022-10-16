@@ -434,11 +434,11 @@ $\Nr(\omega)=\prod_{k} \omega^k$ where the product is over all $1\leq k\leq m,\g
 
 \subsection*{Exercise 2.34}
 
-(a) It's easy to see $$\left(1+\omega+\omega^2+\cdots+\omega^{k-1}\right)\cdot\frac{\omega-1}{\omega^k-1}=1$$ We claim that $(\omega-1)/(\omega^k-1)\in\ZZ[\omega]$. Since $\gcd(k,m)=1$, take $h,t\in\ZZ$ s.t. $hk+tm=1$. So $\omega^{hk}\omega^{tm}=\omega^{hk}=\omega$. Hence, $$\frac{\omega-1}{\omega^k-1}=\frac{\omega^{hk}-1}{\omega^k-1}=\omega^{(h-1)k}+\omega^{(h-2)k}+\cdots+\omega^k+1\in\ZZ[\omega]$$
+(a) Since $$\left(1+\omega+\omega^2+\cdots+\omega^{k-1}\right)\cdot\frac{\omega-1}{\omega^k-1}=1$$ So it's sufficient to show that $(\omega-1)/(\omega^k-1)\in\ZZ[\omega]$. Since $\gcd(k,m)=1$, take $h,t\in\ZZ$ s.t. $hk+tm=1$. This implies $\omega^{hk}\omega^{tm}=\omega^{hk}=\omega$. Hence, we have $$\frac{\omega-1}{\omega^k-1}=\frac{\omega^{hk}-1}{\omega^k-1}=\omega^{(h-1)k}+\omega^{(h-2)k}+\cdots+\omega^k+1\in\ZZ[\omega]$$
 
-(b) By Lem 2 of Thm 10 (p. 22), $p=\prod_{k} (1-\omega^k)$ where the porduct is taken over all $k$, $1\leq k\leq p^r,k\nmid p^r$. Since for each such $k$ is relatively prime to $m=p^r$ and there are $\phi(p^r)$ many. So by (a), we have $$p=\prod_{k} (1-\omega^k)= \prod_{k}(1+\omega+\omega^2+\cdots+\omega^{k-1})(1-\omega)=u(1-\omega)^{\phi(p^r)}
+(b) By Lem 2 of Thm 10 (p. 22), we have $p=\prod_{k} (1-\omega^k)$ where the product is taken over all $k$, $1\leq k\leq p^r,k\nmid p^r$. Observe that each such $k$ is relatively prime to $m=p^r$, and there are $\phi(p^r)$ of them. So by (a), we have $$p=\prod_{k} (1-\omega^k)= \prod_{k}(1+\omega+\omega^2+\cdots+\omega^{k-1})(1-\omega)=u(1-\omega)^{\phi(p^r)}
 $$
-for some unit $u$ in $\ZZ[\omega]$. (We've used the fact that all $(1+\omega+\omega^2+\cdots+\omega^{k-1})$ are units in $\ZZ[\omega]$.)
+for some unit $u$ in $\ZZ[\omega]$.
 
 \subsection*{Exercise 2.35}
 
