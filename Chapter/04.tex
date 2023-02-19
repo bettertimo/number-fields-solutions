@@ -10,7 +10,7 @@ Let $\sigma\in D(Q/P)$ and $\tau\in E(Q/P)$ be given. Then for each $\alpha\in S
 
 \subsection*{Exercise 4.2}
 
-We know $PS=(Q_1\cdots Q_r)^e$. On the other hand, we have from the proof of Cor 2 (p. 72) that $PS=PS_DS_ES=(P'_1\cdots P'_r)S_ES=(P''_1\cdots P''_r)S$. So by the uniqueness of prime decompositions, we have $P''_iS=Q_i^e$ for all $i=1,\ldots,r$. (After rearranging appropriately, of course.)
+Note that $PS=PS_DS_ES=(P'_1\cdots P'_r)S_ES=(P''_1\cdots P''_r)S$. And since $PS=(Q_1\cdots Q_r)^e$, so by the uniqueness of prime decompositions, we have $P''_iS=Q_i^e$ for all $i=1,\ldots,r$. (After rearranging appropriately, of course.)
 
 \subsection*{Exercise 4.3}
 
@@ -18,9 +18,9 @@ We know $PS=(Q_1\cdots Q_r)^e$. On the other hand, we have from the proof of Cor
 
 Note that since $(\ZZ/p\ZZ)^\times=\{g,g^2,g^3,\ldots,g^{p-1}\}$, so the squares in $(\ZZ/p\ZZ)^\times$ are precisely $\{g^2,g^4,g^6,\ldots,g^{p-1}\}$. This means for $g^n\in(\ZZ/p\ZZ)^\times$, $(g^n/p)=1$ if and only if $n$ is even. So if we write $a=g^s,b=g^t$ and $ab=g^{s+t}$. Then $(ab/p)=1 \iff s+t$ is even $\iff s,t$ have the same parity $\iff (a/p)=(b/p)$. Hence, $(a/p)(b/p)=(ab/p)$.
 
-(b) First, consider the case where $q=2$. This is easily seen by using Thm 25 (p. 52). So $(2/p)=1 \iff$ $2$ splits completely in $\QQ(\sqrt{\pm p}) \iff \pm p\equiv 1 \pmod{8} \iff p\equiv \pm1 \pmod{8}$.
+(b) First, consider the case where $q=2$. This is easily seen by using Theorem 25 (p. 52). So $(2/p)=1 \iff$ $2$ splits completely in $\QQ(\sqrt{\pm p}) \iff \pm p\equiv 1 \pmod{8} \iff p\equiv \pm1 \pmod{8}$.
 
-Now, assume $q\neq p$ is an odd prime. We split it into three cases and use Thm 25 again.
+Now, assume $q\neq p$ is an odd prime. We split it into three cases and use Theorem 25 again.
 
 Case 1: $p\equiv 1\pmod{4}$. Then $(q/p)=1 \iff$ $q$ splits completely in $\QQ(\sqrt{p}) \iff$ $p$ is a square mod $q$ $\iff (p/q)=1$. So we have $(q/p)=(p/q)$.
 
@@ -32,7 +32,17 @@ Case 2: $p\equiv q \equiv3\pmod{4}$. Then $(q/p)=1 \iff$ $q$ splits completely i
 
 For (a), (b), (c) and (d), write $b=\prod p_i^{r_i}$ and $b'=\prod q_j^{s_j}$.
 
-(a) From Ex 4.3(a), we know $(a/p)(b/p)=(ab/p)$ for Legendre symbols where $p$ is an odd prime. For the first one, $(aa'/b)=(aa'/\prod p_i^{r_i})\overset{\df}{=}\prod (aa'/p_i)^{r_i}=\prod (a/p_i)^{r_i}(a'/p_i)^{r_i}\overset{\df}{=}(a/\prod p_i^{r_i})(a'/\prod p_i^{r_i})=(a/b)(a'/b)$. And for the second one, $(a/bb')=(a/\prod p_i^{r_i}q_j^{s_j})\overset{\df}{=}\prod (a/p_i)^{r_i}(a/q_j)^{s_j}\overset{\df}{=}(a/\prod p_i^{r_i})(a/\prod q_j^{s_j})=(a/b)(a/b')$.
+(a) From Exercise 4.3(a), we know $(a/p)(b/p)=(ab/p)$ when $p$ is an odd prime. For the first one,
+\begin{align*}
+    \left(\dfrac{aa'}{b}\right) &= \left(\dfrac{aa'}{\prod p_i^{r_i}}\right) \overset{\df}{=} \prod\left(\dfrac{aa'}{p_i}\right)^{r_i} \\
+    &= \prod \left(\dfrac{a}{p_i}\right)^{r_i}\left(\dfrac{a'}{p_i}\right)^{r_i}
+    \overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a'}{\prod p_i^{r_i}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a'}{b}\right)
+\end{align*}
+And for the second one,
+\begin{align*}
+    \left(\dfrac{a}{bb'}\right) &= \left(\dfrac{a}{\prod p_i^{r_i}\prod q_j^{s_j}}\right) \overset{\df}{=} \prod\left(\dfrac{a}{p_i}\right)^{r_i}\prod\left(\dfrac{a}{q_j}\right)^{s_j} \\
+    &\overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a}{\prod q_j^{s_j}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a}{b'}\right)
+\end{align*}
 
 (b) We know $(a/p)=(a'/p)$ for Legendre symbols if $a\equiv a'\pmod{p}$. Note that if $a\equiv a'\pmod{b}$, then $a\equiv a'\pmod{p_i}$ for all $i$. So $(a/b)\overset{\df}{=}\prod (a/p_i)^{r_i}=\prod (a'/p_i)^{r_i}\overset{\df}{=}(a'/b)$.
 
@@ -42,18 +52,16 @@ For (a), (b), (c) and (d), write $b=\prod p_i^{r_i}$ and $b'=\prod q_j^{s_j}$.
 
 (e) Write $a=\prod p_i$ where $p_i$ not necessarily distinct and $b=\prod q_j$ also not necessarily distinct. Observe that $(a/b)(b/a)\overset{(a)}{=}\prod (p_i/q_j)(q_j/p_i)=(-1)^k$ where $k$ is the number of pairs where $p_i$ and $q_j\equiv 3\pmod{4}$. Moreover, $(-1)^k=(-1)^{mn}$ where $m$ and $n$ are the numbers of $p_i$ and $q_j\equiv 3\pmod{4}$, respectively. Note that $(-1)^{mn}=1 \iff$ at least one of $m,n$ is even $\iff$ at least one of $a,b\equiv 1\pmod{4}$. This shows that $(a/b)(b/a)=1 \iff$ at least one of $a,b\equiv 1\pmod{4}$, which completes the proof.
 
-(f) We don't need to bother factoring $2413$. (In fact, it's $19\times 127$.)
+(f) We don't need to bother factoring $2413$, just simply apply the results we have shown. (In fact, $2413 = 19\times 127$.)
 \begin{align*}
-\left(\dfrac{2413}{4903}\right) &\overset{(e)}{=} \left(\dfrac{4903}{2413}\right) \overset{(b)}{=} \left(\dfrac{77}{2413}\right) \overset{(a)}{=} \left(\dfrac{7}{2413}\right)\left(\dfrac{11}{2413}\right) \\ &\overset{(e)}{=} \left(\dfrac{2413}{7}\right)\left(\dfrac{2413}{11}\right) \overset{(b)}{=} \left(\dfrac{5}{7}\right)\left(\dfrac{4}{11}\right) = -1
+    \left(\dfrac{2413}{4903}\right) &\overset{(e)}{=} \left(\dfrac{4903}{2413}\right) \overset{(b)}{=} \left(\dfrac{77}{2413}\right) \overset{(a)}{=} \left(\dfrac{7}{2413}\right)\left(\dfrac{11}{2413}\right) \\ &\overset{(e)}{=} \left(\dfrac{2413}{7}\right)\left(\dfrac{2413}{11}\right) \overset{(b)}{=} \left(\dfrac{5}{7}\right)\left(\dfrac{4}{11}\right) = -1
 \end{align*}
-
-%$(2413/4903)\overset{(e)}{=}(4903/2413)\overset{(b)}{=}(77/2413)\overset{(a)}{=}(7/2413)(11/2413)\overset{(e)}{=}(2413/7)(2413/11)\overset{(b)}{=}(5/7)(4/11)=-1$.
 
 \subsection*{Exercise 4.5}
 
-We use the same notation as in the textbook. (See Thm 28 (p. 70) and Thm 29 (p. 73).) These two are also the main results we are going to use. In addition, for the followings, we fix a prime $Q$ in $L$.
+We use the same notation as in the textbook. (See Theorem 28 (p. 70) and Theorem 29 (p. 73).) These two are also the main results we are going to use. In addition, for the followings, we fix a prime $Q$ in $L$.
 
-(a) Suppose $P$ is inert in $L$. This means $r=e=1$ and so $[L_D:K]=[L:L_E]=1$. By Galois theory, we have $[G:D]=[E:\{\id_L\}]=1$, i.e., $G=D$ and $E=\{\id_L\}$. Hence, $D/E=G/\{\id_L\}\simeq G$ is cyclic by Cor 1 (p. 71).
+(a) Suppose $P$ is inert in $L$. This means $r=e=1$ and so $[L_D:K]=[L:L_E]=1$. By Galois theory, we have $[G:D]=[E:\{\id_L\}]=1$, i.e., $G=D$ and $E=\{\id_L\}$. Hence, $D/E=G/\{\id_L\}\simeq G$ is cyclic by Corollary 1 (p. 71).
 
 (b) Suppose there's an intermediate field $K\varsubsetneq K'\varsubsetneq L$. Let $P'$ be the unique prime in $R'$ lying under $Q$, then $P'$ also lies over $P$. As $P$ is totally ramified in $K'$, we have $e(P'/P)=[K':K]>1$.
 
@@ -69,21 +77,21 @@ Again, since there's no such $K'$, so by Galois theory we know there's no non-ze
 
 (d) First note that if there are no intermediate fields $K\varsubsetneq K'\varsubsetneq L$, then by Galois theory, the only subgroups of $G$ are $\{\id_L\}$ and $G$. In this case, take $H=G$ and done.
 
-Now, assume there's at least one intermediate field $K'$. Then for each such $K'$, by assumption we have $e(P'/P)=1$ for each $P'$ in $K'$ lying over $P$. So by Thm 29(3), $K'\subseteq L_E$. This means $L_E$ contains all intermediate fields. Moreover, since $P$ is ramified in $L$. So $L_E\varsubsetneq L$. This shows $L_E$ is the largest intermediate field. Hence by Galois theory, the corresponding subgroup $E$ in $G$ is the smallest non-trivial subgroup in $G$. (The uniqueness is clear.)
+Now, assume there's at least one intermediate field $K'$. Then for each such $K'$, by assumption we have $e(P'/P)=1$ for each $P'$ in $K'$ lying over $P$. So by Theorem 29(3), $K'\subseteq L_E$. This means $L_E$ contains all intermediate fields. Moreover, since $P$ is ramified in $L$. So $L_E\varsubsetneq L$. This shows $L_E$ is the largest intermediate field. Hence by Galois theory, the corresponding subgroup $E$ in $G$ is the smallest non-trivial subgroup in $G$. (The uniqueness is clear.)
 
 Let's show $G$ and $H=E$ have the desired properties. If there are distinct prime divisors $p,q$ of $\#(G)$, then by Cauchy's theorem, $\exists \sigma,\tau\in G$ with order $p,q$, respectively. Since $H$ is the smallest subgroup, $H\subseteq \langle\sigma\rangle,\langle\tau\rangle$. This implies $\#(H)\mid p,q$ and so $\#(H)=1$, which is absurd. So $\#(G)$ is a prime power. Consequently, $H$ must have prime order. Lastly, $H\subset Z(G)$ is clear.
 
-(e) Similar to (d), we assume there's at least one intermediate field $K'$. For each such $K'$, by assumption we have $e(P'/P)=f(P'/P)=1$ for each $P'$ in $K'$ lying over $P$. So by Thm 29(1), $K'\subseteq L_D$. This means $L_D$ contains all intermediate fields. Moreover, since $P$ does not split completely in $L$. So $L_D\varsubsetneq L$. This shows $L_D$ is the largest intermediate field. Hence by Galois theory, the corresponding subgroup $D$ in $G$ is the smallest non-trivial subgroup in $G$. (The uniqueness is clear.)
+(e) Similar to (d), we assume there's at least one intermediate field $K'$. For each such $K'$, by assumption we have $e(P'/P)=f(P'/P)=1$ for each $P'$ in $K'$ lying over $P$. So by Theorem 29(1), $K'\subseteq L_D$. This means $L_D$ contains all intermediate fields. Moreover, since $P$ does not split completely in $L$. So $L_D\varsubsetneq L$. This shows $L_D$ is the largest intermediate field. Hence by Galois theory, the corresponding subgroup $D$ in $G$ is the smallest non-trivial subgroup in $G$. (The uniqueness is clear.)
 
-As an example, let $K=\QQ$ and $L=\QQ(e^{2\pi i/5})$. We know $G=(\ZZ/5\ZZ)^\times\simeq C_4$, the cyclic group of order $4$. There's only one subgroup in $C_4$, namely, $\{0,2\}$. So by Galois correspondence, there's only one intermediate field. Moreover, by Ex 2.8, we know this field is $\QQ(\sqrt{5})$. Note that the corresponding subgroup $H$ is isomorphic to $\{0,2\}$, which clearly has the desired properties.
+As an example, let $K=\QQ$ and $L=\QQ(e^{2\pi i/5})$. We know $G=(\ZZ/5\ZZ)^\times\simeq C_4$, the cyclic group of order $4$. There's only one subgroup in $C_4$, namely, $\{0,2\}$. So by Galois correspondence, there's only one intermediate field. Moreover, by Exercise 2.8, we know this field is $\QQ(\sqrt{5})$. Note that the corresponding subgroup $H$ is isomorphic to $\{0,2\}$, which clearly has the desired properties.
 
-Consider $p=11$. Since $5$ is a square mod $11$, by Thm 25 (p. 52), we have $11$ splits completely in $\QQ(\sqrt{5})$. Moreover, by Thm 26 (p. 53), $f$ is the order of $11$ in $(\ZZ/5\ZZ)^\times$, which is $2$. So $11$ does not split completely in $L=\QQ(e^{2\pi i/5})$.
+Consider $p=11$. Since $5$ is a square mod $11$, by Theorem 25 (p. 52), we have $11$ splits completely in $\QQ(\sqrt{5})$. Moreover, by Theorem 26 (p. 53), $f$ is the order of $11$ in $(\ZZ/5\ZZ)^\times$, which is $2$. So $11$ does not split completely in $L=\QQ(e^{2\pi i/5})$.
 
 (f) Suppose $P$ is inert in every intermediate field $K'$. Note the condition on $L$ implies that $r>1$ or $e>1$. If $r>1$, then the assumption in (c) is satisfied. So $G$ is cyclic of prime order.
 
 Assume $e>1$, then the assumption in (d) is satisfied. So $\#(G)=p^m$. And $E$ is the unique smallest non-trivial subgroup in $G$. Note that if $K\varsubsetneq L_D$, then $L_D$ is an intermediate field. By assumption $P$ is inert in $L_D$. So $1<[L_D:K]=e(Q_D/P)f(Q_D/P)=1$, a contradiction. This shows $K=L_D$ and so $G=D$.
 
-From (d) we know $E=H\subseteq Z(G)\subseteq G=D$. By the third isomorphism theorem, $G/Z(G) \simeq (G/H)/(Z(G)/H) = (D/E)/(Z(G)/H)$. From Cor 1 we know  $D/E$ is cyclic. In particular, so is $(D/E)/(Z(G)/H)\simeq G/Z(G)$. Thus by group theory we have $G$ is abelian. And the fundamental theorem of finite abelian groups tells us $G$ is a direct sum of cyclic groups of prime power order. Note that if $G\simeq \ZZ/p^{m_1}\ZZ\oplus\cdots\oplus\ZZ/p^{m_k}\ZZ$ where $k\geq 2$, then it would contradict to the uniqueness of $H$, because in this case there are $k$ subgroups of order $p$. So we must have $G\simeq \ZZ/p^m\ZZ$ is cyclic.
+From (d) we know $E=H\subseteq Z(G)\subseteq G=D$. By the third isomorphism theorem, $G/Z(G) \simeq (G/H)/(Z(G)/H) = (D/E)/(Z(G)/H)$. From Corollary 1 we know  $D/E$ is cyclic. In particular, so is $(D/E)/(Z(G)/H)\simeq G/Z(G)$. Thus by group theory we have $G$ is abelian. And the fundamental theorem of finite abelian groups tells us $G$ is a direct sum of cyclic groups of prime power order. Note that if $G\simeq \ZZ/p^{m_1}\ZZ\oplus\cdots\oplus\ZZ/p^{m_k}\ZZ$ where $k\geq 2$, then it would contradict to the uniqueness of $H$, because in this case there are $k$ subgroups of order $p$. So we must have $G\simeq \ZZ/p^m\ZZ$ is cyclic.
 
 \begin{comment}
 (b) Suppose there's an intermediate field $K\varsubsetneq K'\varsubsetneq L$. Let $P'$ be the unique prime in $R'$ lying under $Q$, then $P'$ also lies over $P$. Since $P$ is not totally ramified in $L$, we have $e<n$. So $n=ref<rnf$ and thus $rf>1$.
@@ -100,38 +108,38 @@ Again, since there's no such $K'$, so by Galois theory we know there's no non-ze
 
 (d) First note that if there are no intermediate fields $K\varsubsetneq K'\varsubsetneq L$, then by Galois theory, the only subgroups of $G$ are $\{\id_L\}$ and $G$. In this case, take $H=G$ and done.
 
-Now, assume there's at least one intermediate field $K'$. Note that since $G$ is a finite group. So we know there are only finitely many such $K'$'s. Take $K'$ be the compositum of all intermediate fields, and $H$ be the corresponding subgroup in $G$. Since by assumption $P$ is unramified in every intermediate field. By Thm 31 (p. 76), $P$ is unramified in $K'$. Thus we have $K'\varsubsetneq L$. This implies $H$ is non-trivial. Moreover, by the selection of $K'$, it's easy to see that $H$ is the unique smallest subgroup in $G$.
+Now, assume there's at least one intermediate field $K'$. Note that since $G$ is a finite group. So we know there are only finitely many such $K'$'s. Take $K'$ be the compositum of all intermediate fields, and $H$ be the corresponding subgroup in $G$. Since by assumption $P$ is unramified in every intermediate field. By Theorem 31 (p. 76), $P$ is unramified in $K'$. Thus we have $K'\varsubsetneq L$. This implies $H$ is non-trivial. Moreover, by the selection of $K'$, it's easy to see that $H$ is the unique smallest subgroup in $G$.
 
 It's remaining to show that $H$ is normal in $G$. Note that for each $\sigma\in G$, $\sigma H\sigma^{-1}$ forms another subgroup with $\#(\sigma H\sigma^{-1})=\#(H)$. And by the uniqueness, we have $\sigma H\sigma^{-1}=H$. This means $H$ is normal in $G$.
 
 Let's show the groups have the desired properties. If there are distinct prime divisors $p,q$ of $\#(G)$, then by Cauchy's theorem, $\exists \sigma,\tau\in G$ with order $p,q$, respectively. Since $H$ is the smallest subgroup, $H\subseteq \langle\sigma\rangle,\langle\tau\rangle$. This implies $\#(H)\mid p,q$ and so $\#(H)=1$, which is absurd. So $\#(G)$ is a prime power. Consequently, $H$ must have prime order. Lastly, $H\subset Z(G)$ is clear.
 
-(e) Similar to (d), we assume there's at least one intermediate field $K'$. And let $K'$ be the compositum of all intermediate fields, $H$ be the corresponding subgroup in $G$. Since this time $P$ splits completely in every intermediate field. By Thm 31 again, $P$ splits completely in $K'$. Thus we have $K'\varsubsetneq L$. The remaining arguments are exactly the same in (d).
+(e) Similar to (d), we assume there's at least one intermediate field $K'$. And let $K'$ be the compositum of all intermediate fields, $H$ be the corresponding subgroup in $G$. Since this time $P$ splits completely in every intermediate field. By Theorem 31 again, $P$ splits completely in $K'$. Thus we have $K'\varsubsetneq L$. The remaining arguments are exactly the same in (d).
 
-As an example, let $K=\QQ$ and $L=\QQ(e^{2\pi i/5})$. We know $G=(\ZZ/5\ZZ)^\times\simeq C_4$, the cyclic group of order $4$. There's only one subgroup in $C_4$, namely, $\{0,2\}$. So by Galois correspondence, there's only one intermediate field. Moreover, by Ex 2.8, we know this field is $\QQ(\sqrt{5})$. Note that the corresponding subgroup $H$ is isomorphic to $\{0,2\}$, which clearly has the desired properties.
+As an example, let $K=\QQ$ and $L=\QQ(e^{2\pi i/5})$. We know $G=(\ZZ/5\ZZ)^\times\simeq C_4$, the cyclic group of order $4$. There's only one subgroup in $C_4$, namely, $\{0,2\}$. So by Galois correspondence, there's only one intermediate field. Moreover, by Exercise 2.8, we know this field is $\QQ(\sqrt{5})$. Note that the corresponding subgroup $H$ is isomorphic to $\{0,2\}$, which clearly has the desired properties.
 
-Consider $p=11$. Since $5$ is a square mod $11$, by Thm 25 (p. 52), we have $11$ splits completely in $\QQ(\sqrt{5})$. Moreover, by Thm 26 (p. 53), $f$ is the order of $11$ in $(\ZZ/5\ZZ)^\times$, which is $2$. So $11$ does not split completely in $L=\QQ(e^{2\pi i/5})$.
+Consider $p=11$. Since $5$ is a square mod $11$, by Theorem 25 (p. 52), we have $11$ splits completely in $\QQ(\sqrt{5})$. Moreover, by Theorem 26 (p. 53), $f$ is the order of $11$ in $(\ZZ/5\ZZ)^\times$, which is $2$. So $11$ does not split completely in $L=\QQ(e^{2\pi i/5})$.
 \end{comment}
 
 \subsection*{Exercise 4.6}
 
-By Ex 2.42, $K$ contains $\QQ(\sqrt{k})$ where $k:=mn/\gcd(m,n)^2$. This is the third quadratic subfield.
+By Exercise 2.42, $K$ contains $\QQ(\sqrt{k})$ where $k:=mn/\gcd(m,n)^2$. This is the third quadratic subfield.
 
 Note that since $G$ is abelian, by the remark in page 76, we know the groups $D$ and $E$ are independent of the primes in $K$ lying over $p$. Also note that the corresponding fields $K_D$ and $K_E$ have only five candidates, namely, $\QQ,\QQ(\sqrt{m}),\QQ(\sqrt{n}),\QQ(\sqrt{k})$ and $K$.
 
-The main results we are going to use are Thm 28 (p. 70) and Thm 29 (p. 73). All the splittings of a given prime $p$ in the quadratic fields can be found in Thm 25 (p. 52). In addition, we know $4=[K:\QQ]=ref$.
+The main results we are going to use are Theorem 28 (p. 70) and Theorem 29 (p. 73). All the splittings of a given prime $p$ in the quadratic fields can be found in Theorem 25 (p. 52). In addition, we know $4=[K:\QQ]=ref$.
 
-(a) Since $p$ is ramified in each of the quadratic subfields, so $p$ splits into a square of single prime in these fields. By Thm 29(3), $K_E$ cannot be any of these quadratic subfields, let alone $K$. This implies $K_E=\QQ$. So $e=4$ and $f=r=1$, i.e., $p$ splits into $P^4$ in $K$.
+(a) Since $p$ is ramified in each of the quadratic subfields, so $p$ splits into a square of single prime in these fields. By Theorem 29(3), $K_E$ cannot be any of these quadratic subfields, let alone $K$. This implies $K_E=\QQ$. So $e=4$ and $f=r=1$, i.e., $p$ splits into $P^4$ in $K$.
 
 As an example, consider $n=2,m=3$ and $p=2$, then $2$ is ramified in $\QQ(\sqrt{2}),\QQ(\sqrt{3})$ and $\QQ(\sqrt{6})$. So $2$ splits into $P^4$ in $K=\QQ(\sqrt{2},\sqrt{3})$.
 
-(b) Suppose $p$ splits completely in each of the quadratic subfields, then by Thm 29(1), $K_D$ contains all these fields. This implies $K_D=K$. So $r=4$ and $e=f=1$, i.e., $p$ splits completely in $K$.
+(b) Suppose $p$ splits completely in each of the quadratic subfields, then by Theorem 29(1), $K_D$ contains all these fields. This implies $K_D=K$. So $r=4$ and $e=f=1$, i.e., $p$ splits completely in $K$.
 
 As an example, consider $n=-2,m=7$ and $p=3$, then $3$ splits completely in $\QQ(\sqrt{-2}),$ $\QQ(\sqrt{7})$ and $\QQ(\sqrt{-14})$. So $3$ splits completely in $K=\QQ(\sqrt{-2},\sqrt{7})$.
 
-(c) Suppose $p$ is inert in each of the quadratic subfields, this forces $f\geq 2$. Moreover, by Thm 29(3), $K_E$ contains all these fields. This implies $K_E=K$ and so $e=1$.
+(c) Suppose $p$ is inert in each of the quadratic subfields, this forces $f\geq 2$. Moreover, by Theorem 29(3), $K_E$ contains all these fields. This implies $K_E=K$ and so $e=1$.
 
-If $f=2$, then $r=2$, $K_D$ is a quadratic field. So $p$ is inert in $K_D$, which is impossible because we know the corresponding ramification index and inertial degree must be $1$. On the other hand, if $f=4$, then $r=1=e$, $p$ is inert in $K$. By Ex 4.5(a), we have $G$ is cyclic, which is a contradiction. So we may conclude that this case can't occur.
+If $f=2$, then $r=2$, $K_D$ is a quadratic field. So $p$ is inert in $K_D$, which is impossible because we know the corresponding ramification index and inertial degree must be $1$. On the other hand, if $f=4$, then $r=1=e$, $p$ is inert in $K$. By Exercise 4.5(a), we have $G$ is cyclic, which is a contradiction. So we may conclude that this case can't occur.
 
 (d) For $p$ splits into $PQ$ in $K$, this means $r=f=2$ and $e=1$. Take $n=2,m=7$ and $p=3$. Since $3$ is inert in $\QQ(\sqrt{2})$, we have $f\geq 2$. And since $3$ splits into two primes in $\QQ(\sqrt{7})$, we have $r\geq 2$. From these two we may conclude that in fact $r=f=2$ and $e=1$.
 
@@ -141,9 +149,9 @@ For $p$ splits into $P^2$ in $K$, this means $e=f=2$ and $r=1$. Take $n=3,m=5$ a
 
 \subsection*{Exercise 4.7}
 
-If $K=\QQ(\sqrt{m})$ and $L=\QQ(\sqrt{n})$ where $m,n\neq 1$ are distinct square-free integers, then $KL=\QQ(\sqrt{m},\sqrt{n})$, which is normal over $\QQ$ with degree $4$. And from Ex 4.6 we know there's another quadratic subfield $\QQ(\sqrt{k})$ where $k:=mn/\gcd(m,n)^2$ contained in $KL$.
+If $K=\QQ(\sqrt{m})$ and $L=\QQ(\sqrt{n})$ where $m,n\neq 1$ are distinct square-free integers, then $KL=\QQ(\sqrt{m},\sqrt{n})$, which is normal over $\QQ$ with degree $4$. And from Exercise 4.6 we know there's another quadratic subfield $\QQ(\sqrt{k})$ where $k:=mn/\gcd(m,n)^2$ contained in $KL$.
 
-All the splittings of a given prime $p$ in the quadratic fields can be found in Thm 25 (p. 52). In addition, the numbers $r,e,f$ are defined corresponding to the splitting of $p$ in $KL$.
+All the splittings of a given prime $p$ in the quadratic fields can be found in Theorem 25 (p. 52). In addition, the numbers $r,e,f$ are defined corresponding to the splitting of $p$ in $KL$.
 
 (a) Take $K=\QQ(\sqrt{-1}),L=\QQ(\sqrt{3})$ and $p=2$. Then $2$ is totally ramified in both $K$ and $L$. Note that since $2$ is inert in $\QQ(\sqrt{k})=\QQ(\sqrt{-3})$, we know $f\geq 2$. So $2$ cannot be totally ramified in $KL$.
 
@@ -157,15 +165,15 @@ All the splittings of a given prime $p$ in the quadratic fields can be found in 
 
 For the followings, let $r,e,f$ be fixed.
 
-(a) First note that if $p,q$ are primes and $p\neq q$, write $q=p^0\cdot q$. Then by Thm 26 (p. 53), the ramification index (of the splitting of $p$ in the $q$-th cyclotomic field $K$) is $1$.
+(a) First note that if $p,q$ are primes and $p\neq q$, write $q=p^0\cdot q$. Then by Theorem 26 (p. 53), the ramification index (of the splitting of $p$ in the $q$-th cyclotomic field $K$) is $1$.
 
-Write $(\ZZ/q\ZZ)^\times=\langle a\rangle$, then $\ord(a^r)=k=(q-1)/r=[K:\QQ]/r$ in $(\ZZ/q\ZZ)^\times$. Since $\gcd(a^r,q)=1$, we may again use Dirichlet theorem to find a prime $p$ of the form $ql+a^r$. This means $p\equiv a^r \pmod{q}$ and so they have the same order. By Thm 26 again, the inertial degree is $[K:\QQ]/r$. Moreover, the ramification index is clearly $1$ by the above observation. These two together imply that this particular $p$ splits into $[K:\QQ]\cdot([K:\QQ]/r)^{-1}=r$ distinct primes in $K$.
+Write $(\ZZ/q\ZZ)^\times=\langle a\rangle$, then $\ord(a^r)=k=(q-1)/r=[K:\QQ]/r$ in $(\ZZ/q\ZZ)^\times$. Since $\gcd(a^r,q)=1$, we may again use Dirichlet theorem to find a prime $p$ of the form $ql+a^r$. This means $p\equiv a^r \pmod{q}$ and so they have the same order. By Theorem 26 again, the inertial degree is $[K:\QQ]/r$. Moreover, the ramification index is clearly $1$ by the above observation. These two together imply that this particular $p$ splits into $[K:\QQ]\cdot([K:\QQ]/r)^{-1}=r$ distinct primes in $K$.
 
 (b) Similar to (a), but this time we find a prime $q$ of the form $(rf)k+1$. Write $(\ZZ/q\ZZ)^\times=\langle a\rangle$, then $\ord(a^r)=fk=(q-1)/r=[K:\QQ]/r$ in $(\ZZ/q\ZZ)^\times$. Take a prime $p$ of the form $ql+a^r$, then the inertial degree is $\ord(p)=\ord(a^r)=[K:\QQ]/r$ in $(\ZZ/q\ZZ)^\times$. And the ramification index is $1$. So $p$ splits into $r$ distinct primes in $K$.
 
 We claim that $K$ contains a subfield of degree $rf$ over $\QQ$. It's equivalent to find a subgroup $H$ in $G:=(\ZZ/q\ZZ)^\times$ with $[G:H]=rf$. This is easy because $G=\langle a\rangle$, so we may take $H=\langle a^{rf}\rangle=\{a^{rf},a^{2rf},\ldots,a^{krf}=a^{q-1}=1\}$, then $[G:H]=rfk/k=rf$.
 
-Since $p$ splits into $r$ distinct primes in $K$. By the remark of Cor 2 (p. 72), $K_D$ is the unique intermediate field with $[K_D:\QQ]=r$. So $D$ is the unique subgroup of $G$ with $[G:D]=r$. This implies $D=\langle a^r\rangle=\{a^r,a^{2r},\ldots,a^{fkr}=1\}\supset H$. So the fixed field of $H$ contains $K_D$ and hence $p$ splits into $r$ distinct primes in this field by the same remark.
+Since $p$ splits into $r$ distinct primes in $K$. By the remark of Corollary 2 (p. 72), $K_D$ is the unique intermediate field with $[K_D:\QQ]=r$. So $D$ is the unique subgroup of $G$ with $[G:D]=r$. This implies $D=\langle a^r\rangle=\{a^r,a^{2r},\ldots,a^{fkr}=1\}\supset H$. So the fixed field of $H$ contains $K_D$ and hence $p$ splits into $r$ distinct primes in this field by the same remark.
 
 (c) Take a prime $q$ of the form $(ref)k+1$. Write $(\ZZ/q\ZZ)^\times=\langle a\rangle$, then $\ord(a^r)=efk=(q-1)/r=[K:\QQ]/r$ in $(\ZZ/q\ZZ)^\times$. We need to show that it's possible to find a prime $p$ of the form $ql+a^r$ and $el'+1$, and check that this particular $p$ has all the desired properties.
 
@@ -183,28 +191,28 @@ Lastly, we check that $K$ contains a subfield of degree $rf$ over $\QQ$. Similar
 
 (a) For the decomposition groups, $D' = D(Q'/P) = D(\sigma(Q)/P)$, and
 \begin{align*}
-D(\sigma(Q)/P) & = \{\tau\in G\mid \tau\sigma(Q)=\sigma(Q)\} = \{\tau\in G\mid \sigma^{-1}\tau\sigma(Q)=Q\} \\
-&= \{\tau\in G\mid \sigma^{-1}\tau\sigma \in D(Q/P)\} = \sigma D(Q/P) \sigma^{-1} = \sigma D\sigma^{-1}
+    D(\sigma(Q)/P) & = \{\tau\in G\mid \tau\sigma(Q)=\sigma(Q)\} = \{\tau\in G\mid \sigma^{-1}\tau\sigma(Q)=Q\} \\
+    &= \{\tau\in G\mid \sigma^{-1}\tau\sigma \in D(Q/P)\} = \sigma D(Q/P) \sigma^{-1} = \sigma D\sigma^{-1}
 \end{align*}
 On the other hand, for the inertia groups, $E' = E(Q'/P) = E(\sigma(Q)/P)$, and
 \begin{align*}
-E(\sigma(Q)/P) &= \{\tau\in G\mid \tau(\alpha)\equiv\alpha \pmod{\sigma(Q)}, \forall\alpha\in S\} \\
-&= \{\tau\in G\mid \tau(\alpha)-\alpha\in\sigma(Q), \forall\alpha\in S\} \\
-&= \{\tau\in G\mid \sigma^{-1}\tau(\alpha)-\sigma^{-1}(\alpha)\in Q, \forall\alpha\in S\} \\
-&= \{\tau\in G\mid \sigma^{-1}\tau\sigma\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha)\in Q, \forall\alpha\in S\} \\
-&= \{\tau\in G\mid \sigma^{-1}\tau\sigma(\beta) \equiv \beta \pmod{Q}, \forall\beta\in S\} \\
-&= \{\tau\in G\mid \sigma^{-1}\tau\sigma\in E(Q/P)\} \\
-&= \sigma E(Q/P)\sigma^{-1} = \sigma E\sigma^{-1}
+    E(\sigma(Q)/P) &= \{\tau\in G\mid \tau(\alpha)\equiv\alpha \pmod{\sigma(Q)}, \forall\alpha\in S\} \\
+    &= \{\tau\in G\mid \tau(\alpha)-\alpha\in\sigma(Q), \forall\alpha\in S\} \\
+    &= \{\tau\in G\mid \sigma^{-1}\tau(\alpha)-\sigma^{-1}(\alpha)\in Q, \forall\alpha\in S\} \\
+    &= \{\tau\in G\mid \sigma^{-1}\tau\sigma\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha)\in Q, \forall\alpha\in S\} \\
+    &= \{\tau\in G\mid \sigma^{-1}\tau\sigma(\beta) \equiv \beta \pmod{Q}, \forall\beta\in S\} \\
+    &= \{\tau\in G\mid \sigma^{-1}\tau\sigma\in E(Q/P)\} \\
+    &= \sigma E(Q/P)\sigma^{-1} = \sigma E\sigma^{-1}
 \end{align*}
 
-(b) By the uniqueness of Frobenius automorphisms (Thm 32 (p. 77)), it's sufficient to show that $\sigma\phi\sigma^{-1}$ has the same property with $\phi'$, i.e., $\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{Q'=\sigma(Q)}$ for all $\alpha\in S$. But notice that
+(b) By the uniqueness of Frobenius automorphisms (Theorem 32 (p. 77)), it's sufficient to show that $\sigma\phi\sigma^{-1}$ has the same property with $\phi'$, i.e., $\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{Q'=\sigma(Q)}$ for all $\alpha\in S$. But notice that
 \begin{align*}
-&\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{\sigma(Q)}, \forall\alpha\in S \\
-\iff{} &\sigma\phi\sigma^{-1}(\alpha)-\alpha^{\|P\|}\in\sigma(Q), \forall\alpha\in S \\
-\iff{} &\sigma^{-1}\sigma\phi\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha^{\|P\|}) \in Q, \forall\alpha\in S \\
-\iff{} &\phi\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha)^{\|P\|} \in Q, \forall\alpha\in S \\
-\iff{} &\phi(\beta)-\beta^{\|P\|} \in Q, \forall\beta\in S \\
-\iff{} &\phi(\beta)\equiv\beta^{\|P\|} \pmod{Q}, \forall\beta\in S
+    &\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{\sigma(Q)}, \forall\alpha\in S \\
+    \iff{} &\sigma\phi\sigma^{-1}(\alpha)-\alpha^{\|P\|}\in\sigma(Q), \forall\alpha\in S \\
+    \iff{} &\sigma^{-1}\sigma\phi\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha^{\|P\|}) \in Q, \forall\alpha\in S \\
+    \iff{} &\phi\sigma^{-1}(\alpha)-\sigma^{-1}(\alpha)^{\|P\|} \in Q, \forall\alpha\in S \\
+    \iff{} &\phi(\beta)-\beta^{\|P\|} \in Q, \forall\beta\in S \\
+    \iff{} &\phi(\beta)\equiv\beta^{\|P\|} \pmod{Q}, \forall\beta\in S
 \end{align*}
 Since the last statement holds, the result follows.
 
@@ -214,9 +222,9 @@ Since the last statement holds, the result follows.
 
 (b) Let $\sigma\in E(V/Q)\subseteq\Gal(LM/L)$, then $\sigma(\alpha)\equiv\alpha \pmod{V}$ for all $\alpha\in LM\cap\mathbb{A}$. We need to claim that $\sigma|_M(\alpha)\equiv\alpha\pmod{U}$ for all $\alpha\in M\cap\mathbb{A}$. Fix such $\alpha$, we know $\sigma|_M(\alpha)-\alpha\in M$. On the other hand, since $\alpha\in M\cap\mathbb{A}\subset LM\cap\mathbb{A}$, we have $\sigma|_M(\alpha)-\alpha=\sigma(\alpha)-\alpha\in V$. So $\sigma|_M(\alpha)-\alpha\in M\cap V=U$ and hence $\sigma|_M(\alpha)\equiv\alpha\pmod{U}$.
 
-(c) Let $Q$ be any prime in $L$ lying over $P$ and $V$ be any prime in $LM$ lying over $Q$. Since $e(U/P)=1$, by Thm 28 (p. 70), we have $E(U/P)=\{\id_M\}$. By (b) we know $E(V/Q)|_M:=\{\sigma|_M \mid \sigma\in E(V/Q)\} \subseteq E(U/P)=\{\id_M\}$, so $\sigma|_M=\id_M$ for all $\sigma\in E(V/Q)$. This means $M$ is fixed by all elements in $E(V/Q)$. Moreover, since $L$ is necessarily fixed by these elements, we have $E(V/Q)=\id_{LM}$, which implies $e(V/Q)=1$.
+(c) Let $Q$ be any prime in $L$ lying over $P$ and $V$ be any prime in $LM$ lying over $Q$. Since $e(U/P)=1$, by Theorem 28 (p. 70), we have $E(U/P)=\{\id_M\}$. By (b) we know $E(V/Q)|_M:=\{\sigma|_M \mid \sigma\in E(V/Q)\} \subseteq E(U/P)=\{\id_M\}$, so $\sigma|_M=\id_M$ for all $\sigma\in E(V/Q)$. This means $M$ is fixed by all elements in $E(V/Q)$. Moreover, since $L$ is necessarily fixed by these elements, we have $E(V/Q)=\id_{LM}$, which implies $e(V/Q)=1$.
 
-(d) Similar to (c), since $e(U/P)=f(U/P)=1$, by Thm 28 again, we have $D(U/P)=\{\id_M\}$. By (a) we know $D(V/Q)|_M:=\{\sigma|_M \mid \sigma\in D(V/Q)\} \subseteq D(U/P)=\{\id_M\}$, so $\sigma|_M=\id_M$ for all $\sigma\in D(V/Q)$. This means $M$ is fixed by all elements in $D(V/Q)$. Moreover, since $L$ is necessarily fixed by these elements, we have $D(V/Q)=\id_{LM}$, which implies $e(V/Q)=f(V/Q)=1$.
+(d) Similar to (c), since $e(U/P)=f(U/P)=1$, by Theorem 28 again, we have $D(U/P)=\{\id_M\}$. By (a) we know $D(V/Q)|_M:=\{\sigma|_M \mid \sigma\in D(V/Q)\} \subseteq D(U/P)=\{\id_M\}$, so $\sigma|_M=\id_M$ for all $\sigma\in D(V/Q)$. This means $M$ is fixed by all elements in $D(V/Q)$. Moreover, since $L$ is necessarily fixed by these elements, we have $D(V/Q)=\id_{LM}$, which implies $e(V/Q)=f(V/Q)=1$.
 
 (e) Since $P$ is unramified in $M$, we know $D(U/P)$ is isomorphic to the Galois group of $(M\cap\mathbb{A})/U$ over $(K\cap\mathbb{A})/P$. So if two maps $\phi(V/Q)|_M$ and $\phi(U/P)^{f(Q/P)}$ in $D(U/P)$ induce the same map in the Galois group, then they are necessarily the same. 
 
@@ -228,23 +236,23 @@ Consider the field extension $(L\cap\mathbb{A})/Q$ over $(K\cap\mathbb{A})/P$ wi
 
 \subsection*{Exercise 4.11}
 
-(a) Suppose $K\subset L\subset M$ and $M$ is normal over $K$, then $LM=M$. Put $V=U$ in this case. And by Ex 4.10(e), we have $\phi(V/Q)|_M=\phi(U/Q)=\phi(U/P)^{f(Q/P)}$.
+(a) Suppose $K\subset L\subset M$ and $M$ is normal over $K$, then $LM=M$. Put $V=U$ in this case. And by Exercise 4.10(e), we have $\phi(V/Q)|_M=\phi(U/Q)=\phi(U/P)^{f(Q/P)}$.
 
-(b) By the uniqueness of Frobenius automorphisms (Thm 32 (p. 77)), it's sufficient to show that $\phi(U/P)|_L$ has the same property with $\phi(Q/P)$, i.e., $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$ for all $\alpha\in L\cap\mathbb{A}$. Fix such $\alpha$, we know $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}\in L$. On the other hand, since $\alpha\in L\cap\mathbb{A}\subset M\cap\mathbb{A}$, we have $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}=\phi(U/P)(\alpha)-\alpha^{\|P\|}\in U$. So $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|} \in L\cap U=Q$ and hence $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$.
+(b) By the uniqueness of Frobenius automorphisms (Theorem 32 (p. 77)), it's sufficient to show that $\phi(U/P)|_L$ has the same property with $\phi(Q/P)$, i.e., $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$ for all $\alpha\in L\cap\mathbb{A}$. Fix such $\alpha$, we know $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}\in L$. On the other hand, since $\alpha\in L\cap\mathbb{A}\subset M\cap\mathbb{A}$, we have $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}=\phi(U/P)(\alpha)-\alpha^{\|P\|}\in U$. So $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|} \in L\cap U=Q$ and hence $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$.
 
 \subsection*{Exercise 4.12}
 
-(a) Since $K/\QQ$ is normal and $p$ is unramified in $K$ (as $p$ is unramified in $\QQ(\omega)$), we can consider the Frobenius automorphism $\phi(P/p)$. Let $Q$ be a prime in $\QQ(\omega)$ lying over $P$. From Ex 4.11(b), we know $\phi(P/p)=\phi(Q/p)|_K$. Since $f(P/p)$ is the order of $\phi(P/p)$, we have $f(P/p)$ is the least positive integer s.t. $\phi(P/p)^{f(P/p)}=\id_K$. So $f(P/p)$ is the least positive integer s.t. $\phi(Q/p)^{f(P/p)}$ fixes $K$ pointwise, which means $\phi(Q/p)^{f(P/p)}\in\Gal(L/K)$.
+(a) Since $K/\QQ$ is normal and $p$ is unramified in $K$ (as $p$ is unramified in $\QQ(\omega)$), we can consider the Frobenius automorphism $\phi(P/p)$. Let $Q$ be a prime in $\QQ(\omega)$ lying over $P$. From Exercise 4.11(b), we know $\phi(P/p)=\phi(Q/p)|_K$. Since $f(P/p)$ is the order of $\phi(P/p)$, we have $f(P/p)$ is the least positive integer s.t. $\phi(P/p)^{f(P/p)}=\id_K$. So $f(P/p)$ is the least positive integer s.t. $\phi(Q/p)^{f(P/p)}$ fixes $K$ pointwise, which means $\phi(Q/p)^{f(P/p)}\in\Gal(L/K)$.
 
 Note that $\phi(Q/p)$ is the automorphism which maps $\omega$ to $\omega^p$ (see p. 77), so $\phi(Q/p)$ corresponds to the element $p\in(\ZZ/m\ZZ)^\times$. Moreover, $\Gal(L/K)\simeq H$, so we know $f(P/p)$ is the least positive integer s.t. $\ovl{p^{f(P/p)}}\in H$, which by definition is $f$. So $f=f(P/p)$.
 
-Alternatively, we can use Thm 33 (p. 78) to obtain the same result. Consider the action of $p$ on the right coset space of $H$ in $G$. The orbit of $H$ is $\{H,Hp,\ldots,Hp^{f-1}\}$. So by Thm 33, $f(P/p)=f$. (Viewing $H=H\cdot 1$ and identify $1$ as the identity map.)
+Alternatively, we can use Theorem 33 (p. 78) to obtain the same result. Consider the action of $p$ on the right coset space of $H$ in $G$. The orbit of $H$ is $\{H,Hp,\ldots,Hp^{f-1}\}$. So by Theorem 33, $f(P/p)=f$. (Viewing $H=H\cdot 1$ and identify $1$ as the identity map.)
 
-(b) Let $\sigma\in\Gal(\QQ(\omega)/\QQ)$ where $\sigma(\omega)=\omega^k$, $\gcd(k,m)=1$. We want to find all $k\in(\ZZ/m\ZZ)^\times$ s.t. $\sigma(\omega+\omega^{-1})=\omega^k+\omega^{-k}=\omega+\omega^{-1}$. It's easy to see that $1,-1\in(\ZZ/m\ZZ)^\times$ are two solutions. Moreover, by Ex 2.35(b), $[\QQ(\omega):\QQ(\omega+\omega^{-1})]=2$, so by Galois correspondence, $\#(H)=2$. Hence we have $H=\{1,-1\}\subset(\ZZ/m\ZZ)^\times$.
+(b) Let $\sigma\in\Gal(\QQ(\omega)/\QQ)$ where $\sigma(\omega)=\omega^k$, $\gcd(k,m)=1$. We want to find all $k\in(\ZZ/m\ZZ)^\times$ s.t. $\sigma(\omega+\omega^{-1})=\omega^k+\omega^{-k}=\omega+\omega^{-1}$. It's easy to see that $1,-1\in(\ZZ/m\ZZ)^\times$ are two solutions. Moreover, by Exercise 2.35(b), $[\QQ(\omega):\QQ(\omega+\omega^{-1})]=2$, so by Galois correspondence, $\#(H)=2$. Hence we have $H=\{1,-1\}\subset(\ZZ/m\ZZ)^\times$.
 
 Let $f$ be the least positive integer s.t. $p^f \equiv \pm1\pmod{m}$, then by (a), $f(P/p)=f$. Hence $p$ splits into $\phi(m)/(2f)$ primes in $\QQ(\omega+\omega^{-1})$.
 
-(c) Note that $\ovl{p}\in H$ means $f=1$. And by (a), $f(P/p)=f=1$. So $\ovl{p}\in H \iff$ $p$ splits into two primes in $\QQ(\sqrt{d})$. By Thm 25 (p. 52), if $p$ is odd, this is equivalent to say that $d$ is a square mod $p$. And if $p=2$, this is equivalent to say that $d\equiv 1\pmod{8}$.
+(c) Note that $\ovl{p}\in H$ means $f=1$. And by (a), $f(P/p)=f=1$. So $\ovl{p}\in H \iff$ $p$ splits into two primes in $\QQ(\sqrt{d})$. By Theorem 25 (p. 52), if $p$ is odd, this is equivalent to say that $d$ is a square mod $p$. And if $p=2$, this is equivalent to say that $d\equiv 1\pmod{8}$.
 
 \subsection*{Exercise 4.13}
 
@@ -255,9 +263,9 @@ On the other hand, we know $\#(H')=[L:K']=4$. Define $\sigma$ by $\sigma(\alpha)
 
 Since $H\cdot H'\subseteq G$ and $\#(G)=8$, we have $G=\{1,\tau,\sigma,\tau\sigma,\sigma^2,\tau\sigma^2,\sigma^3,\tau\sigma^3\}\simeq D_8$, the dihedral group of order $8$.
 
-(b) By the Cor of Thm 31 (p. 76), it's enough to show that $p$ is unramified in $K$. To do this, we want to use Cor 1 of Thm 24 (p. 51). Let $f(x)=x^4-m$, then $\Nr(f'(\alpha))=\Nr(4\alpha^3)=4^4\Nr(\alpha)^3=-256m^3$. Since we have $p\nmid -256m^3$, so $p$ is unramified in $K$. 
+(b) By the Corollary of Theorem 31 (p. 76), it's enough to show that $p$ is unramified in $K$. To do this, we want to use Corollary 1 of Theorem 24 (p. 51). Let $f(x)=x^4-m$, then $\Nr(f'(\alpha))=\Nr(4\alpha^3)=4^4\Nr(\alpha)^3=-256m^3$. Since we have $p\nmid -256m^3$, so $p$ is unramified in $K$. 
 
-(c) The right coset space of $H=\Gal(L/K)$ in $G$ is $\{H,H\sigma,H\sigma^2,H\sigma^3\}$. And a simple calculation shows that the action of $\phi(Q/p)=\tau$ on this space gives us three orbits: $\{H\},\{H\sigma,H\sigma\tau=H\tau\sigma^3=H\sigma^3\},\{H\sigma^2\}$. (One may use the fact that $(\tau\sigma)^2=(1)$.) So by Thm 33 (p. 78), $p$ splits into three primes in $K$.
+(c) The right coset space of $H=\Gal(L/K)$ in $G$ is $\{H,H\sigma,H\sigma^2,H\sigma^3\}$. And a simple calculation shows that the action of $\phi(Q/p)=\tau$ on this space gives us three orbits: $\{H\},\{H\sigma,H\sigma\tau=H\tau\sigma^3=H\sigma^3\},\{H\sigma^2\}$. (One may use the fact that $(\tau\sigma)^2=(1)$.) So by Theorem 33 (p. 78), $p$ splits into three primes in $K$.
 
 (d) It's easy to check all the cases. If $\phi=1=\id_L$, then there are four orbits, so $p$ splits completely in $K$. If $\phi=\sigma,\sigma^3$, there is only one orbit, so $p$ is inert in $K$. If $\phi=\tau\sigma,\sigma^2,\tau\sigma^3$, there are two orbits. And finally, if $\phi=\tau\sigma^2$, there are three orbits.
 
@@ -269,9 +277,9 @@ If there exist distinct automorphisms $\sigma_1,\ldots,\sigma_n$ which are linea
 
 \subsection*{Exercise 4.16}
 
-Suppose $p$ is unramified in $K$, then by the Cor of Thm 31 (p. 76), $p$ is unramified in the normal closure $L$ of $K$ over $\QQ$. Since $L$ contains $\QQ(\sqrt{d})$, $p$ is also unramified in $\QQ(\sqrt{d})$. On the other hand, let $p,q_1,\ldots,q_r$ be all prime numbers dividing $d$ exactly odd times, then $\QQ(\sqrt{d})=\QQ(\sqrt{pq_1\cdots q_n})$. By Thm 25 (p. 52), $p$ splits into a square in $\QQ(\sqrt{d})$, a contradiction.
+Suppose $p$ is unramified in $K$, then by the Corollary of Theorem 31 (p. 76), $p$ is unramified in the normal closure $L$ of $K$ over $\QQ$. Since $L$ contains $\QQ(\sqrt{d})$, $p$ is also unramified in $\QQ(\sqrt{d})$. On the other hand, let $p,q_1,\ldots,q_r$ be all prime numbers dividing $d$ exactly odd times, then $\QQ(\sqrt{d})=\QQ(\sqrt{pq_1\cdots q_n})$. By Theorem 25 (p. 52), $p$ splits into a square in $\QQ(\sqrt{d})$, a contradiction.
 
-Suppose now $d:=\disc(\alpha_1,\ldots,\alpha_n)$ which is divisible by $p$ exactly odd times. Let $\beta_1,\ldots,\beta_n$ be an integral basis, then by Thm 9 (p. 21), $\beta_i=(m_{i1}\alpha_1+\cdots+m_{in}\alpha_n)/d$ for some $m_{i1},\ldots,m_{in}\in\ZZ$ for each $i$. By applying each embedding of $K$ in $\CC$ to each $\beta_i$, writing as matrices, taking determinants and squaring, we obtain $$\disc(R)=\disc(\beta_1,\ldots,\beta_n)=\disc(\alpha_1,\ldots,\alpha_n)\cdot\jk^2=d\cdot\jk^2$$ where $\jk\in\QQ$. Since $p$ divides $d$ exactly odd times, we must have $p\mid\disc(R)$. And since $L$ contains $\QQ(\sqrt{\disc(R)})$, by Thm 25 again we get a similar contradiction.
+Suppose now $d:=\disc(\alpha_1,\ldots,\alpha_n)$ which is divisible by $p$ exactly odd times. Let $\beta_1,\ldots,\beta_n$ be an integral basis, then by Theorem 9 (p. 21), $\beta_i=(m_{i1}\alpha_1+\cdots+m_{in}\alpha_n)/d$ for some $m_{i1},\ldots,m_{in}\in\ZZ$ for each $i$. By applying each embedding of $K$ in $\CC$ to each $\beta_i$, writing as matrices, taking determinants and squaring, we obtain $$\disc(R)=\disc(\beta_1,\ldots,\beta_n)=\disc(\alpha_1,\ldots,\alpha_n)\cdot\jk^2=d\cdot\jk^2$$ where $\jk\in\QQ$. Since $p$ divides $d$ exactly odd times, we must have $p\mid\disc(R)$. And since $L$ contains $\QQ(\sqrt{\disc(R)})$, by Theorem 25 again we get a similar contradiction.
 
 \subsection*{Exercise 4.17}
 

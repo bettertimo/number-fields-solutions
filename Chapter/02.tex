@@ -36,7 +36,7 @@ case2: $m \equiv 1 \pmod{4}$. Observe that $\alpha=r+s\sqrt{m}=(2r+2s\sqrt{m})/2
 
 Each $a_i$ is a root of a monic polynomial in $\ZZ[x]$. Let $e_i$ be the degree of such polynomial $f_i(x)$. We claim that $$G:=\{a_0^{m_0}a_1^{m_1}\cdots a_{n-1}^{m_{n-1}}\alpha^m \mid 1\leq m_i \leq e_i-1,1\leq m\leq n-1\}$$ is a set of generators of $\ZZ[a_0,\ldots,a_{n-1},\alpha]$. Indeed, given $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$. If $k_i\geq e_i$ for some $k_i$, then we may express $a_i^{k_i}$ as a linear combination of $1,a_i,a_i^2,\ldots,a_i^{e_i-1}$ over $\ZZ$ by exploiting $f_i(x)$. And if $k\geq n$, exploiting the equation $\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0$. In either case, we may reduce the exponents $k_0,\ldots,k_{n-1},k$ and express $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$ as a linear combination of the elements in $G$ over $\ZZ$.
 
-Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Thm 2(3) (p. 11), $\alpha$ is an algenraic integer.  
+Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Theorem 2(3) (p. 11), $\alpha$ is an algenraic integer.  
 
 \subsection*{Exercise 2.5}
 
@@ -50,27 +50,32 @@ Write $g=f^2h$, then $g'=2ff'h+f^2h'$. Since $f\mid 2ff'h$ and $f\mid f^2h'$, we
 
 \subsection*{Exercise 2.7}
 
-We've obtained a bijection $\phi: \Gal(\QQ(\omega)/\QQ)\to\ZZ_m^{\times}$ in the proof of Cor 2 (p. 13). Now, for $\sigma\in \Gal(\QQ(\omega)/\QQ)$, $\sigma(\omega)=\omega^k$, define $\phi(\sigma):=k\in\ZZ_m^{\times}$. We check that $\phi$ is a homomorphism. Given $\sigma,\tau\in\Gal(\QQ(\omega)/\QQ)$ and assume $\sigma(\omega)=\omega^k,\tau(\omega)=\omega^h$, then we have $\phi(\sigma)=k, \phi(\tau)=h$ and $(\sigma\circ\tau)(\omega)=\omega^{hk}$. Hence, $\phi(\sigma\circ\tau)=hk=\phi(\sigma)\phi(k)$.
+Recall from Corollary 2 of Theorem 3 (p. 13), we have the following bijection $\phi: \Gal(\QQ(\omega)/\QQ)\to(\ZZ/m\ZZ)^{\times}$ where for $\sigma\in \Gal(\QQ(\omega)/\QQ)$, $\sigma(\omega)=\omega^k$, $\phi(\sigma):=k\in(\ZZ/m\ZZ)^{\times}$. We check that $\phi$ is a group homomorphism. Given $\sigma,\tau\in\Gal(\QQ(\omega)/\QQ)$ and assume $\sigma(\omega)=\omega^k,\tau(\omega)=\omega^h$. Then $(\sigma\circ\tau)(\omega)=\omega^{hk}$. So we have $\phi(\sigma)=k, \phi(\tau)=h$ and $\phi(\sigma\circ\tau)=hk=\phi(\sigma)\phi(k)$.
 
 \subsection*{Exercise 2.8}
 
 (a) We know
 $\disc(\omega)=\pm p^{p-2}$ where $+$ holds iff $p\equiv 1 \pmod{4}$. Since $\sigma(\omega^k)\in\QQ(\omega)$ for each embedding of $\QQ(\omega)$ in $\CC$ and each $k\in\NN$, we have $\sqrt{\disc(\omega)}=\sqrt{\pm p^{p-2}} \in \QQ(\omega)$. Also note that $\sqrt{p^{p-1}} \in \ZZ \subset \QQ(\omega)$. So if $p\equiv 1 \pmod{4}$, then $\sqrt{p^{p-1}}/\sqrt{p^{p-2}} = \sqrt{p} \in \QQ(\omega)$. And if $p\equiv 3 \pmod{4}$, then $\sqrt{p^{p-1}}/\sqrt{-p^{p-2}} = -i\sqrt{p} \in \QQ(\omega)$, so $\sqrt{-p}\in\QQ(\omega)$.
 
-Consider $\sqrt{-3}$. In this case take $p=3$ and $\omega=e^{2\pi i/3}$. So $$\disc(\omega)=
+Consider $\sqrt{-3}$. In this case take $p=3$ and $\omega=e^{2\pi i/3}$. So
+$$
+\disc(\omega)=
 \begin{vmatrix}
-1 & \omega \\
-1 & \omega^2
+    1 & \omega \\
+    1 & \omega^2
 \end{vmatrix}^2
-=(\omega^2-\omega)^2=-3$$
+=(\omega^2-\omega)^2=-3
+$$
 One may check that $\sqrt{-3}=-(\omega^2-\omega)=\omega-\omega^2$.
-On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{2\pi i/5}$. So $$\disc(\omega)=
+On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{2\pi i/5}$. So
+$$\disc(\omega)=
 \begin{vmatrix}
-1 & \omega & \omega^2 & \omega^3 \\
-1 & \omega^2 & \omega^4 & \omega^6 \\
-1 & \omega^3 & \omega^6 & \omega^9 \\
-1 & \omega^4 & \omega^8 & \omega^{12} 
-\end{vmatrix}^2=(-5\omega^4+5\omega^3+5\omega^2-5\omega)^2=5^3
+    1 & \omega & \omega^2 & \omega^3 \\
+    1 & \omega^2 & \omega^4 & \omega^6 \\
+    1 & \omega^3 & \omega^6 & \omega^9 \\
+    1 & \omega^4 & \omega^8 & \omega^{12} 
+\end{vmatrix}^2
+=(-5\omega^4+5\omega^3+5\omega^2-5\omega)^2=5^3
 $$
 This gives us $(\omega^4-\omega^3-\omega^2+\omega)^2=5$. One may check that $\sqrt{5}=\omega^4-\omega^3-\omega^2+\omega$.
 
@@ -111,9 +116,9 @@ Since all $\alpha^k$ has degree $\leq n$, consider $\{\alpha,\alpha^2,\alpha^3,\
 
 \subsection*{Exercise 2.12}
 
-(a) Note that the embeddings of $\QQ(\omega)$ in $\CC$ are in fact automorphisms in $\QQ(\omega)$ and the complex conjugation is one of the embedding because $\ovl{\omega}=\omega^{-1}=\omega^{p-1}$. Also recall that $\Gal(\QQ(\omega)/\QQ)$ is an abelian group. Thus, for each embedding $\sigma_i$, we have $$\left|\sigma\left(\frac{u}{\ovl{u}}\right)\right| = \left|\frac{\sigma(u)}{\sigma(\ovl{u})}\right| = \left|\frac{\sigma(u)}{\ovl{\sigma(u)}}\right| = 1$$ By Ex 2.11(c), we have $u/\ovl{u}$ is a root of unity. Moreover, by Cor 3 of Thm 3 (p. 14), $u/\ovl{u}\in\QQ(\omega)$ must be a $2p$-th root of unity, which are precisely $\pm \omega^k$, $k\in\ZZ$.
+(a) Note that the embeddings of $\QQ(\omega)$ in $\CC$ are in fact automorphisms in $\QQ(\omega)$ and the complex conjugation is one of the embedding because $\ovl{\omega}=\omega^{-1}=\omega^{p-1}$. Also recall that $\Gal(\QQ(\omega)/\QQ)$ is an abelian group. Thus, for each embedding $\sigma_i$, we have $$\left|\sigma\left(\frac{u}{\ovl{u}}\right)\right| = \left|\frac{\sigma(u)}{\sigma(\ovl{u})}\right| = \left|\frac{\sigma(u)}{\ovl{\sigma(u)}}\right| = 1$$ By Exercise 2.11(c), we have $u/\ovl{u}$ is a root of unity. Moreover, by Corollary 3 of Theorem 3 (p. 14), $u/\ovl{u}\in\QQ(\omega)$ must be a $2p$-th root of unity, which are precisely $\pm \omega^k$, $k\in\ZZ$.
 
-(b) If $u/\ovl{u}=-\omega^k$, then it's easy to see that $u^p=-\ovl{u^p}$. By Ex 1.25, $u^p\equiv a \pmod{p}$ for some integer $a$. Thus, $u^p \equiv a = \ovl{a} \equiv \ovl{u^p} = -u^p \equiv -a \pmod{p}$. So $2a\equiv 0 \pmod{p}$, and thus $a\equiv u^p \equiv0 \pmod{p}$, i.e., $p\mid u^p$. Since $u^p$ is a unit, so is $p$, a contradiction.
+(b) If $u/\ovl{u}=-\omega^k$, then it's easy to see that $u^p=-\ovl{u^p}$. By Exercise 1.25, $u^p\equiv a \pmod{p}$ for some integer $a$. Thus, $u^p \equiv a = \ovl{a} \equiv \ovl{u^p} = -u^p \equiv -a \pmod{p}$. So $2a\equiv 0 \pmod{p}$, and thus $a\equiv u^p \equiv0 \pmod{p}$, i.e., $p\mid u^p$. Since $u^p$ is a unit, so is $p$, a contradiction.
 
 \subsection*{Exercise 2.13}
 
@@ -121,8 +126,8 @@ Recall that we have
 $$
 \Ocal_{\QQ\sqrt{m}}=
 \begin{cases}
-\{ a+b\sqrt{m}\mid a,b\in\ZZ \} & \text{if } m \equiv 2,3 \pmod{4}\\
-\{ (a+b\sqrt{m})/2 \mid a,b\in\ZZ,a \equiv b \pmod{2} \} & \text{if } m \equiv 1 \pmod{4}
+    \{ a+b\sqrt{m}\mid a,b\in\ZZ \} & \text{if } m \equiv 2,3 \pmod{4}\\
+    \{ (a+b\sqrt{m})/2 \mid a,b\in\ZZ,a \equiv b \pmod{2} \} & \text{if } m \equiv 1 \pmod{4}
 \end{cases}
 $$
 And also note that $r+s\sqrt{m}\in \Ocal_{\QQ\sqrt{m}}$ is a unit iff $\Nr(r+s\sqrt{m})=r^2-ms^2=\pm1$.
@@ -141,7 +146,7 @@ Write $(1+\sqrt{2})^k=a_k+b_k\sqrt{2}$. Since $\Nr(1+\sqrt{2})=-1$, we have $$\N
 
 (a) $\Nr(a+b\sqrt{-5})=a^2-5b^2$. Suppose $a^2-5b^2=2,3$ has integral solution. Then $a^2-5b^2 \equiv a^2-b^2 \equiv 2 \pmod{4}$, which is impossible. And $a^2-5b^2 \equiv a^2 \equiv 3 \pmod{5}$, which is also impossible.
 
-(b) $2\cdot3=(1+\sqrt{-5})(1-\sqrt{-5})=6$. Since by Ex 2.13, $\pm1$ are the only units in $\ZZ[\sqrt{-5}]$. So $2,3,1+\sqrt{-5},1-\sqrt{-5}$ are pairwise nonaassociated. Hence, the above factorizations are distinct.
+(b) $2\cdot3=(1+\sqrt{-5})(1-\sqrt{-5})=6$. Since by Exercise 2.13, $\pm1$ are the only units in $\ZZ[\sqrt{-5}]$. So $2,3,1+\sqrt{-5},1-\sqrt{-5}$ are pairwise nonaassociated. Hence, the above factorizations are distinct.
 
 \subsection*{Exercise 2.16}
 
@@ -157,25 +162,29 @@ $\alpha\in L$. Consider the field extensions $K\subset K(\alpha)\subset L$ where
 
 Next, let $\{\beta_1,\ldots,\beta_{n/d}\}$ be a basis of $L$ over $K(\alpha)$. For each $x\in L$, we may write
 \begin{align*}
-x &= x_1\beta_1+\cdots+x_{n/d}\beta_{n/d} \\ &=(x^{(1)}_{1}+x^{(2)}_{1}\alpha+\cdots+x^{(d)}_{1}\alpha^{d-1})\beta_1+\cdots+(x^{(1)}_{n/d}+x^{(2)}_{n/d}\alpha+\cdots+x^{(d)}_{n/d}\alpha^{d-1})\beta_{n/d}
-\end{align*} in a unique way. Thus $\{\alpha^{i}\beta_j\mid 0\leq i\leq d-1,1\leq j \leq n/d\}$ is a basis of $L$ over $K$. By basic linear algebra we know that $$A=\begin{bmatrix}
-A_1 &         &             &               \\
-       & A_2 &             &               \\
-       &         & \ddots &               \\
-       &         &             & A_{n/d}
+    x &= x_1\beta_1+\cdots+x_{n/d}\beta_{n/d} \\ &=(x^{(1)}_{1}+x^{(2)}_{1}\alpha+\cdots+x^{(d)}_{1}\alpha^{d-1})\beta_1+\cdots+(x^{(1)}_{n/d}+x^{(2)}_{n/d}\alpha+\cdots+x^{(d)}_{n/d}\alpha^{d-1})\beta_{n/d}
+\end{align*}
+in a unique way. Thus $\{\alpha^{i}\beta_j\mid 0\leq i\leq d-1,1\leq j \leq n/d\}$ is a basis of $L$ over $K$. By basic linear algebra we know that
+$$
+A=\begin{bmatrix}
+    A_1 &         &             &               \\
+           & A_2 &             &               \\
+           &         & \ddots &               \\
+           &         &             & A_{n/d}
 \end{bmatrix}, \text{where }
-A_i=\begin{bmatrix}
-0          & 0  & \cdots & 0         & -c_d       \\
-1           & 0 & \cdots & 0          & -c_{d-1} \\
-0          & 1  & \cdots & 0          & -c_{d-2}     \\
-\vdots &     & \ddots & \vdots & \vdots       \\
-0         & 0  & \cdots & 1           & -c_1       \\
+A_i=
+\begin{bmatrix}
+    0          & 0  & \cdots & 0         & -c_d       \\
+    1           & 0 & \cdots & 0          & -c_{d-1} \\
+    0          & 1  & \cdots & 0          & -c_{d-2}     \\
+    \vdots &     & \ddots & \vdots & \vdots       \\
+    0         & 0  & \cdots & 1           & -c_1       \\
 \end{bmatrix}
 $$
-It's easy to see that $\tr(A_i)=-c_1=\tr(\alpha)$ and $\det(A_i)=(-1)^dc_d=\nr(\alpha)$ for all $i$. Hence by Thm 4$'$ (p. 17),
+It's easy to see that $\tr(A_i)=-c_1=\tr(\alpha)$ and $\det(A_i)=(-1)^dc_d=\nr(\alpha)$ for all $i$. Hence by Theorem 4$'$ (p. 17),
 \begin{align*}
-\tr(A)&=\frac{n}{d}\tr(A_i)=\frac{n}{d}\cdot\tr(\alpha)=\Tr^L_K(\alpha)\\
-\det(A)&=\det(A_i)^{n/d}=(\nr(\alpha))^{n/d}=\Nr^L_K(\alpha)
+    \tr(A)&=\frac{n}{d}\tr(A_i)=\frac{n}{d}\cdot\tr(\alpha)=\Tr^L_K(\alpha)\\
+    \det(A)&=\det(A_i)^{n/d}=(\nr(\alpha))^{n/d}=\Nr^L_K(\alpha)
 \end{align*}
 
 \subsection*{Exercise 2.18}
@@ -189,61 +198,64 @@ From the assumption $\sigma\tau_{j_1},\sigma\tau_{j_2}$ agree on $M$, we apply $
 Induction on $n$. Suppose the result holds for $n$, i.e.,
 $$
 \det\begin{pmatrix}
-1           & a_1      & \cdots & a_1^{n-1} \\
-1           & a_2     & \cdots & a_2^{n-1} \\
-\vdots & \vdots & \ddots & \vdots \\
-1          & a_n      & \cdots & a_n^{n-1}
-\end{pmatrix}=\prod_{1\leq r<s\leq n}(a_s-a_r)
+    1           & a_1      & \cdots & a_1^{n-1} \\
+    1           & a_2     & \cdots & a_2^{n-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    1          & a_n      & \cdots & a_n^{n-1}
+\end{pmatrix}
+=\prod_{1\leq r<s\leq n}(a_s-a_r)
 $$
 Consider $n+1$. We first claim that for any monic polynomial $f\in R[x]$ of degree $n$, we have
 $$
 \det\begin{pmatrix}
-1           & a_1       & \cdots & a_1^{n-1}         & a_1^n \\
-1           & a_2       & \cdots & a_2^{n-1}        & a_2^n \\
-\vdots & \vdots   & \ddots & \vdots              & \vdots \\
-1          & a_n        & \cdots & a_n^{n-1}        & a_n^n \\
-1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & a_{n+1}^n
-\end{pmatrix}=
+    1           & a_1       & \cdots & a_1^{n-1}         & a_1^n \\
+    1           & a_2       & \cdots & a_2^{n-1}        & a_2^n \\
+    \vdots & \vdots   & \ddots & \vdots              & \vdots \\
+    1          & a_n        & \cdots & a_n^{n-1}        & a_n^n \\
+    1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & a_{n+1}^n
+\end{pmatrix}
+=
 \det\begin{pmatrix}
-1           & a_1        & \cdots & a_1^{n-1}       & f(a_1)\\
-1           & a_2       & \cdots & a_2^{n-1}       & f(a_2) \\
-\vdots & \vdots   & \ddots & \vdots              & \vdots \\
-1          & a_n        & \cdots & a_n^{n-1}        & f(a_n) \\
-1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & f(a_{n+1})
+    1           & a_1        & \cdots & a_1^{n-1}       & f(a_1)\\
+    1           & a_2       & \cdots & a_2^{n-1}       & f(a_2) \\
+    \vdots & \vdots   & \ddots & \vdots              & \vdots \\
+    1          & a_n        & \cdots & a_n^{n-1}        & f(a_n) \\
+    1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & f(a_{n+1})
 \end{pmatrix}
 $$
 Given $f(x)=x^n+c_{n-1}x^{n-1}+\cdots+c_0$. Observe that the RHS is
 $$
 \det\begin{pmatrix}
-1          & a_1         & \cdots & a_1^{n-1}        & a_1^n+c_{n-1}a_1^{n-1}+\cdots+c_0\\
-1          & a_2        & \cdots & a_2^{n-1}        & a_2^n+c_{n-1}a_2^{n-1}+\cdots+c_0 \\
-\vdots & \vdots   & \ddots & \vdots              & \vdots \\
-1          & a_n        & \cdots & a_n^{n-1}        & a_n^n+c_{n-1}a_n^{n-1}+\cdots+c_0 \\
-1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & a_{n+1}^n+c_{n-1}a_{n+1}^{n-1}+\cdots+c_0
-\end{pmatrix}$$
+    1          & a_1         & \cdots & a_1^{n-1}        & a_1^n+c_{n-1}a_1^{n-1}+\cdots+c_0\\
+    1          & a_2        & \cdots & a_2^{n-1}        & a_2^n+c_{n-1}a_2^{n-1}+\cdots+c_0 \\
+    \vdots & \vdots   & \ddots & \vdots              & \vdots \\
+    1          & a_n        & \cdots & a_n^{n-1}        & a_n^n+c_{n-1}a_n^{n-1}+\cdots+c_0 \\
+    1          & a_{n+1} & \cdots & a_{n+1}^{n-1} & a_{n+1}^n+c_{n-1}a_{n+1}^{n-1}+\cdots+c_0
+\end{pmatrix}
+$$
 Let $\Ccal_1,\ldots,\Ccal_{n+1}$ be the column vetcors of the matrix corresponding to the above determinant. If $c_i\neq 0$, by using the column operation $-c_i\cdot\Ccal_{i+1}+\Ccal_{n+1}$, we get the matrix correspond to the LHS. Since these operations leave the determinant unchanged, the claim is done.
 
 In particular, take $f(x)=(x-a_1)(x-a_2)\cdots(x-a_n)$. Then we have
 $$
 \begin{aligned}
-\lhs &= \det\begin{pmatrix}
-1           & a_1        & \cdots & a_1^{n-1}        & 0 \\
-1           & a_2        & \cdots & a_2^{n-1}       & 0 \\
-\vdots & \vdots    & \ddots & \vdots              & \vdots \\
-1           & a_n        & \cdots & a_n^{n-1}        & 0 \\
-1           & a_{n+1} & \cdots & a_{n+1}^{n-1} & f(a_{n+1})
+    \lhs &= \det\begin{pmatrix}
+    1           & a_1        & \cdots & a_1^{n-1}        & 0 \\
+    1           & a_2        & \cdots & a_2^{n-1}       & 0 \\
+    \vdots & \vdots    & \ddots & \vdots              & \vdots \\
+    1           & a_n        & \cdots & a_n^{n-1}        & 0 \\
+    1           & a_{n+1} & \cdots & a_{n+1}^{n-1} & f(a_{n+1})
 \end{pmatrix}
 =
 f(a_{n+1})
 \det\begin{pmatrix}
-1           & a_1      & \cdots & a_1^{n-1} \\
-1           & a_2     & \cdots & a_2^{n-1} \\
-\vdots & \vdots & \ddots & \vdots \\
-1          & a_n      & \cdots & a_n^{n-1}
+    1           & a_1      & \cdots & a_1^{n-1} \\
+    1           & a_2     & \cdots & a_2^{n-1} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    1          & a_n      & \cdots & a_n^{n-1}
 \end{pmatrix} \\
-&= f(a_{n+1})\prod_{1\leq r<s\leq n}(a_s-a_r) \\
-&= (a_{n+1}-a_1)(a_{n+1}-a_2)\cdots(a_{n+1}-a_n)\prod_{1\leq r<s\leq n}(a_s-a_r)  \\
-&= \prod_{1\leq r<s\leq n+1}(a_s-a_r)
+    &= f(a_{n+1})\prod_{1\leq r<s\leq n}(a_s-a_r) \\
+    &= (a_{n+1}-a_1)(a_{n+1}-a_2)\cdots(a_{n+1}-a_n)\prod_{1\leq r<s\leq n}(a_s-a_r)  \\
+    &= \prod_{1\leq r<s\leq n+1}(a_s-a_r)
 \end{aligned}
 $$
 
@@ -253,7 +265,7 @@ Write $f(x)=(x-\alpha)g(x)$ where $g(x)=(x-\beta_2)\cdots(x-\beta_n)$. By differ
 
 \subsection*{Exercise 2.21}
 
-Let $K=\QQ(\alpha)$ where $\alpha\in\Ocal_K$ and $h(x):=\Irr_\QQ(\alpha)$. Given $f(x)\in\ZZ[x]_+$ s.t. $f(\alpha)=0$, then $h(x)\mid f(x)$. Write $f(x)=h(x)g(x)$, then by the Lem of Thm 1 (p. 10), $g(x)\in\ZZ[x]$. So $g(\alpha)\in\Ocal_K$.
+Let $K=\QQ(\alpha)$ where $\alpha\in\Ocal_K$ and $h(x):=\Irr_\QQ(\alpha)$. Given $f(x)\in\ZZ[x]_+$ s.t. $f(\alpha)=0$, then $h(x)\mid f(x)$. Write $f(x)=h(x)g(x)$, then by the Lemma of Theorem 1 (p. 10), $g(x)\in\ZZ[x]$. So $g(\alpha)\in\Ocal_K$.
 
 We know $\disc(\alpha)=\pm \Nr(h'(\alpha))$, so it's enough to show $\Nr(h'(\alpha))\mid\Nr(f'(\alpha))$. From $f=hg$ we have $f'(\alpha)=h'(\alpha)g(\alpha)$. So $\Nr(f'(\alpha))=\Nr(h'(\alpha))\Nr(g(\alpha))$. Note that all three norms are integers so the results follows. (We've used the observation that $g(\alpha)\in\Ocal_K$.)
 
@@ -264,51 +276,57 @@ Extend all $\sigma_i$ to some normal extension $L$ of $\QQ$ so that they become 
 \subsection*{Exercise 2.23 \color{red}(incomplete, missing (a))}
 
 (b) Following the suggestion, we have three $(mn)\times(mn)$ matrices $A,B,AB$ where
-$$A=\begin{bmatrix}
-A_1 &         &             &               \\
-       & A_2 &             &               \\
-       &         & \ddots &               \\
-       &         &             & A_{n}
+$$
+A=
+\begin{bmatrix}
+    A_1 &         &             &               \\
+           & A_2 &             &               \\
+           &         & \ddots &               \\
+           &         &             & A_{n}
 \end{bmatrix}, \text{where }
-A_i=\begin{bmatrix}
-\sigma_i\tau_1(\beta_1) & \sigma_i\tau_1(\beta_2) & \cdots & \sigma_i\tau_1(\beta_m)  \\
-\sigma_i\tau_2(\beta_1) & \sigma_i\tau_2(\beta_2) & \cdots & \sigma_i\tau_2(\beta_m) \\
-\vdots &     & \ddots & \vdots       \\
-\sigma_i\tau_m(\beta_1) & \sigma_i\tau_m(\beta_2) & \cdots & \sigma_i\tau_m(\beta_m) \\
+A_i=
+\begin{bmatrix}
+    \sigma_i\tau_1(\beta_1) & \sigma_i\tau_1(\beta_2) & \cdots & \sigma_i\tau_1(\beta_m)  \\
+    \sigma_i\tau_2(\beta_1) & \sigma_i\tau_2(\beta_2) & \cdots & \sigma_i\tau_2(\beta_m) \\
+    \vdots &     & \ddots & \vdots       \\
+    \sigma_i\tau_m(\beta_1) & \sigma_i\tau_m(\beta_2) & \cdots & \sigma_i\tau_m(\beta_m) \\
 \end{bmatrix}
 $$
-$$B=\begin{bmatrix}
-\sigma_1(\alpha_1)\cdot I_m & \sigma_1(\alpha_2)\cdot I_m & \cdots & \sigma_1(\alpha_n)\cdot I_m  \\
-\sigma_2(\alpha_1)\cdot I_m & \sigma_2(\alpha_2)\cdot I_m & \cdots & \sigma_2(\alpha_n)\cdot I_m  \\
-\vdots & \vdots & \ddots & \vdots \\
-\sigma_n(\alpha_1)\cdot I_m & \sigma_n(\alpha_2)\cdot I_m & \cdots & \sigma_n(\alpha_n)\cdot I_m
+$$
+B=\begin{bmatrix}
+    \sigma_1(\alpha_1)\cdot I_m & \sigma_1(\alpha_2)\cdot I_m & \cdots & \sigma_1(\alpha_n)\cdot I_m  \\
+    \sigma_2(\alpha_1)\cdot I_m & \sigma_2(\alpha_2)\cdot I_m & \cdots & \sigma_2(\alpha_n)\cdot I_m  \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \sigma_n(\alpha_1)\cdot I_m & \sigma_n(\alpha_2)\cdot I_m & \cdots & \sigma_n(\alpha_n)\cdot I_m
 \end{bmatrix}
 $$
-$$AB=\begin{bmatrix}
-A_1\sigma_1(\alpha_1) & A_1\sigma_1(\alpha_2) & \cdots & A_1\sigma_1(\alpha_n)  \\
-A_2\sigma_2(\alpha_1) & A_2\sigma_2(\alpha_2) & \cdots & A_2\sigma_2(\alpha_n)  \\
-\vdots & \vdots & \ddots & \vdots  \\
-A_n\sigma_n(\alpha_1) & A_n\sigma_n(\alpha_2) & \cdots & A_n\sigma_n(\alpha_n)  \\
+$$
+AB=
+\begin{bmatrix}
+    A_1\sigma_1(\alpha_1) & A_1\sigma_1(\alpha_2) & \cdots & A_1\sigma_1(\alpha_n)  \\
+    A_2\sigma_2(\alpha_1) & A_2\sigma_2(\alpha_2) & \cdots & A_2\sigma_2(\alpha_n)  \\
+    \vdots & \vdots & \ddots & \vdots  \\
+    A_n\sigma_n(\alpha_1) & A_n\sigma_n(\alpha_2) & \cdots & A_n\sigma_n(\alpha_n)  \\
 \end{bmatrix}
 $$
 Computing three determinants $|AB|,|A|,|B|$ carefully and one should be able to obtain the desired formula from the equation $|AB|^2=|B|^2|A|^2$. (No special tricks!)
 
 (c) Consider the following diagram of field extensions
 \begin{center}
-\begin{tikzpicture}
-\draw (0,0) node (Q) {$\QQ$};
-\draw (-1.5,1) node (K) {$R\subset K$};
-\draw (1.5,1) node (L) {$L\supset S$};
-\draw (0,2) node (E) {$T\subset KL$};
-\draw (Q) -- node[below left] {$m$} (K) -- node[above left] {$n$} (E) -- node {$mn$} (Q) -- node[below right] {$n$} (L) -- node[above right] {$m$} (E);
-\end{tikzpicture}
+    \begin{tikzpicture}
+    \draw (0,0) node (Q) {$\QQ$};
+    \draw (-1.5,1) node (K) {$R\subset K$};
+    \draw (1.5,1) node (L) {$L\supset S$};
+    \draw (0,2) node (E) {$T\subset KL$};
+    \draw (Q) -- node[below left] {$m$} (K) -- node[above left] {$n$} (E) -- node {$mn$} (Q) -- node[below right] {$n$} (L) -- node[above right] {$m$} (E);
+    \end{tikzpicture}
 \end{center}
 And by assumption we have $T=RS$. Let $\{\alpha_1,\ldots,\alpha_m\},\{\beta_1,\ldots,\beta_n\}$ be integral bases of $R,S$, respectively. Then $\{\alpha_i\beta_j\mid 1\leq i\leq m, 1\leq j\leq n\}$ is an integral basis of $T$ over $\QQ$. It's easy to check $\{\beta_1,\ldots,\beta_n\}$ forms an integral basis of $KL$ over $K$. By considering the tower of field extensions $\QQ\subset K\subset KL$ and using (b), we have
 \begin{align*}
-\disc^{KL}_\QQ(T) &= \disc^{KL}_\QQ(\alpha_1\beta_1,\ldots,\alpha_m\beta_n)\\
-&= \left(\disc^K_\QQ(\alpha_1,\ldots,\alpha_m)\right)^n\cdot \Nr^K_\QQ\left(\disc^{KL}_K(\beta_1,\ldots,\beta_n)\right)\\
-&= \disc(R)^n\cdot \Nr^K_\QQ\left(\disc(S)\right)\\
-&= \disc(R)^n\disc(S)^m
+    \disc^{KL}_\QQ(T) &= \disc^{KL}_\QQ(\alpha_1\beta_1,\ldots,\alpha_m\beta_n)\\
+    &= \left(\disc^K_\QQ(\alpha_1,\ldots,\alpha_m)\right)^n\cdot \Nr^K_\QQ\left(\disc^{KL}_K(\beta_1,\ldots,\beta_n)\right)\\
+    &= \disc(R)^n\cdot \Nr^K_\QQ\left(\disc(S)\right)\\
+    &= \disc(R)^n\disc(S)^m
 \end{align*}
 
 \subsection*{Exercise 2.24}
@@ -318,8 +336,8 @@ And by assumption we have $T=RS$. Let $\{\alpha_1,\ldots,\alpha_m\},\{\beta_1,\l
 Since $\alpha$ is algebraic over $\QQ$, $\exists m_i,n_i \in \ZZ, m_i \neq 0, i=1,\ldots,k$ s.t. $$\alpha^k + \frac{n_1}{m_1}\alpha^{k-1} + \cdots + \frac{n_k}{m_k} = 0$$ 
 Let $m:=m_1\cdots m_k\in\ZZ$. By doing some algebra, we have
 \begin{align*}
-0 &= m^k\alpha^k + n_1\frac{m}{m_1}m^{k-1}\alpha^{k-1} + \cdots + n_k\frac{m}{m_k}m^{k-1} \\
-&= (m\alpha)^k + n_1\frac{m}{m_1}(m\alpha)^{k-1} + \cdots + n_k\frac{m}{m_k}m^{k-1}
+    0 &= m^k\alpha^k + n_1\frac{m}{m_1}m^{k-1}\alpha^{k-1} + \cdots + n_k\frac{m}{m_k}m^{k-1} \\
+    &= (m\alpha)^k + n_1\frac{m}{m_1}(m\alpha)^{k-1} + \cdots + n_k\frac{m}{m_k}m^{k-1}
 \end{align*}
 Note that $m/m_i \in \ZZ$, $\forall i=1,\ldots,k$. Hence, $m\alpha$ is an algebraic integer.
 
@@ -327,49 +345,55 @@ Next, given a finite set $\{\alpha_1,\ldots,\alpha_r\}$ of algebraic numbers. Fo
 
 \subsection*{Exercise 2.26}
 
-By taking the product of two integers corresponding to each $\beta_i,\gamma_i$ in Ex 2.25 there exists $m\in\ZZ$ s.t. $\{m\beta_1,\ldots,m\beta_n\},\{m\gamma_1,\ldots,m\gamma_n\}\subset\Ocal_K$. Since these two sets still generate the same additive subgroup of $K$, we may express each $m\beta_i$ to the linear combination of $\{m\gamma_1,\ldots,m\gamma_n\}$ over $\ZZ$. And by applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations we obtain
+By taking the product of two integers corresponding to each $\beta_i,\gamma_i$ in Exercise 2.25 there exists $m\in\ZZ$ s.t. $\{m\beta_1,\ldots,m\beta_n\},\{m\gamma_1,\ldots,m\gamma_n\}\subset\Ocal_K$. Since these two sets still generate the same additive subgroup of $K$, we may express each $m\beta_i$ to the linear combination of $\{m\gamma_1,\ldots,m\gamma_n\}$ over $\ZZ$. And by applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations we obtain
 $$\begin{pmatrix}
-m\sigma_1(\beta_1)  &  \cdots & m\sigma_1(\beta_n)  \\
-m\sigma_2(\beta_1) &  \cdots & m\sigma_2(\beta_n)  \\
-\vdots                         &  \ddots & \vdots  \\
-m\sigma_n(\beta_1) &  \cdots & m\sigma_n(\beta_n)
-\end{pmatrix}=
+    m\sigma_1(\beta_1)  &  \cdots & m\sigma_1(\beta_n)  \\
+    m\sigma_2(\beta_1) &  \cdots & m\sigma_2(\beta_n)  \\
+    \vdots                         &  \ddots & \vdots  \\
+    m\sigma_n(\beta_1) &  \cdots & m\sigma_n(\beta_n)
+\end{pmatrix}
+=
 \begin{pmatrix}
-m\sigma_1(\gamma_1)  &  \cdots & m\sigma_1(\gamma_n)  \\
-m\sigma_2(\gamma_1) &  \cdots & m\sigma_2(\gamma_n)  \\
-\vdots                         &  \ddots & \vdots  \\
-m\sigma_n(\gamma_1) &  \cdots & m\sigma_n(\gamma_n)
+    m\sigma_1(\gamma_1)  &  \cdots & m\sigma_1(\gamma_n)  \\
+    m\sigma_2(\gamma_1) &  \cdots & m\sigma_2(\gamma_n)  \\
+    \vdots                         &  \ddots & \vdots  \\
+    m\sigma_n(\gamma_1) &  \cdots & m\sigma_n(\gamma_n)
 \end{pmatrix}
 \begin{pmatrix}
-c_{11}  & c_{21} & \cdots & c_{n1} \\
-c_{12} & c_{22} & \cdots & c_{n2} \\
-\vdots & \vdots  & \ddots & \vdots \\
-c_{1n} & c_{2n} & \cdots & c_{nn} \\
+    c_{11}  & c_{21} & \cdots & c_{n1} \\
+    c_{12} & c_{22} & \cdots & c_{n2} \\
+    \vdots & \vdots  & \ddots & \vdots \\
+    c_{1n} & c_{2n} & \cdots & c_{nn} \\
 \end{pmatrix}
 $$
-Taking determinants and squaring we have $\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)\cdot C$. Note that these three are all integers by our adjustment. Hence, we have $\disc(m\gamma_1,\ldots,m\gamma_n)$ divides $\disc(m\beta_1,\ldots,m\beta_n)$. Using similar argument can show $\disc(m\beta_1,\ldots,m\beta_n)$ divides $\disc(m\gamma_1,\ldots,m\gamma_n)$ and so they are in fact the same. Hence, we have $$m^{2n}\disc(\beta_1,\ldots,\beta_n)=\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)=m^{2n}\disc(\gamma_1,\ldots,\gamma_n)$$ So the result follows.
+
+Taking determinants and squaring give us $\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)\cdot C$. Note that these three are all integers by our adjustment. Hence, we have $\disc(m\gamma_1,\ldots,m\gamma_n)$ divides $\disc(m\beta_1,\ldots,m\beta_n)$. Using similar argument can show $\disc(m\beta_1,\ldots,m\beta_n)$ divides $\disc(m\gamma_1,\ldots,m\gamma_n)$ and so they are in fact the same. Hence, we have $$m^{2n}\disc(\beta_1,\ldots,\beta_n)=\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)=m^{2n}\disc(\gamma_1,\ldots,\gamma_n)$$ So the result follows.
 
 \subsection*{Exercise 2.27 \color{red}(incomplete, missing (a) and (b))}
 
 (d) Let $\beta_1,\ldots,\beta_n$ be an integral basis and by wrting each $\alpha_i$ to the linear combination of $\beta_1,\ldots,\beta_n$ over $\ZZ$ we obtain
-$$\begin{pmatrix}
-\alpha_1  \\
-\alpha_2 \\
-\vdots \\
-\alpha_n
-\end{pmatrix}=
+$$
 \begin{pmatrix}
-c_{11}  & c_{21} & \cdots & c_{1n} \\
-c_{21} & c_{22} & \cdots & c_{2n} \\
-\vdots & \vdots  & \ddots & \vdots \\
-c_{n1} & c_{n2} & \cdots & c_{nn} \\
+    \alpha_1  \\
+    \alpha_2 \\
+    \vdots \\
+    \alpha_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+    c_{11}  & c_{21} & \cdots & c_{1n} \\
+    c_{21} & c_{22} & \cdots & c_{2n} \\
+    \vdots & \vdots  & \ddots & \vdots \\
+    c_{n1} & c_{n2} & \cdots & c_{nn} \\
 \end{pmatrix}
 \begin{pmatrix}
-\beta_1 \\
-\beta_2 \\
-\vdots \\
-\beta_n
-\end{pmatrix}$$
+    \beta_1 \\
+    \beta_2 \\
+    \vdots \\
+    \beta_n
+\end{pmatrix}
+$$
+
 By applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations, taking determinants and squaring, we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(\beta_1,\ldots,\beta_n)\cdot \det(C^T)^2=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$ is the coefficients matrix above. If $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$, then we have $\det(C)=\pm 1$. (Here we've used the fact that the discriminant of any integral basis is nonzero.) This means $C$ is invertible and $C^{-1}\in\Mat_n(\ZZ)$. By appying $C^{-1}$ to the system of equations above we may express each $\beta_i$ to the linear combination of $\alpha_1,\ldots,\alpha_n$ over $\ZZ$ (in a unique way, of course). This shows $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
 
 (e) Using the same notation in (d) we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$. All three of them are integers, so if $\disc(\alpha_1,\ldots,\alpha_n)$ is sqaure-free then we must have $\det(C)^2=1$. Thus $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$ and by (d) we have $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
@@ -380,17 +404,20 @@ By applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations, taking de
 
 (b) Checking $2a\alpha+3b$ is a root is straightforward. Let $g(x)$ be the polynomial as in (b), then $g(x)=f((x-3b)/2a)$. As $f$ is irreducible, so is $g$. So $$\Irr_\QQ(2a\alpha+3b)=g(x)\cdot (2a)^3=(x-3b)^3+a(2a)^2(x-3b)+b$$ Since $-\Nr(2a\alpha+3b)$ is the constant term of its irreducible polynomial, we have $$\Nr(2a\alpha+3b)=4a^3b+27b^3$$
 
-(c) By Thm 8 (p. 19) and (a), we have $$\disc(\alpha)=-\Nr\left(\frac{-(2a\alpha+3b)}{\alpha}\right)=-(-1)^3\cdot\Nr(2a\alpha+3b)\cdot\Nr\left(\frac{1}{\alpha}\right)$$ Since $\Irr_\QQ(\alpha)=x^3+ax+b$, we have $\Nr(1/\alpha)=1/\Nr(\alpha)=1/(-b)$. Thus by (b), $$\disc(\alpha)=(4a^3b+27b^3)\cdot\frac{-1}{b}=-(4a^3+27b^2)$$
+(c) By Theorem 8 (p. 19) and (a), we have $$\disc(\alpha)=-\Nr\left(\frac{-(2a\alpha+3b)}{\alpha}\right)=-(-1)^3\cdot\Nr(2a\alpha+3b)\cdot\Nr\left(\frac{1}{\alpha}\right)$$ Since $\Irr_\QQ(\alpha)=x^3+ax+b$, we have $\Nr(1/\alpha)=1/\Nr(\alpha)=1/(-b)$. Thus by (b), $$\disc(\alpha)=(4a^3b+27b^3)\cdot\frac{-1}{b}=-(4a^3+27b^2)$$
 
-(d) First, the condition $\alpha$ satisfies $x^3-x-1$, which is irreducible, tells us $a=-1,b=-1$. So by (c) $\disc(\alpha)=-23$, which is square-free. By Ex 2.27(e), we have $\{1,\alpha,\alpha^2\}$ forms a integral basis.
+(d) First, the condition $\alpha$ satisfies $x^3-x-1$, which is irreducible, tells us $a=-1,b=-1$. So by (c) $\disc(\alpha)=-23$, which is square-free. By Exercise 2.27(e), we have $\{1,\alpha,\alpha^2\}$ forms a integral basis.
 
 Next, $\alpha$ satisfies $x^3+x-1$, which is also irreducible, tells us $a=1,b=-1$. So $\disc(\alpha)=-31$, which is also square-free. Thus we have the same conclusion.
 
 \subsection*{Exercise 2.29}
 
-(a) Let $R=\Ocal_{\QQ\sqrt{m}},S=\Ocal_{\QQ\sqrt{n}},T=\Ocal_K$. Then we have $\disc(R)=m$, $\disc(S)=n$ and $d=\gcd(\disc(R),\disc(S))=1$. So the conditions of Cor 1 of Thm 12 (p. 24) are satisfied. Hence, $$T=RS=\left(\ZZ\oplus\ZZ\frac{1+\sqrt{m}}{2}\right)\left(\ZZ\oplus\ZZ\frac{1+\sqrt{n}}{2}\right)$$ So $\{1,(1+\sqrt{m})/2,(1+\sqrt{n})/2,(1+\sqrt{m}+\sqrt{n}+\sqrt{mn})/4\}$ is an integral basis of $T$. Moreover, by Ex 2.23(c), $\disc(T)=\disc(R)^2\disc(S)^2=(mn)^2$.  
+Let $R:=\Ocal_{\QQ\sqrt{m}},S:=\Ocal_{\QQ\sqrt{n}}$ and $T=\Ocal_K$. 
 
-(b) Using the same notation as above, we have $\disc(R)=m,\disc(S)=4n$ and $d=\gcd(m,4n)=~1$. (Here we've used the fact that $m$ is odd.) So we can use the same theorem again. Hence, $$T=RS=\left(\ZZ\oplus\ZZ\frac{1+\sqrt{m}}{2}\right)\left(\ZZ\oplus\ZZ\sqrt{n}\right)$$ So $\{1,\sqrt{n},(1+\sqrt{m})/2,(\sqrt{n}+\sqrt{mn})/2\}$ is an integral basis of $T$. And by Ex 2.23(c) again, we have $\disc(T)=m^2(4n)^2=16(mn)^2$.
+(a) We have $\disc(R)=m$, $\disc(S)=n$ and $d=\gcd(\disc(R),\disc(S))=1$. So the conditions of Corollary 1 of Theorem 12 (p. 24) are satisfied. Hence, $$T=RS=\left(\ZZ\oplus\ZZ\frac{1+\sqrt{m}}{2}\right)\left(\ZZ\oplus\ZZ\frac{1+\sqrt{n}}{2}\right)$$ So $\{1,(1+\sqrt{m})/2,(1+\sqrt{n})/2,(1+\sqrt{m}+\sqrt{n}+\sqrt{mn})/4\}$ is an integral basis of $T$. Moreover, by Exercise 2.23(c), $\disc(T)=\disc(R)^2\disc(S)^2=(mn)^2$.  
+
+(b) We have $\disc(R)=m,\disc(S)=4n$ and $d=\gcd(m,4n)=1$. (Here we've used the fact that $m$ is odd.) So we can use the same theorem again that
+$$T=RS=\left(\ZZ\oplus\ZZ\frac{1+\sqrt{m}}{2}\right)\left(\ZZ\oplus\ZZ\sqrt{n}\right)$$ So $\{1,\sqrt{n},(1+\sqrt{m})/2,(\sqrt{n}+\sqrt{mn})/2\}$ is an integral basis of $T$. And by Exercise 2.23(c) again, we have $\disc(T)=m^2(4n)^2=16(mn)^2$.
 
 \subsection*{Exercise 2.30}
 
@@ -414,13 +441,13 @@ The polynomials with degree one in $(\ZZ/3\ZZ)[x]$ are $x,x+1,x+2,2x,2x+1,2x+2$.
 
 Let $x=(\sqrt{3}+\sqrt{7})/2$, then it's easy to check that $x$ satisfies $x^4-5x^2+1$. So $x$ is an algebraic integer. Consider the following diagram of field extensions
 \begin{center}
-\begin{tikzpicture}
-\draw (0,0) node (Q) {$\QQ$};
-\draw (-1,1) node (K) {$\QQ(\sqrt{3})$};
-\draw (1,1) node (L) {$\QQ(\sqrt{7})$};
-\draw (0,2) node (E) {$\QQ(\sqrt{3},\sqrt{7})$};
-\draw (Q) -- (K) -- (E) -- (Q) -- (L) -- (E);
-\end{tikzpicture}
+    \begin{tikzpicture}
+    \draw (0,0) node (Q) {$\QQ$};
+    \draw (-1,1) node (K) {$\QQ(\sqrt{3})$};
+    \draw (1,1) node (L) {$\QQ(\sqrt{7})$};
+    \draw (0,2) node (E) {$\QQ(\sqrt{3},\sqrt{7})$};
+    \draw (Q) -- (K) -- (E) -- (Q) -- (L) -- (E);
+    \end{tikzpicture}
 \end{center}
 Let $R=\ZZ[\sqrt{3}],S=\ZZ[\sqrt{7}],T$ be the rings of algebraic integers of $\QQ(\sqrt{3}),\QQ(\sqrt{7}),\QQ(\sqrt{3},\sqrt{7})$, respectively. Then we have $x\in T$, and it's easy to see that $x\notin RS$. Thus, $RS\varsubsetneq T$. 
 
@@ -436,7 +463,7 @@ $\Nr(\omega)=\prod_{k} \omega^k$ where the product is over all $1\leq k\leq m,\g
 
 (a) Since $$\left(1+\omega+\omega^2+\cdots+\omega^{k-1}\right)\cdot\frac{\omega-1}{\omega^k-1}=1$$ So it's sufficient to show that $(\omega-1)/(\omega^k-1)\in\ZZ[\omega]$. Since $\gcd(k,m)=1$, take $h,t\in\ZZ$ s.t. $hk+tm=1$. This implies $\omega^{hk}\omega^{tm}=\omega^{hk}=\omega$. Hence, we have $$\frac{\omega-1}{\omega^k-1}=\frac{\omega^{hk}-1}{\omega^k-1}=\omega^{(h-1)k}+\omega^{(h-2)k}+\cdots+\omega^k+1\in\ZZ[\omega]$$
 
-(b) By Lem 2 of Thm 10 (p. 22), we have $p=\prod_{k} (1-\omega^k)$ where the product is taken over all $k$, $1\leq k\leq p^r,k\nmid p^r$. Observe that each such $k$ is relatively prime to $m=p^r$, and there are $\phi(p^r)$ of them. So by (a), we have $$p=\prod_{k} (1-\omega^k)= \prod_{k}(1+\omega+\omega^2+\cdots+\omega^{k-1})(1-\omega)=u(1-\omega)^{\phi(p^r)}
+(b) By Lemma 2 of Theorem 10 (p. 22), we have $p=\prod_{k} (1-\omega^k)$ where the product is taken over all $k$, $1\leq k\leq p^r,k\nmid p^r$. Observe that each such $k$ is relatively prime to $m=p^r$, and there are $\phi(p^r)$ of them. So by (a), we have $$p=\prod_{k} (1-\omega^k)= \prod_{k}(1+\omega+\omega^2+\cdots+\omega^{k-1})(1-\omega)=u(1-\omega)^{\phi(p^r)}
 $$
 for some unit $u$ in $\ZZ[\omega]$.
 
@@ -450,9 +477,9 @@ Next, we show that $\Bcal=\{1,f_1(\alpha)/d_1,\ldots,f_{k-1}(\alpha)/d_{k-1},\be
 
 Given $x=m_0+\cdots+m_{k-1}\alpha^{k-1}/d+m_k\alpha^k/d \in R_{k+1}$. Write $\beta=b_0+\cdots+b_k\alpha^k/d$. Then $\pi(x)=m_k\alpha^k/d \in \pi(R_{k+1})$ and $\pi(\beta)=b_k\alpha^k/d$. Since $\pi(\beta)$ generates $\pi(R_{k+1})$, there exists $m\in\ZZ$ s.t. $m_k\alpha^k/d=mb_k\alpha^k/d$. Hence,
 \begin{align*}
-x &= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}+m_k\frac{\alpha^k}{d} \\
-&= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}+mb_k\frac{\alpha^k}{d} \\
-&= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}-m\left(b_0+\cdots+b_{k-1}\frac{\alpha^{k-1}}{d}\right)+m\beta
+    x &= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}+m_k\frac{\alpha^k}{d} \\
+    &= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}+mb_k\frac{\alpha^k}{d} \\
+    &= m_0+\cdots+m_{k-1}\frac{\alpha^{k-1}}{d}-m\left(b_0+\cdots+b_{k-1}\frac{\alpha^{k-1}}{d}\right)+m\beta
 \end{align*}
 Observe that the first $2k$ terms are in $R_{k}$ and by assumption $\{1,f_1(\alpha)/d_1,\ldots,f_{k-1}(\alpha)/d_{k-1}\}$ is a basis of $R_k$ over $\ZZ$, so they can be written as a linear combination of elements in $\Bcal$ over $\ZZ$. (The first $k$ elements actually.) Moreover, the last term $m\beta\in\ZZ\beta$. This shows $\Bcal$ generates $R_{k+1}$ over $\ZZ$.
 
@@ -462,10 +489,10 @@ Suppose $f\neq g$. Define $h=f-g\not\equiv0$. Since $h(\alpha)=f(\alpha)-g(\alph
 
 \subsection*{Exercise 2.38}
 
-Consider $\Bcal=\{1,f_1(\alpha)/d_1,\ldots,f_{k-1}(\alpha)/d_{k-1}\}$. This is clearly linear independent because it's a subset of the given basis in Thm 13 (p.26). Now given $x\in R_k=R\cap F_k$, we may write $x$ as linear combinations in two ways by using the integral basis in Thm 13 and the $\ZZ$-basis of $F_{k}$. Thus $\exu m_0,\ldots,m_{n-1},m'_0,\ldots,m'_{k-1}\in\ZZ$ s.t.
+Consider $\Bcal=\{1,f_1(\alpha)/d_1,\ldots,f_{k-1}(\alpha)/d_{k-1}\}$. This is clearly linear independent because it's a subset of the given basis in Theorem 13 (p.26). Now given $x\in R_k=R\cap F_k$, we may write $x$ as linear combinations in two ways by using the integral basis in Theorem 13 and the $\ZZ$-basis of $F_{k}$. Thus $\exu m_0,\ldots,m_{n-1},m'_0,\ldots,m'_{k-1}\in\ZZ$ s.t.
 \begin{align*}
-x &= m_0+\cdots+\frac{m_{n-1}f_{n-1}(\alpha)}{d_{n-1}} \\
-&= \frac{m'_0}{d}+\cdots+\frac{m'_{k-1}\alpha^{k-1}}{d}
+    x &= m_0+\cdots+\frac{m_{n-1}f_{n-1}(\alpha)}{d_{n-1}} \\
+    &= \frac{m'_0}{d}+\cdots+\frac{m'_{k-1}\alpha^{k-1}}{d}
 \end{align*}
 Since $k-1\leq m-1$, by comparing the coeffients we may conclude that $x$ is indeed a linear combination of elements in $\Bcal$ over $\ZZ$. Hence, we have $$R_k=\ZZ\oplus\ZZ\frac{f_1(\alpha)}{d_1}\oplus\cdots\oplus\ZZ\frac{f_{k-1}(\alpha)}{d_{k-1}}$$
 
@@ -477,17 +504,17 @@ Let $m$ be any positive integer s.t. $mR_k\subset\ZZ[\alpha]$. Then we have $mf_
 
 (a) We first claim that $1,\alpha,\ldots,\alpha^{n-1}$ and $1,f_1(\alpha),\ldots,f_{n-1}(\alpha)$ generate the same additive subgroup. Denote them as $G_1,G_2$, respectively. It's easy to see $G_1\supseteq G_2$. On the other hand given $x\in G_1$, write $x=m_0+\cdots+m_{n-1}\alpha^{n-1}$, we want to find integers $m'_0,\ldots,m'_{n-1}$ s.t. $$x=m_0+m_1\alpha+\cdots+m_{n-1}\alpha^{n-1}=m'_0+m'_1f_1(\alpha)+\cdots+m'_{n-1}f_{n-1}(\alpha)$$ This can be done easily by comparing the coefficients and solving $m'_i$ in the order of $m'_{n-1},m'_{n-2},\ldots,m'_0$. Note that the resulting $m'_i$'s are indeed integers. Hence $x\in G_2$.
 
-By Ex 2.26, we have $\disc(\alpha)=\disc(1,\alpha,\ldots,\alpha^{n-1})=\disc(1,f_1(\alpha),\ldots,f_{n-1}(\alpha))$. Since 
+By Exercise 2.26, we have $\disc(\alpha)=\disc(1,\alpha,\ldots,\alpha^{n-1})=\disc(1,f_1(\alpha),\ldots,f_{n-1}(\alpha))$. Since 
 \begin{align*}
-\disc(R) &= \disc\left(1,\frac{f_1(\alpha)}{d_1},\ldots,\frac{f_{n-1}(\alpha)}{d_{n-1}}\right) \\
-&= \left(\frac{1}{d_1d_2\cdots d_{n-1}}\right)^2\disc(1,f_1(\alpha),\ldots,f_{n-1}(\alpha)) \\ 
-&= \left(\frac{1}{d_1d_2\cdots d_{n-1}}\right)^2\disc(\alpha)
+    \disc(R) &= \disc\left(1,\frac{f_1(\alpha)}{d_1},\ldots,\frac{f_{n-1}(\alpha)}{d_{n-1}}\right) \\
+    &= \left(\frac{1}{d_1d_2\cdots d_{n-1}}\right)^2\disc(1,f_1(\alpha),\ldots,f_{n-1}(\alpha)) \\ 
+    &= \left(\frac{1}{d_1d_2\cdots d_{n-1}}\right)^2\disc(\alpha)
 \end{align*}
 So $\disc(\alpha)=(d_1d_2\cdots d_{n-1})^2\disc(R)$.
 
-(b) By (a) and Ex 2.27(c), we have
+(b) By (a) and Exercise 2.27(c), we have
 \begin{align*}
-\disc(\alpha)=\disc(\ZZ[\alpha])=\#(R/\ZZ[\alpha])^2\cdot\disc(R)=(d_1d_2\cdots d_{n-1})^2\cdot\disc(R)
+    \disc(\alpha)=\disc(\ZZ[\alpha])=\#(R/\ZZ[\alpha])^2\cdot\disc(R)=(d_1d_2\cdots d_{n-1})^2\cdot\disc(R)
 \end{align*}
 Hence, $\#(R/\ZZ[\alpha])=d_1d_2\cdots d_{n-1}$.
 
@@ -501,33 +528,33 @@ Combining $d_1\mid d_1,d_1^2\mid d_2,\ldots,d_1^{n-1}\mid d_{n-1}$ we get $$d_1^
 
 Let's first compute some useful numbers. $\alpha:=\sqrt[3]{m}$. $\Irr_\QQ(\alpha)=x^3-m$ and $\Irr_\QQ(\alpha^2)=x^3-m^2$. So $\Tr(\alpha)=0,\Tr(\alpha^2)=0$ and $\Nr(\alpha)=m,\Nr(\alpha^2)=m^2$.
 
-(a) $\Irr_\QQ(\alpha)'=3x^2$. By Thm 8 (p. 19), $\disc(\alpha)=-\Nr(3\alpha^2)=-3^3\Nr(\alpha^2)=-27m^2$.
+(a) $\Irr_\QQ(\alpha)'=3x^2$. By Theorem 8 (p. 19), $\disc(\alpha)=-\Nr(3\alpha^2)=-3^3\Nr(\alpha^2)=-27m^2$.
 
-By Ex 2.40(d), $d_1^6\mid -27m^2=-27h^2k^4$ where $h,k$ are reletively prime and square-free. If $3\mid k$ then $d_1=1,3$. In this case $9\mid m$. Otherwise if $3\nmid k$ then $d_1=1$.
+By Exercise 2.40(d), $d_1^6\mid -27m^2=-27h^2k^4$ where $h,k$ are reletively prime and square-free. If $3\mid k$ then $d_1=1,3$. In this case $9\mid m$. Otherwise if $3\nmid k$ then $d_1=1$.
 
 (b) In the case $9\mid m$. Write $f_1(x)=x+a\in\ZZ[x]$. If $d_1=3$, then $\beta:=f_1(\alpha)/d_1=(\alpha+a)/3\in R$. Observe that
 \begin{align*}
-\Tr(\beta^3) &= \Tr\left(\frac{a^3}{27}+\frac{1}{9}a^2\alpha+\frac{1}{9}a\alpha^2+\frac{m}{27}\right) \\ 
-&= \frac{a^3}{9}+\frac{a^2}{9}\Tr(\alpha)+\frac{a}{9}\Tr(\alpha^2)+\frac{m}{9} = \frac{a^3}{9}+\frac{m}{9} \in\ZZ
+    \Tr(\beta^3) &= \Tr\left(\frac{a^3}{27}+\frac{1}{9}a^2\alpha+\frac{1}{9}a\alpha^2+\frac{m}{27}\right) \\ 
+    &= \frac{a^3}{9}+\frac{a^2}{9}\Tr(\alpha)+\frac{a}{9}\Tr(\alpha^2)+\frac{m}{9} = \frac{a^3}{9}+\frac{m}{9} \in\ZZ
 \end{align*}
 Since $m/9\in\ZZ$, so is $a^3/9$. Then $9\mid a^3$ and thus $3\mid a$. This means $\beta-a/3=\alpha/3\in R$. So $\Nr(\alpha/3)=\Nr(\alpha)/27=m/27\in\ZZ$, which is a contradiction because $m$ is cube-free.
 
-So we have $d_1=1$. By Ex 2.39 we may take $f_1(x)=x$. So $f_1(\alpha)=\alpha$.
+So we have $d_1=1$. By Exercise 2.39 we may take $f_1(x)=x$. So $f_1(\alpha)=\alpha$.
 
 (c) $x=\alpha^2/k$ satisfies $x^3-h^2k\in\ZZ[x]$. So $\alpha^2/k\in R$.
 
 (d) We compute the case where $\beta:=(\alpha-1)^2/3$, the other one is similar. Using this definition, we find that
 \begin{align*}
-\left(\beta-\frac{1}{3}\right)^3 &= \left(\frac{\alpha(\alpha-2)}{3}\right)^3 = \frac{1}{27}(\alpha^6-6\alpha^5+12\alpha^4-8\alpha^3) \\
-&= \frac{1}{27}m^2-\frac{2}{9}m\alpha^2+\frac{4}{9}m\alpha-\frac{8}{27}m
+    \left(\beta-\frac{1}{3}\right)^3 &= \left(\frac{\alpha(\alpha-2)}{3}\right)^3 = \frac{1}{27}(\alpha^6-6\alpha^5+12\alpha^4-8\alpha^3) \\
+    &= \frac{1}{27}m^2-\frac{2}{9}m\alpha^2+\frac{4}{9}m\alpha-\frac{8}{27}m
 \end{align*}
 This is the same as the expanded form of $(\beta-1/3)^3$. So we have the equation $$\beta^3-\beta^2+\frac{1}{3}\beta-\frac{1}{27}-\frac{1}{27}m^2+\frac{2}{9}m\alpha^2-\frac{4}{9}m\alpha+\frac{8}{27}m=0$$
 By completing the square, we have $$\frac{2}{9}m\alpha^2-\frac{4}{9}m\alpha = \frac{2m}{3}\cdot\frac{(\alpha-1)^2}{3}-\frac{2}{9}m = \frac{2m}{3}\beta-\frac{2}{9}m$$
 Hence,
 \begin{align*}
-&\beta^3-\beta^2+\frac{1}{3}\beta-\frac{1}{27}-\frac{1}{27}m^2+\frac{2}{9}m\alpha^2-\frac{4}{9}m\alpha+\frac{8}{27}m \\
-={} &\beta^3-\beta^2+\frac{1}{3}\beta-\frac{1}{27}-\frac{1}{27}m^2+\frac{2m}{3}\beta-\frac{2}{9}m+\frac{8}{27}m \\
-={} &\beta^3-\beta^2+\left(\frac{1+2m}{3}\right)\beta-\frac{(m-1)^2}{27} = 0
+    &\beta^3-\beta^2+\frac{1}{3}\beta-\frac{1}{27}-\frac{1}{27}m^2+\frac{2}{9}m\alpha^2-\frac{4}{9}m\alpha+\frac{8}{27}m \\
+    ={} &\beta^3-\beta^2+\frac{1}{3}\beta-\frac{1}{27}-\frac{1}{27}m^2+\frac{2m}{3}\beta-\frac{2}{9}m+\frac{8}{27}m \\
+    ={} &\beta^3-\beta^2+\left(\frac{1+2m}{3}\right)\beta-\frac{(m-1)^2}{27} = 0
 \end{align*}
 
 By writing $m=9k\pm1,k\in\ZZ$, it's easy to see that the corresponding coefficients are all integers, so $\beta\in R$.
@@ -539,43 +566,47 @@ It's remaining to show this number is in $R$. To do this, we only need to claim 
 
 By writing $\alpha^2/k,(\alpha^2\pm k^2\alpha+k^2)/3k$ as the linear combinations of the given integral basis over $\ZZ$ and comparing the coefficient of the highest power, we have $k\mid d_2$ when $m\not\equiv \pm1 \pmod{9}$ and $3k\mid d_2$ when $m\equiv \pm1 \pmod{9}$.
 
-(f) By Ex 40(a), we have $-27m^2=d_2^2\disc(R)$. So $-3(3m/d_2)^2=\disc(R)\in\ZZ$. This forces $3m/d_2\in\ZZ$, i.e., $d_2\mid 3m$.
+(f) By Exercise 40(a), we have $-27m^2=d_2^2\disc(R)$. So $-3(3m/d_2)^2=\disc(R)\in\ZZ$. This forces $3m/d_2\in\ZZ$, i.e., $d_2\mid 3m$.
 
 For the following problems, let's look at the big picture first. Since $m=hk^2$ where $h,k$ are relatively prime and sqaure-free, we may write $m=(p_1\cdots p_r)(q_1\cdots q_s)^2$ where $p_i,q_j$ are distinct primes. From (e) we know $k\mid d_2$ when $m\not\equiv \pm1 \pmod{9}$ and $3k\mid d_2$ when $m\equiv \pm1 \pmod{9}$. So
 $$
 d_2 =
 \begin{cases}
-k\cdot(\jk1) = q_1\cdots q_s\cdot(\jk1) & m\not\equiv \pm1 \pmod{9} \\
-3k\cdot(\jk2) = 3q_1\cdots q_s\cdot(\jk2) & m\equiv \pm1 \pmod{9}
+    k\cdot(\jk1) = q_1\cdots q_s\cdot(\jk1) & m\not\equiv \pm1 \pmod{9} \\
+    3k\cdot(\jk2) = 3q_1\cdots q_s\cdot(\jk2) & m\equiv \pm1 \pmod{9}
 \end{cases}
 $$
 To obtain our desired result that $d_2=k$ when $m\not\equiv \pm1 \pmod{9}$ and $d_2=3k$ when $m\equiv \pm1 \pmod{9}$, we want to show $\jk1=\jk2=1$. From (f) we have $d_2\mid 3m=3(p_1\cdots p_r)(q_1\cdots q_s)^2$, so the possible prime divisors of $d_2$ are $3,p_i,q_j$. Thus it's enough to show that $3,p_i,q_j\nmid\jk1,\jk2$ for all $i,j$.
 
 Now this splits to several cases. When $p$ is a prime, $p\neq 3$ and $p\mid m$,
-$$\begin{cases}
-p=p_i \overset{(g)}{\implies} p\nmid d_2 \implies p\nmid\jk1,\jk2 \\
-p=q_j \overset{(h)}{\implies} p^2\nmid d_2 \implies p\nmid\jk1,\jk2 \\
-\end{cases}$$
-And when $p=3$,
-$$\begin{cases}
-3\nmid m
+$$
 \begin{cases}
-\overset{(j)}{\implies} 3\nmid d_2 \implies 3\nmid\jk1, & m\not\equiv \pm1 \pmod{9} \\
-\overset{(f)}{\implies} 9\nmid d_2 \implies 3\nmid\jk2, & m\equiv \pm1 \pmod{9}
-\end{cases}\\
+    p=p_i \overset{(g)}{\implies} p\nmid d_2 \implies p\nmid\jk1,\jk2 \\
+    p=q_j \overset{(h)}{\implies} p^2\nmid d_2 \implies p\nmid\jk1,\jk2 \\
+\end{cases}
+$$
+And when $p=3$,
+$$
+\begin{cases}
+    3\nmid m
+    \begin{cases}
+        \overset{(j)}{\implies} 3\nmid d_2 \implies 3\nmid\jk1, & m\not\equiv \pm1 \pmod{9} \\
+        \overset{(f)}{\implies} 9\nmid d_2 \implies 3\nmid\jk2, & m\equiv \pm1 \pmod{9}
+    \end{cases}\\
 
 3\mid m
-\begin{cases}
-m\not\equiv \pm1 \pmod{9}
-\begin{cases}
-9\nmid m \ ( p_i=3) \overset{(k)}{\implies} 3\nmid d_2 \implies 3\nmid\jk1 \\
-9\mid m  \ ( q_j=3) \overset{(l)}{\implies} 9\nmid d_2 \implies 3\nmid\jk1 
-\end{cases} \\
-m\equiv \pm1 \pmod{9}, \text{ no such case}
+    \begin{cases}
+        m\not\equiv \pm1 \pmod{9}
+        \begin{cases}
+            9\nmid m \ ( p_i=3) \overset{(k)}{\implies} 3\nmid d_2 \implies 3\nmid\jk1 \\
+            9\mid m  \ ( q_j=3) \overset{(l)}{\implies} 9\nmid d_2 \implies 3\nmid\jk1 
+        \end{cases} \\
+        m\equiv \pm1 \pmod{9}, \text{ no such case}
+    \end{cases}
 \end{cases}
-\end{cases}$$
+$$
 
-After finishing proving all the cases, we may conclude by (c), (e) and Ex 2.39 that $f_2(\alpha)/d_2=\alpha^2/k$ when $m\not\equiv \pm1 \pmod{9}$ and $f_2(\alpha)/d_2=(\alpha^2\pm k^2\alpha+k^2)/3k$ when $m\equiv \pm1 \pmod{9}$. Now let's go back and prove all the cases.
+After finishing proving all the cases, we may conclude by (c), (e) and Exercise 2.39 that $f_2(\alpha)/d_2=\alpha^2/k$ when $m\not\equiv \pm1 \pmod{9}$ and $f_2(\alpha)/d_2=(\alpha^2\pm k^2\alpha+k^2)/3k$ when $m\equiv \pm1 \pmod{9}$. Now let's go back and prove all the cases.
 
 (g) Let $p\neq 3$ be a prime, $p\mid m,p^2\nmid m$. If $p\mid d_2$. Since $f_2(\alpha)/d_2=(\alpha^2+a\alpha+b)/d_2\in R$, we have $(\alpha^2+a\alpha+b)/p\in R$. From $\Tr((\alpha^2+a\alpha+b)/p)=3b/p\in\ZZ$ we have $p\mid 3b$, so $p\mid b$. Hence $(\alpha^2+a\alpha)/p\in R$. By a simple calculation we have $\Tr(((\alpha^2+a\alpha)/p)^3) = 3m(m+a^3)/p^3\in\ZZ$. So $p^3\mid m(m+a^3)$. From $p\mid m$ and $p^2\nmid m$ we have $p^2\mid m+a^3\implies p\mid m+a^3\implies p\mid a^3\implies p\mid a\implies p^2\mid a^2\mid a^3\implies p^2\mid m$, a contradiction.
 
