@@ -60,10 +60,12 @@ Note that $(\alpha)=\{n(\alpha)+m(i\alpha)\mid n,m\in\ZZ\}$ forms a lattice in t
 		\draw[densely dotted,variable=\x] plot ({ \x },{ -2*(\x-5*\i/4) }); }
 	\foreach \j in {-3,...,3} {
 		\draw[densely dotted,variable=\x] plot ({ \x },{ \x/2-5*\j/4 }); }    
+
+	\draw[loosely dashed] (0,0) circle [radius=sqrt(5/4)];
     \end{tikzpicture}
 \end{center}
 
-We have $\{\text{all vertices}\}=(\alpha)\subseteq I$. If $(\alpha)\varsubsetneq I$, then there exists an $r\in I$ but $r\notin(\alpha)$. (So $r$ is NOT one of the vertices.) Since $\alpha\in I$ we know $r+c\cdot\alpha,r+d\cdot i\alpha\in I$ for all $c,d\in\ZZ$. And notice that these two numbers correspond geometrically that $r$ moving toward the direction $\vec v_1$ (resp. $\vec v_2$) for $c$ (resp. $d$) steps, where each step has length equal to the side length of the squares. This shows that $r$ will get closer to the origin than $\alpha$ (i.e., $\mathbf{N}(z)<\mathbf{N}(\alpha)$) after moving finitely many steps (this involves choosing $c,d$ appropriately), and still be an element in $I$. Moreover, since $r$ is not one of the vertices, so it will not end up at the origin, i.e., the resulting number won't be zero. And this contradicts to the choice of $\alpha$. We then conclude that $I=(\alpha)$ is principal.
+We have $\{\text{all vertices}\}=(\alpha)\subseteq I$. If $(\alpha)\varsubsetneq I$, then there exists an $r\in I$ but $r\notin(\alpha)$. (So $r$ is NOT one of the vertices.) Since $\alpha\in I$ we know $r+c\cdot\alpha,r+d\cdot i\alpha\in I$ for all $c,d\in\ZZ$. And notice that these two numbers correspond geometrically that $r$ moving toward the direction $\vec v_1$ (resp. $\vec v_2$) for $c$ (resp. $d$) steps, where each step has length equal to the side length of the squares. This shows that $r$ can be moved closer to the origin than $\alpha$ (i.e., the new point $r'$ lies in the circle as shown in the graph) after finitely many steps (this involves choosing $c,d$ appropriately), and still be an element in $I$. Moreover, since $r$ is not one of the vertices, so it will not end up at the origin, i.e., $r'\neq0$. This contradicts to the choice of $\alpha$ as now $\mathbf{N}(r')<\mathbf{N}(\alpha)$. So we may conclude that $I=(\alpha)$ is principal.
  
 \subsection*{Exercise 1.8}
 
