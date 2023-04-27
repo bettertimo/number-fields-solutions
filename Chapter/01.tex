@@ -33,44 +33,37 @@ Note that $2+i=i(1-2i)$ and $2-i=-i(1+2i)$ and by Exercise 1.2, $i,-i$ are units
 \subsection*{Exercise 1.6}
 
 \subsection*{Exercise 1.7}
-Let $I\neq 0$ be an ideal in $\ZZ[i]$ and take a non-zero element $\alpha\in I$ s.t. $\mathbf{N}(\alpha)$ is minimized. For each $n+mi\in\ZZ[i]$, we have $\alpha(n+mi)=n(\alpha)+m(i\alpha)$. So $$(\alpha)=\alpha\cdot\ZZ[i]=\{n(\alpha)+m(i\alpha)\mid n,m\in\ZZ\}$$
+Let $I\neq 0$ be an ideal in $\ZZ[i]$ and take a non-zero element $\alpha\in I$ s.t. $\mathbf{N}(\alpha)$ is minimized. We show that this $\alpha$ generates the ideal $I$, i.e., $(\alpha)=\alpha\cdot\ZZ[i]=I$.
 
-We put $\alpha$ in the fourth quadrant as an example. The other situations are very similar.
+Note that $(\alpha)=\{n(\alpha)+m(i\alpha)\mid n,m\in\ZZ\}$ forms a lattice in the complex plane. And as the graph shown below, it's easy to see that when $n,m$ run through all integers, the infinitely many squares (formed by the lattice) cover the whole complex plane. (We demonstrate the case when $\alpha$ is in the fourth quadrant. But the others are very similar.)
 
 \begin{center}
     \begin{tikzpicture}
-    \draw[dotted] (-3.5,0)--(3,0);
-    \draw[dotted] (0,-2)--(0,3.5);
+    \draw[dotted] (-3,0)--(3,0);
+    \draw[dotted] (0,-3)--(0,3);
     
     \coordinate (A) at (0,0);
-    \coordinate (B) at (1/1.5,-2/1.5);
-    \coordinate (C) at (2/1.5,1/1.5);
-    \coordinate (D) at (3/1.5,-1/1.5);
+    \coordinate (B) at (1/2,-2/2);
+    \coordinate (C) at (2/2,1/2);
+    \coordinate (D) at (3/2,-1/2);
     \filldraw (A) circle (1pt) node[below left] {$0$}
-    -- (B) circle (1pt) node[below left] {$\alpha$}
-    -- (D) circle (1pt) node[right]  {$(1+i)\alpha$}
-    -- (C) circle (1pt) node[right]  {$i\alpha$}
+    -- (B) circle (1pt) node[below] {$1\cdot\alpha$}
+    -- (D) circle (1pt) node[right]  {$1\cdot\alpha+1\cdot i\alpha$}
+    -- (C) circle (1pt) node[above right]  {$1\cdot i\alpha$}
     -- (A);
     
     \draw[->] (A) -- (B) node[midway, below left] {$\vec v_1$};
     \draw[->] (A) -- (C) node[midway, above] {$\vec v_2$};
-    
-    \coordinate (A') at (-4/1.5,3/1.5);
-    \coordinate (B') at (1/1.5-4/1.5,-2/1.5+3/1.5);
-    \coordinate (C') at (2/1.5-4/1.5,1/1.5+3/1.5);
-    \coordinate (D') at (3/1.5-4/1.5,-1/1.5+3/1.5);
-    \filldraw (A') circle (1pt) node [above left] {$n(\alpha)+m(i\alpha)$}
-    -- (B') circle (1pt) node[left] {$(n+1)(\alpha)+m(i\alpha)$}
-    -- (D') circle (1pt) node[right]  {$(n+1)(\alpha)+(m+1)(i\alpha)$}
-    -- (C') circle (1pt) node[above]  {$n(\alpha)+(m+1)(i\alpha)$}
-    -- (A');
-    
+
+	\clip (-3,-3) rectangle (3,3);
+	\foreach \i in {-3,...,3} {
+		\draw[densely dotted,variable=\x] plot ({ \x },{ -2*(\x-5*\i/4) }); }
+	\foreach \j in {-3,...,3} {
+		\draw[densely dotted,variable=\x] plot ({ \x },{ \x/2-5*\j/4 }); }    
     \end{tikzpicture}
 \end{center}
 
-As the graph above illustrates, when $n,m$ run through all integers, these squares will cover the whole complex plane. Note that all the vertices are indeed in $(\alpha)$.
-
-Clearly we have $\{\text{vertices}\}=(\alpha)\subseteq I$. If $(\alpha)\varsubsetneq I$, then $\exists r\in I,r\notin(\alpha)$. So we know $r+c\cdot\alpha,r+d\cdot i\alpha\in I$ for all $c,d\in\ZZ$. Note that for $z\in\CC$, $z+\alpha$ and $z+i\alpha$ means $z$ moving toward the direction $\vec v_1$ and $\vec v_2$ for the distance equals the side length of the squares, respectively. (Also note that minus sign will mean the opposite direction.) This shows geometrically that $z$ can get closer to the origin than $\alpha$, i.e., $\mathbf{N}(z)<\mathbf{N}(\alpha)$, after walking enough steps (choosing $c,d$ accordingly). And since $z\notin(\alpha)$, $z$ is not one of the vertices. This means $z$ will not arrive at the origin, i.e., the resulting number won't be zero. This contradicts to the selection of $\alpha$. So we may now conclude that $I=(\alpha)$ is principal.
+We have $\{\text{all vertices}\}=(\alpha)\subseteq I$. If $(\alpha)\varsubsetneq I$, then there exists an $r\in I$ but $r\notin(\alpha)$. (So $r$ is NOT one of the vertices.) Since $\alpha\in I$ we know $r+c\cdot\alpha,r+d\cdot i\alpha\in I$ for all $c,d\in\ZZ$. And notice that these two numbers correspond geometrically that $r$ moving toward the direction $\vec v_1$ (resp. $\vec v_2$) for $c$ (resp. $d$) steps, where each step has length equal to the side length of the squares. This shows that $r$ will get closer to the origin than $\alpha$ (i.e., $\mathbf{N}(z)<\mathbf{N}(\alpha)$) after moving finitely many steps (this involves choosing $c,d$ appropriately), and still be an element in $I$. Moreover, since $r$ is not one of the vertices, so it will not end up at the origin, i.e., the resulting number won't be zero. And this contradicts to the choice of $\alpha$. We then conclude that $I=(\alpha)$ is principal.
  
 \subsection*{Exercise 1.8}
 
