@@ -6,15 +6,17 @@
 
 \subsection*{Exercise 3.1}
 
-$(1)\Rightarrow(1')$ Suppose every ideal is finitely generated. Given any ascending chain of ideals $I_1\subseteq I_2\subseteq I_3\subseteq\cdots$. Let $\Ical:=\cup_{k=1}^\infty I_k$. It's easy to check that $\Ical$ is also an ideal of $R$ and hence it's finitely generated. Write $\Ical=Rr_1+\cdots+Rr_n$ where $r_i\in I_{k_i}$. WLOG, may assume $I_{k_i}\subseteq I_{k_{i+1}}$ $\forall i=1,\ldots,n-1$. 
+$(1)\Rightarrow(1')$ Suppose every ideal is finitely generated. Given any ascending chain of ideals $I_1\sbe I_2\sbe I_3\sbe\cdots$. Let $\Ical:=\cup_{k=1}^\infty I_k$. It's easy to check that $\Ical$ is also an ideal of $R$ and hence it's finitely generated. Write $\Ical=Rr_1+\cdots+Rr_n$ where $r_i\in I_{k_i}$. WLOG, we may assume $I_{k_i}\sbe I_{k_{i+1}}$ $\forall i=1,\ldots,n-1$. 
 
-We claim $\Ical=I_{k_n}$. $\Ical\supseteq I_{k_n}$ is clear. Conversely, since for each $i$ we have $r_i\in I_{k_i}\subseteq I_{k_n}$, so $Rr_i\subseteq I_{k_n}$ and thus $\Ical\subseteq I_{k_n}$. This completes the claim. Since for each $k\geq k_n$, we have $I_k\subseteq \Ical=I_{k_n}$. And it's easy to see that $I_k\supseteq I_{k_n}$. Hence $I_k=I_{k_n}$. This means the ascending chain will eventually stable from $k_n$.
+We claim that $\Ical=I_{k_n}$. Clearly, $\Ical\spe I_{k_n}$. Conversely, since for each $i$ we have $r_i\in I_{k_i}\sbe I_{k_n}$, so $Rr_i\sbe I_{k_n}$ and thus $\Ical\sbe I_{k_n}$. This completes the claim.
 
-$(1')\Rightarrow(1'')$ Suppose the a.c.c. holds. If there exists a non-empty set $S$ of ideals s.t. $S$ has no maximal elements. Then for any $I\in S$, $\exists I'\in S$ s.t. $I\varsubsetneq I'$. Repeat this process we will get a non-stable ascending chain of ideals, a contradiction.
+Since for each $k\geq k_n$, we have $I_k\sbe \Ical=I_{k_n}$ and $I_k\spe I_{k_n}$. So $I_k=I_{k_n}$ for all $k\geq k_n$. This means the ascending chain of ideals $I_1\sbe I_2\sbe I_3\sbe\cdots$ is stationary.
 
-$(1'')\Rightarrow(1)$ Suppose every non-empty set of ideals has a maximal element. Given an ideal $I$ of $R$. Consider the set of ideals $S:=\{Rr_1+\cdots+Rr_n\mid r_1,\ldots,r_n\in I\}$. Then by assumption there exists a maximal element in $S$, say $Rr_1+\cdots+Rr_n \in S$. We claim that $Rr_1+\cdots+Rr_n=I$. (So $I$ is finitely generated.)
+$(1')\Rightarrow(1'')$ Suppose the ascending chain condition holds. If there exists a non-empty set $S$ of ideals s.t. $S$ has no maximal elements. Then for any $I\in S$, $\exists I'\in S$ s.t. $I\sbne I'$. Inductively we will get a non-stable ascending chain of ideals, a contradiction.
 
-$Rr_1+\cdots+Rr_n\subseteq I$ is clear. Conversely, if $\exists r'\in I$ and $r'\notin Rr_1+\cdots+Rr_n$, consider $Rr_1+\cdots+Rr_n+Rr' \in S$. And since $Rr_1+\cdots+Rr_n \varsubsetneq Rr_1+\cdots+Rr_n+Rr'$, this leads to a contradiction.
+$(1'')\Rightarrow(1)$ Suppose every non-empty set of ideals has a maximal element. Given an ideal $I$ of $R$. Consider the set of ideals $S:=\{Rr_1+\cdots+Rr_n\mid r_1,\ldots,r_n\in I, n\in\NN\}$. Then by assumption there exists a maximal element in $S$, say $Rr_1+\cdots+Rr_n \in S$. We claim that $Rr_1+\cdots+Rr_n=I$. (So $I$ is finitely generated.)
+
+$Rr_1+\cdots+Rr_n\sbe I$ is clear. Conversely, if $\exists r'\in I$ and $r'\notin Rr_1+\cdots+Rr_n$, then we will have $Rr_1+\cdots+Rr_n+Rr' \in S$ and $Rr_1+\cdots+Rr_n \sbne Rr_1+\cdots+Rr_n+Rr'$. This contradicts to the maximality.
 
 \subsection*{Exercise 3.2}
 
@@ -22,11 +24,11 @@ Let $R$ be a finite integral domain with $\#(R)=m$. Given $0\neq\alpha\in R$, co
 
 \subsection*{Exercise 3.3}
 
-Write $G=\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n$ and consider the natural group homomorphism $\phi:\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n \to \ZZ/m\ZZ\beta_1\oplus\cdots\oplus\ZZ/m\ZZ\beta_n$. It's easy to see that $\phi$ is surjective and $\ker\phi=mG$. So $G/mG\simeq \ZZ/m\ZZ\beta_1\oplus\cdots\oplus\ZZ/m\ZZ\beta_n$ where each $\ZZ/m\ZZ\beta_i$ is a cyclic group of order $m$.
+Write $G=\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n$. Consider the natural group homomorphism $\phi:\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n \to (\ZZ/m\ZZ)\beta_1\oplus\cdots\oplus(\ZZ/m\ZZ)\beta_n$. It's easy to see that $\phi$ is surjective and $\ker\phi=mG$. So $G/mG\simeq (\ZZ/m\ZZ)\beta_1\oplus\cdots\oplus(\ZZ/m\ZZ)\beta_n$ where each $(\ZZ/m\ZZ)\beta_i$ is a cyclic group of order $m$.
 
 \subsection*{Exercise 3.4}
 
-Fix an integral basis $\{\beta_1,\ldots,\beta_n\}$ of $R$ and let $\alpha\neq 0$ be any element in $I$. Since $(\alpha)\subseteq I \subseteq R$, we know $I$ is a free abelian group of rank at most $n$. And from $(\alpha)=\alpha R=\alpha(\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n)=\ZZ\alpha\beta_1\oplus\cdots\oplus\ZZ\alpha\beta_n$ we have $I$ has rank at least $n$. So the result follows.
+Fix an integral basis $\{\beta_1,\ldots,\beta_n\}$ of $R$. Since $I \sbe R$, we know $I$ is a free abelian group of rank at most $n$. On the other hand, we take any  $0 \neq \alpha \in I$. From $I \spe (\alpha)=\alpha R = \alpha(\ZZ\beta_1\oplus\cdots\oplus\ZZ\beta_n) = \ZZ\alpha\beta_1\oplus\cdots\oplus\ZZ\alpha\beta_n$ we know $I$ has rank at least $n$. So the result follows.
 
 \subsection*{Exercise 3.5}
 
@@ -38,38 +40,46 @@ Fix $m,n\in\NN$ and write $1=\alpha+\beta$ where $\alpha\in I,\beta\in J$. Raisi
 \begin{multline*}
     1=\alpha^{m+n}+\binom{m+n}{1}\alpha^{m+n-1}\beta+\cdots+\binom{m+n}{n}\alpha^m\beta^n \\ +\binom{m+n}{n+1}\alpha^{m-1}\beta^{n+1}+\cdots+\binom{m+n}{m+n-1}\alpha\beta^{m+n-1}+\beta^{m+n}
 \end{multline*}
-This expression can be written as $\alpha^m\cdot\jk+\beta^n\cdot\jk$ and hence $1\in I^m+J^n$.
+This expression can be written as $\alpha^m\cdot\jk + \beta^n\cdot\jk$ and hence $1\in I^m+J^n$.
 
 \subsection*{Exercise 3.8}
 
-\subsection*{Exercise 3.9 \color{red}(incomplete, missing (c))}
+\subsection*{Exercise 3.9}
 
-(a) Write $I=I_1^{\alpha_1}\cdots I_s^{\alpha_s}$ where $I_i$'s are distinct and $J=J_1^{\beta_1}\cdots J_t^{\beta_t}$ where $J_j$'s are also distinct. All of them are prime ideals in $R$. Then
+(a) Write $I=I_1^{\alpha_1}\cdots I_s^{\alpha_s}$ and $J=J_1^{\beta_1}\cdots J_t^{\beta_t}$ into prime factorizations in $R$. Then
 \begin{align*}
     IS &= (I_1S)^{\alpha_1}\cdots (I_sS)^{\alpha_s}=(I_{11}\cdots I_{1n_1})^{\alpha_1}\cdots (I_{s1}\cdots I_{sn_s})^{\alpha_s} \\
     JS &= (J_1S)^{\beta_1}\cdots (J_tS)^{\beta_t}=(J_{11}\cdots J_{1m_1})^{\beta_1}\cdots (J_{t1}\cdots J_{tm_t})^{\beta_t}
 \end{align*}
 where all primes are now in $S$.
 
-We first claim that $I_{ik}\neq I_{i'k'}$ if $i\neq i'$. Otherwise, if $I_{ik}=I_{i'k'}$, then from $I_{ik}$ lies over $I_i$ and $I_{i'k'}$ lies over $I_{i'}$ we have $I_{ik}$ also lies over $I_{i'}$. By Theorem 20 (p. 45), we must have $I_i=I_{i'}$, a contradiction. This means if two primes come from different $I_iS$, they must be different.
+We first claim that $I_{ik}\neq I_{i'k'}$ if $i\neq i'$. Otherwise, if $I_{ik}=I_{i'k'}$, then since $I_{ik}$ lies over $I_i$ and $I_{i'k'}$ lies over $I_{i'}$, we have $I_{ik}$ also lies over $I_{i'}$. By Theorem 20 (p. 45), we must have $I_i=I_{i'}$, a contradiction. This means if two primes come from different $I_iS$, they must be different.
 
-Since $IS\mid JS$, by rearranging appropriately, we have $I_{11}=J_{11}$. Since $I_{11},J_{11}$ lie over $I_1,J_1$, respectively. By Them 20 again, we have $I_1=J_1$.
+Since $IS\mid JS$, by rearranging appropriately, we may assume $I_{11}=J_{11}$. Since $I_{11},J_{11}$ lie over $I_1,J_1$, respectively. By Theorem 20 again, we have $I_1=J_1$.
 
-We claim that $I_{ik}=J_{1k'}$ iff $i=1$. Assume $I_{ik}=J_{1k'}$. Then $I_{ik}$ lies over $I_i$ and $J_1(=I_1)$. So we have $i=1$. Conversely, assume $i=1$. Since $IS\mid JS$, $I_{1k}$ must be some $J_{i'k'}$. If $I_{1k}=J_{i'k'}$ where $i'\neq 1$, then $I_{1k}$ lies over $I_1(=J_1)$ and $J_{i'}$. So $i'=1$, a contradiction.
+We next claim that for each fixed $k$, one has that $I_{ik}=J_{1k'}$ for some $k'$ iff $i=1$. Assume $I_{ik}=J_{1k'}$. Then $I_{ik}$ lies over $I_i$ and $J_1(=I_1)$. So we have $i=1$. Conversely, assume $i=1$. Since $IS\mid JS$, $I_{1k}$ must be some $J_{i'k'}$. And since $I_{1k}$ lies over $I_1(=J_1)$ and $J_{i'}$. So we know $i'=1$ and hence $I_{1k}=J_{1k'}$ for some $k'$.
 
-Note that from our two claims, together with $IS\mid JS$. We know $\alpha_1\leq \beta_1$. And by repeating this argument, the result follows.
+Note that from our two claims together with $IS\mid JS$, we have $\alpha_1\leq \beta_1$. And by repeating this argument, the result follows.
 
-(b) Take $J:=IS\cap R$. It's easy to easy that $J$ is an ideal in $S$. Moreover, from $$JS=(IS\cap R)S\subset IS^2\cap RS=IS\cap S\subset IS$$ we have $IS\mid JS$. So by (a), $I\mid J$. Hence $J=IS\cap R\subseteq I$. Conversely, $I\subseteq IS\cap R$ is clear. So we have $I=IS\cap R$.
+(b) Take $J:=IS\cap R$. It's easy to see that $J$ is an ideal in $R$. Moreover, from $$JS = (IS\cap R)S \sbe IS^2\cap RS = IS\cap S = IS$$ we have $IS\mid JS$. So by (a), we have $I\mid J$. Hence $J=IS\cap R\sbe I$. Conversely, $I\sbe IS\cap R$ is clear. So we have $I=IS\cap R$.
+
+(c) We claim that $I=(I\cap R)S$ iff $I=JS$ for some ideal $J$ in $R$.
+
+$(\Rightarrow)$ Just take $J=I\cap R$ and done.
+
+$(\Leftarrow)$ By (b), we have $(I\cap R)S = (JS\cap R)S = JS = I$.
 
 \subsection*{Exercise 3.10}
 
-Let $e=e(U/P),e_1=e(U/Q),e_2=e(Q/P)$. Then $QT=U^{e_1}\cdot\jk1$, $PS=Q^{e_2}\cdot\jk2$. Observe that we have $$(QT)^{e_2}=Q^{e_2}T^{e_2}=Q^{e_2}T=U^{e_1e_2}\cdot(\jk1)^{e_2}$$ and so $$PST=PT=Q^{e_2}\cdot\jk2\cdot T=U^{e_1e_2}\cdot(\jk1)^{e_2}\cdot\jk2$$ It's remaining to show $\jk1$ and $\jk2$ have no prime divisor $U$. For $\jk1$, it follows easily from the definition. For $\jk2$, let $Q_i\subset S$ be any prime divisor of $\jk2$, we want to show that $Q_i\neq U$. This can be seen from the facts that $Q_i$ lies over $P$ and by Theorem 20 (p. 45) $U$ can only lie over $Q$ and not $Q_i$, so if $Q_i=U$ then by Theorem 19 (p. 44) we would have $U$ lies over $Q_i$, which is absurd.
+Let $e=e(U/P),e_1=e(U/Q),e_2=e(Q/P)$. Then we have $QT=U^{e_1}\cdot\jk1$ and $PS=Q^{e_2}\cdot\jk2$. So $$PT = PST = Q^{e_2}\cdot\jk2\cdot T = (QT)^{e_2}\cdot\jk2 = U^{e_1e_2}\cdot(\jk1)^{e_2}\cdot\jk2$$
 
-For the inertial degree, it follows easily from the tower of field extensions $R/P\subset S/Q\subset T/U$ and the fact that $[T/U:R/P]=[T/U:S/Q]\cdot[S/Q:R/P]$.
+It's remaining to show that $U \nmid \jk1 , \jk2$, or equivalently, $\jk1,\jk2 \nsbe U$. For $\jk1$, this follows easily from the definition. For $\jk2$, let $Q_i\subset S$ be any prime divisor of $\jk2$ (so in particular $Q_i \neq Q$), we want to show that $Q_i \nsbe U$. But if $Q_i \sbe U$, then $U$ lies over $Q_i$. And since $U$ lies over $Q$, so by Theorem 20 (p. 45), we have $Q=Q_i$, a contradiction.
+
+For the inertial degree, we may consider the tower of field extensions $R/P\subset S/Q\subset T/U$ and use the fact that $[T/U:R/P]=[T/U:S/Q]\cdot[S/Q:R/P]$.
 
 \subsection*{Exercise 3.11}
 
-From Theorem 22(c) (p. 46) we know $\|(\alpha)\|=|\Nr(\alpha)|$. Since $(\alpha)\subseteq I \subseteq R$, by the third isomorphism theorem, we have $(R/(\alpha))/(I/(\alpha))\simeq R/I$. So $$\#(R/I)\cdot\#(I/(\alpha))=\#(R/(\alpha))$$ Hence $\|I\|=\#(R/I)\mid \#(R/(\alpha))=\|(\alpha)\|=|\Nr(\alpha)|$. The equality holds iff $\#(I/(\alpha))=1$ iff $I=(\alpha)$.
+From Theorem 22 (c) (p. 46) we know $\|(\alpha)\|=|\Nr(\alpha)|$. And since $(\alpha)\sbe I \sbe R$, so by the third isomorphism theorem, we have $(R/(\alpha))/(I/(\alpha))\simeq R/I$. This implies $$\#(R/I)\cdot\#(I/(\alpha))=\#(R/(\alpha))$$ Hence $\|I\|=\#(R/I)\mid \#(R/(\alpha))=\|(\alpha)\|=|\Nr(\alpha)|$. And the equality holds iff $\#(I/(\alpha))=1$ iff $I=(\alpha)$.
 
 \subsection*{Exercise 3.12}
 
@@ -77,9 +87,9 @@ From Theorem 22(c) (p. 46) we know $\|(\alpha)\|=|\Nr(\alpha)|$. Since $(\alpha)
 
 \subsection*{Exercise 3.14}
 
-In this exercise, we will put $(*)$ whenever we quote Exercise 3.9(b). Moreover, in parts (a) and (b), we will write $e=e(Q/P),f=f(Q/P)$ for the sake of simplicity. And we assume $PS=(Q_1\cdots Q_r)^e$ where $Q_i$'s are distinct primes. Note that by the Corollary of Theorem 23 (p. 50), we have $e=e(Q_i/P),f=f(Q_i/P)$ for all $i=1,\ldots,r$.
+In this exercise, we will put $(*)$ whenever we quote Exercise 3.9 (b). Moreover, in parts (a) and (b), we will denote $e:=e(Q/P)$ and $f:=f(Q/P)$. We also assume $PS=(Q_1\cdots Q_r)^e$ where $Q_i$ are distinct primes. (Note that by the Corollary of Theorem 23 (p. 50), we have $e=e(Q_i/P)$ and $f=f(Q_i/P)$ for all $i=1,\ldots,r$.)
 
-(a) By Theorem 23 (p. 49), $\exists\phi\in G$ s.t. $\phi(Q)=Q'$. Define the map
+(a) By Theorem 23 (p. 49), there exists $\phi\in G$ s.t. $\phi(Q)=Q'$. Define the map
 $$
 \begin{array}{ccc}
     \{\sigma\mid \sigma(Q)=Q\} & \longleftrightarrow & \{\tau\mid \tau(Q)=Q'\} \\
@@ -87,54 +97,103 @@ $$
     \phi^{-1}\circ\tau & \longmapsfrom & \tau
     \end{array}
 $$
-It's easy to see that this is a bijection. Hence these two sets have the same cardinality.
+It's easy to see that this is a bijection. So these two sets have the same cardinality.
 
-Write $G=\cup_{i=1}^r \Gcal_i$ where $\Gcal_i:=\{\sigma\mid \sigma(Q_1)=Q_i\}$. This is clearly a disjoint union and we've shown that all $\Gcal_i$ have the same cardinality, we denote it as $g$. So $n=\#(G)=rg$. Since $n=ref$, we have $g=ef$.
+Write $G=\cup_{i=1}^r \Gcal_i$ where $\Gcal_i:=\{\sigma\mid \sigma(Q_1)=Q_i\}$. This is clearly a disjoint union and we've shown in the first step that all $\Gcal_i$ have the same cardinality, let's call it $g$. So $n=\#(G)=rg$. And since $n=ref$, we have $g=ef$.
 
-(b) By $(*)$, $P^f=R\cap P^fS=R\cap(PS)^f=R\cap(Q_1\cdots Q_r)^{ef}$. So it's remaining to show $(Q_1\cdots Q_r)^{ef}=\prod_{\sigma\in G}\sigma(Q)$. WLOG, we assume $Q=Q_1$. From (a) we know there are $ef$ $\sigma$'s map $Q_1$ to $Q_i$ $\forall i=1,\ldots,r$. So $\prod_{\sigma\in G}\sigma(Q_1)=Q_1^{ef}\cdots Q_r^{ef}=(Q_1\cdots Q_r)^{ef}$.
+(b) By $(*)$,
+$$
+P^f=R\cap P^fS=R\cap(PS)^f=R\cap(Q_1\cdots Q_r)^{ef}
+$$
+So it's remaining to show $(Q_1\cdots Q_r)^{ef}=\prod_{\sigma\in G}\sigma(Q)$. WLOG, we assume $Q=Q_1$. From (a) we know there are $ef$ $\sigma$'s sending $Q_1$ to $Q_i$ for all $i=1,\ldots,r$. So $\prod_{\sigma\in G}\sigma(Q_1)=Q_1^{ef}\cdots Q_r^{ef}=(Q_1\cdots Q_r)^{ef}$.
 
-(c) Write $I=I_1\cdots I_s$ where $I_i$'s are prime in $S$. Each $I_i$ lies over a unique prime ideal in $R$, say $J_i$. For each $i$, let $e_i,f_i$ be the corresponding ramification index and inertial degree of $I_i$ over $J_i$. Then $J_iS=(I_i\cdot\jk)^{e_i}$. So similar to (b), we have $$\prod_{\sigma\in G}\sigma(I_i)=\sigma_1(I_i)\cdots\sigma_n(I_i)=(I_i\cdot\jk)^{e_if_i}=(J_iS)^{f_i}=J_i^{f_i}S$$ Let $J:=\prod_{i=1}^s J_i^{f_i}$, then $$\prod_{\sigma\in G}\sigma(I)=\prod_{\sigma\in G}\sigma(I_1)\cdots\sigma(I_s)=\prod_{i=1}^s\left(\prod_{\sigma\in G}\sigma(I_i)\right)=\prod_{i=1}^s J_i^{f_i}S=JS$$ By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\prod_{\sigma\in G}\sigma(I)=\Nr^L_K(I)\cdot S$.
+(c) Write $I=I_1\cdots I_s$ where $I_i$ are prime in $S$. Each $I_i$ lies over a unique prime ideal in $R$, say $J_i$. For each $i$, let $e_i:=e(I_i/J_i)$ and $f_i:=f(I_i/J_i)$. Then $J_iS=(I_i\cdot\jk)^{e_i}$. So similar to (b), we have 
+$$
+\prod_{\sigma\in G}\sigma(I_i)
+= \sigma_1(I_i)\cdots\sigma_n(I_i)
+= (I_i\cdot\jk)^{e_if_i}
+= (J_iS)^{f_i}=J_i^{f_i}S
+$$
 
-(d) Note that "Norm" is an ideal in $R$. So
+Let $J:=\prod_{i=1}^s J_i^{f_i}$ be the ideal in $R$, then
+$$
+\prod_{\sigma\in G}\sigma(I)
+= \prod_{\sigma\in G}\sigma(I_1)\cdots\sigma(I_s)
+= \prod_{i=1}^s\left(\prod_{\sigma\in G}\sigma(I_i)\right)
+= \prod_{i=1}^s J_i^{f_i}S=JS
+$$
+By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\prod_{\sigma\in G}\sigma(I)=\Nr^L_K(I)\cdot S$.
+
+(d) Since the norm of an ideal in $S$ is an ideal in $R$. So
 \begin{align*}
-    \Nr^L_K(IJ) &\overset{(*)}{=} \Nr^L_K(IJ)\cdot S\cap R \overset{(c)}{=} \prod_{\sigma\in G}\sigma(IJ)\cap R = \prod_{\sigma\in G}\sigma(I)\sigma(J)\cap R \\
-    &= \prod_{\sigma\in G}\sigma(I)\prod_{\sigma\in G}\sigma(J)\cap R \overset{(c)}{=} \left(\Nr^L_K(I)\cdot S\right)\left(\Nr^L_K(J)\cdot S\right)\cap R \\
-    &= \Nr^L_K(I)\Nr^L_K(J)S\cap R \overset{(*)}{=} \Nr^L_K(I)\Nr^L_K(J)
+    \Nr^L_K(IJ)
+	&\overset{(*)}{=} \Nr^L_K(IJ)\cdot S\cap R
+	\overset{(c)}{=} \prod_{\sigma\in G}\sigma(IJ)\cap R
+	= \prod_{\sigma\in G}\sigma(I)\sigma(J)\cap R   \\
+    &= \prod_{\sigma\in G}\sigma(I)\prod_{\sigma\in G}\sigma(J)\cap R
+	\overset{(c)}{=} \left(\Nr^L_K(I)\cdot S\right)\left(\Nr^L_K(J)\cdot S\right)\cap R   \\
+    &= \Nr^L_K(I)\Nr^L_K(J)S\cap R
+	\overset{(*)}{=} \Nr^L_K(I)\Nr^L_K(J)
 \end{align*}
 
 (e) We will use the fact that $\Nr^L_K(\alpha)\in R$.
 \begin{align*}
-    \Nr^L_K((\alpha)) &= \Nr^L_K(\alpha S) = R\cap \prod_{\sigma\in G}\sigma(\alpha S) = R\cap \prod_{\sigma\in G}\sigma(\alpha)\sigma(S) \\
-    &= R\cap \Nr^L_K(\alpha)\cdot S = R\cap\left(\Nr^L_K(\alpha)\cdot R\right)\cdot S \\
-    &= \Nr^L_K(\alpha)\cdot R
+    \Nr^L_K((\alpha))
+	&= \Nr^L_K(\alpha S)
+	\overset{\df}{=} R\cap \prod_{\sigma\in G}\sigma(\alpha S)
+	= R\cap \prod_{\sigma\in G}\sigma(\alpha)\sigma(S)    \\
+    &\overset{\df}{=} R\cap \Nr^L_K(\alpha)\cdot S
+	= R\cap\left(\Nr^L_K(\alpha)\cdot R\right)\cdot S
+    \overset{(*)}{=} \Nr^L_K(\alpha)\cdot R
 \end{align*}
 
 \subsection*{Exercise 3.15}
 
-(a) Factor $I$ in the number ring of $M$: $I=I_1\cdots I_r$ where $I_i$'s are prime. By Theorem 20 (p. 45), each $I_i$ lies over a unique prime ideal $Q_i$ in the number ring of $L$, and each $Q_i$ lies over a unique prime ideal $P_i$ in the number ring of $K$. So we have a tower of prime ideals $P_i\subset Q_i\subset I_i$. By Exercise 3.10, $f(I_i/P_i)=f(I_i/Q_i)f(Q_i/P_i)$. So
+(a) Write $I=I_1\cdots I_r$ into prime factorization in $\AA\cap M$. By Theorem 20 (p. 45), each $I_i$ lies over a unique prime ideal $Q_i$ in $\AA\cap L$, and each $Q_i$ lies over a unique prime ideal $P_i$ in $\AA\cap K$. So we have the prime ideals $P_i\subset Q_i\subset I_i$. By Exercise 3.10, $f(I_i/P_i)=f(I_i/Q_i)f(Q_i/P_i)$. So
 \begin{align*}
-    \Nr^L_K\left(\Nr^M_L(I)\right) &= \Nr^L_K\left(\Nr^M_L\left(\prod_{i=1}^r I_i\right)\right) = \Nr^L_K\left(\prod_{i=1}^r \Nr^M_L(I_i)\right) \\ 
-    &= \Nr^L_K\left(\prod_{i=1}^r Q_i^{f(I_i/Q_i)}\right) = \prod_{i=1}^r \left(\Nr^L_K(Q_i)\right)^{f(I_i/Q_i)} = \prod_{i=1}^r \left(P_i^{f(Q_i/P_i)}\right)^{f(I_i/Q_i)} \\
-    &= \prod_{i=1}^r P_i^{f(Q_i/P_i)f(I_i/Q_i)} = \prod_{i=1}^r P_i^{f(I_i/P_i)} = \prod_{i=1}^r \Nr^M_K(I_i) = \Nr^M_K(I)
+    \Nr^L_K\left(\Nr^M_L(I)\right)
+	&= \Nr^L_K\left(\Nr^M_L\left(\prod_{i=1}^r I_i\right)\right)
+	= \Nr^L_K\left(\prod_{i=1}^r \Nr^M_L(I_i)\right)     \\ 
+    &= \Nr^L_K\left(\prod_{i=1}^r Q_i^{f(I_i/Q_i)}\right)
+	= \prod_{i=1}^r \left(\Nr^L_K(Q_i)\right)^{f(I_i/Q_i)}
+	= \prod_{i=1}^r \left(P_i^{f(Q_i/P_i)}\right)^{f(I_i/Q_i)}      \\
+    &= \prod_{i=1}^r P_i^{f(Q_i/P_i)f(I_i/Q_i)}
+	= \prod_{i=1}^r P_i^{f(I_i/P_i)}
+	= \prod_{i=1}^r \Nr^M_K(I_i)
+	= \Nr^M_K(I)
 \end{align*}
 
 (b) Let $M$ be the normal closure of $L$ over $K$. Then we have a tower of field extensions $K\subset L\subset M$. By field theory since $M/K$ is normal, we have $M/L$ is also normal. Let $R,S,T$ be the number rings of $K,L,M$, respectively. Our goal is to show $\Nr^L_K(\alpha S)=\Nr^L_K(\alpha)R$.
 
-Write $\alpha S=Q_1\cdots Q_r$ where $Q_i$'s are prime in $S$. Then $\alpha S\cdot T=Q_1T\cdots Q_rT$. For each $i=1,\ldots,r$, since $M/L$ is normal, we may write $Q_iT=(I_{i1}\cdots I_{in_i})^{e_i}$ where $I_{i1},\ldots,I_{in_i}$ are prime in $T$. Let $f_i$ be the corresponding inertial degree, then by (a)
+Write $\alpha S=Q_1\cdots Q_r$ where $Q_i$ are prime in $S$. Then $\alpha S\cdot T=Q_1T\cdots Q_rT$. For each $i=1,\ldots,r$, since $M/L$ is normal, we may write $Q_iT=(I_{i1}\cdots I_{in_i})^{e_i}$ where $I_{i1},\ldots,I_{in_i}$ are prime in $T$. Let $f_i$ be the corresponding inertial degree, then by (a),
 \begin{align*}
-    \Nr^M_K(Q_iT) &= \Nr^L_K\left(\Nr^M_L(Q_iT)\right) = \Nr^L_K\left(\Nr^M_L\left(\prod_{k=1}^{n_i} I_{ik}^{e_i}\right)\right) \\
-    &= \Nr^L_K\left(\prod_{k=1}^{n_i}\left(\Nr^M_L (I_{ik})^{e_i}\right)\right) = \Nr^L_K\left(\prod_{k=1}^{n_i} Q_i^{e_if_i}\right) \\
-    &= \Nr^L_K\left(Q_i^{e_if_in_i}\right) = \Nr^L_K\left(Q_i^{[M:L]}\right) = \Nr^L_K(Q_i)^{[M:L]}
+    \Nr^M_K(Q_iT)
+	&= \Nr^L_K\left(\Nr^M_L(Q_iT)\right)
+	= \Nr^L_K\left(\Nr^M_L\left(\prod_{k=1}^{n_i} I_{ik}^{e_i}\right)\right)    \\
+    &= \Nr^L_K\left(\prod_{k=1}^{n_i}\left(\Nr^M_L (I_{ik})^{e_i}\right)\right)
+	= \Nr^L_K\left(\prod_{k=1}^{n_i} Q_i^{e_if_i}\right)     \\
+    &= \Nr^L_K\left(Q_i^{e_if_in_i}\right)
+	= \Nr^L_K\left(Q_i^{[M:L]}\right)
+	= \Nr^L_K(Q_i)^{[M:L]}
 \end{align*}
 So
 \begin{align*}
-    \Nr^M_K(\alpha S\cdot T) &= \Nr^M_K\left(\prod_{i=1}^r Q_iT\right) = \prod_{i=1}^r \Nr^M_K(Q_iT) = \prod_{i=1}^r \Nr^L_K(Q_i)^{[M:L]} \\
-    &= \Nr^L_K\left(\prod_{i=1}^r Q_i\right)^{[M:L]} = \Nr^L_K(\alpha S)^{[M:L]}
+    \Nr^M_K(\alpha S\cdot T)
+	&= \Nr^M_K\left(\prod_{i=1}^r Q_iT\right)
+	= \prod_{i=1}^r \Nr^M_K(Q_iT)    \\
+	&= \prod_{i=1}^r \Nr^L_K(Q_i)^{[M:L]}
+    = \Nr^L_K\left(\prod_{i=1}^r Q_i\right)^{[M:L]}
+	= \Nr^L_K(\alpha S)^{[M:L]}
 \end{align*}
 On the other hand, since $M/K$ is normal, by Exercise 3.14 (e), we have
 \begin{align*}
-    \Nr^M_K(\alpha S\cdot T) &= \Nr^M_K(\alpha T) = \Nr^M_K(\alpha)R = \Nr^L_K\left(\Nr^M_L(\alpha)\right)R \\
-    &= \Nr^L_K\left(\alpha^{[M:L]}\right)R = \left(\Nr^L_K(\alpha)\right)^{[M:L]}R = \left(\Nr^L_K(\alpha)R\right)^{[M:L]} 
+    \Nr^M_K(\alpha S\cdot T)
+	&= \Nr^M_K(\alpha T)
+	= \Nr^M_K(\alpha)R
+	= \Nr^L_K\left(\Nr^M_L(\alpha)\right)R     \\
+    &= \Nr^L_K\left(\alpha^{[M:L]}\right)R
+	= \left(\Nr^L_K(\alpha)\right)^{[M:L]}R
+	= \left(\Nr^L_K(\alpha)R\right)^{[M:L]} 
 \end{align*}
 We've used the fact that $\alpha\in S$ in the fourth equality.
 
@@ -142,13 +201,24 @@ Combining these two gives us $\Nr^L_K(\alpha S)^{[M:L]}=(\Nr^L_K(\alpha)R)^{[M:L
 
 (c) First we assume $I=Q$ is a prime. Then $Q$ lies over a unique prime ideal $(p)=p\ZZ$ in $\ZZ$. Let $f=f(Q/p\ZZ)$, then $\Nr^L_\QQ(Q)=(p\ZZ)^f=p^f\ZZ=\#(S/Q)\cdot\ZZ=\|Q\|\cdot\ZZ$.
 
-In general, write $I=Q_1\cdots Q_r$ where $Q_i$'s are prime. Then $\Nr^L_\QQ(I)=\Nr^L_\QQ(Q_1\cdots Q_r)=\Nr^L_\QQ(Q_1)\cdots\Nr^L_\QQ(Q_r)=\|Q_1\|\ZZ\cdots\|Q_r\|\ZZ=\|Q_1\cdots Q_r\|\ZZ=\|I\|\ZZ$.
+In general, write $I=Q_1\cdots Q_r$ into prime factorization. Then
+\begin{align*}
+	\Nr^L_\QQ(I)
+	&= \Nr^L_\QQ(Q_1\cdots Q_r)
+	= \Nr^L_\QQ(Q_1)\cdots\Nr^L_\QQ(Q_r)    \\
+	&= \|Q_1\|\ZZ\cdots\|Q_r\|\ZZ
+	= \|Q_1\cdots Q_r\|\ZZ
+	= \|I\|\ZZ
+\end{align*}
 
 \subsection*{Exercise 3.16}
 
-(a) Define $\phi:G(S)\to G(R)$ by $\phi([I])=[\Nr^L_K(I)]$ where $I$ is a prime ideal in $S$. We only check this is well-defined because $\phi$ is clearly a group homomorphism. Given two ideals $I,J$ in $S$ where $[I]=[J]$, $\exists a,b\in S$ s.t. $aI=bJ\implies aS\cdot I=bS\cdot J\implies \Nr^L_K(aS)\Nr^L_K(I)=\Nr^L_K(bS)\Nr^L_K(J)$. By Exercise 3.15(b), we have $\Nr^L_K(aS)=\Nr^L_K(a)\cdot R=:(\alpha)$ and $\Nr^L_K(bS)=\Nr^L_K(b)\cdot R=:(\beta)$ where $\alpha,\beta\in R$. So $\alpha\cdot\Nr^L_K(I)=\beta\cdot\Nr^L_K(J)$ and hence $[\Nr^L_K(I)]=[\Nr^L_K(J)]$.
+(a) Define $\phi:G(S)\to G(R)$ by $\phi([I])=[\Nr^L_K(I)]$. We only need to check this is well-defined because $\phi$ is clearly a group homomorphism. Given two ideals $I,J$ in $S$ where $[I]=[J]$. Take $a,b\in S$ s.t. $aI=bJ\implies aS\cdot I=bS\cdot J\implies \Nr^L_K(aS)\Nr^L_K(I)=\Nr^L_K(bS)\Nr^L_K(J)$. And by Exercise 3.15 (b), we have $\Nr^L_K(aS)=\Nr^L_K(a)\cdot R=:(\alpha)$ and $\Nr^L_K(bS)=\Nr^L_K(b)\cdot R=:(\beta)$ where $\alpha,\beta\in R$. So $\alpha\cdot\Nr^L_K(I)=\beta\cdot\Nr^L_K(J)$ and hence $[\Nr^L_K(I)]=[\Nr^L_K(J)]$.
 
-(b) Let $f:=f(Q/P)$. From group theory we know $\ord(\phi([Q]))\mid \ord([Q])$. Also note that $\phi([Q])=[\Nr^L_K(Q)]=[P^f]=[P]^f$. Thus $$d_P=\ord([P])\mid \ord([P]^f)\cdot f = \ord(\phi([Q]))\cdot f\mid \ord([Q])\cdot f=d_Q\cdot f$$
+(b) Let $f:=f(Q/P)$. Note that $\phi([Q])=[\Nr^L_K(Q)]=[P^f]=[P]^f$, and from group theory we know $\ord(\phi([Q]))\mid \ord([Q])$. Thus
+$$
+d_P=\ord([P])\mid \ord([P]^f)\cdot f = \ord(\phi([Q]))\cdot f\mid \ord([Q])\cdot f=d_Q\cdot f
+$$
 
 \subsection*{Exercise 3.17}
 
@@ -204,7 +274,7 @@ We provide another proof using the fact that $P$ is a maximal ideal of $R$. Assu
 
 If the latter case occurs then we are done, so suppose $\gamma\beta_i\in P$ $\forall i$, then we must have $\gamma\beta\in R\setminus P$. Since $\alpha\notin PS$, by (a) we have $\alpha\beta\gamma=\alpha_1\beta_1\gamma+\cdots+\alpha_n\beta_n\gamma\notin PS$, which is absurd.
 
-(c) (The idea of the proof is very similar to the proof of Theorem 24 (p. 50).) Suppose $e(Q/P)>1$ where $Q$ is a prime in $S$ lying over $P$. Write $PS=QJ\varsubsetneq J$ where $J$ is divisible by all primes of $S$ lying over $P$. Take $\alpha\in J\setminus PS$, then $\alpha$ is in every prime of $S$ lying over $P$, but not in $PS$.
+(c) (The idea of the proof is very similar to the proof of Theorem 24 (p. 50).) Suppose $e(Q/P)>1$ where $Q$ is a prime in $S$ lying over $P$. Write $PS=QJ\sbne J$ where $J$ is divisible by all primes of $S$ lying over $P$. Take $\alpha\in J\setminus PS$, then $\alpha$ is in every prime of $S$ lying over $P$, but not in $PS$.
 
 Write $\alpha=\alpha_1\beta_1+\cdots+\alpha_n\beta_n$ where $\beta_n\in K$. By Exercise 2.25, $\exists m\in\ZZ$ s.t. $m\beta_i\in R$ $\forall i$. Then $\alpha m=\alpha_1\beta_1m+\cdots+\alpha_n\beta_nm$. Since $\alpha\notin PS$. By (b), $\exists\gamma\in K$ s.t. $\gamma m\in R$, $\gamma\beta_im\in R$ for all $i$ and $\gamma\beta_i m\notin P$ for some $i$. WLOG, may assume $\gamma\beta_1m\notin P$.
 
@@ -234,14 +304,14 @@ By Exercise 2.27 (c), $\disc(\alpha_1,\ldots,\alpha_n)=\disc(G)=\#(S/G)^2\disc(S
 
 \subsection*{Exercise 3.23}
 
-(3.2) Suppose $m\equiv 3\pmod{4}$. This means $R=\ZZ[\sqrt{m}]$. We want to show $2R=(2,1+\sqrt{m})^2=(4,2+2\sqrt{m},m+1+2\sqrt{m})$. $\supseteq$ is clear. (Note that $m+1$ is even.) On the other hand,
-since $(m+1+2\sqrt{m})-(2+2\sqrt{m})=m-1\in\rhs$, so is $\gcd(4,m-1)=2$. So we get $\subseteq$.
+(3.2) Suppose $m\equiv 3\pmod{4}$. This means $R=\ZZ[\sqrt{m}]$. We want to show $2R=(2,1+\sqrt{m})^2=(4,2+2\sqrt{m},m+1+2\sqrt{m})$. $\spe$ is clear. (Note that $m+1$ is even.) On the other hand,
+since $(m+1+2\sqrt{m})-(2+2\sqrt{m})=m-1\in\rhs$, so is $\gcd(4,m-1)=2$. So we get $\sbe$.
 
-(3.3) Suppose $m\equiv 1\pmod{8}$. This implies $m\equiv 1\pmod{4}$ and so $R=\ZZ[{(1+\sqrt{m})/2}]$. We want to show $2R=(2,(1+\sqrt{m})/2)(2,(1-\sqrt{m})/2)=(4,1-\sqrt{m},1+\sqrt{m},(1-m)/4)$. $\supseteq$ is clear. (Note that $(1-m)/4$ is even.) On the other hand, from $(1-\sqrt{m})+(1+\sqrt{m})=2\in\rhs$, we get $\subseteq$.
+(3.3) Suppose $m\equiv 1\pmod{8}$. This implies $m\equiv 1\pmod{4}$ and so $R=\ZZ[{(1+\sqrt{m})/2}]$. We want to show $2R=(2,(1+\sqrt{m})/2)(2,(1-\sqrt{m})/2)=(4,1-\sqrt{m},1+\sqrt{m},(1-m)/4)$. $\spe$ is clear. (Note that $(1-m)/4$ is even.) On the other hand, from $(1-\sqrt{m})+(1+\sqrt{m})=2\in\rhs$, we get $\sbe$.
 
 Since $2\nmid m=\disc(R)$. By Theorem 24 (p. 50), $2$ is unramified in $R$. So the two factors are distinct.
 
-(3.5) Suppose $p\nmid m$ is odd and $m\equiv n^2\pmod{p}$. We want to show $pR=(p,n+\sqrt{m})(p,n-\sqrt{m})=(p^2,pn-p\sqrt{m},pn+p\sqrt{m},n^2-m)$. $\supseteq$ is clear. (Note that $p\mid n^2-m$.) On the other hand, from $(pn-p\sqrt{m})+(pn+p\sqrt{m})=2pn\in\rhs$, so is $\gcd(p^2,2pn)=p$. (Here we've used the the facts that $p$ is odd, and since $p\nmid m,p\mid n^2-m$, we must have $p\nmid n$.) So we get $\subseteq$.
+(3.5) Suppose $p\nmid m$ is odd and $m\equiv n^2\pmod{p}$. We want to show $pR=(p,n+\sqrt{m})(p,n-\sqrt{m})=(p^2,pn-p\sqrt{m},pn+p\sqrt{m},n^2-m)$. $\spe$ is clear. (Note that $p\mid n^2-m$.) On the other hand, from $(pn-p\sqrt{m})+(pn+p\sqrt{m})=2pn\in\rhs$, so is $\gcd(p^2,2pn)=p$. (Here we've used the the facts that $p$ is odd, and since $p\nmid m,p\mid n^2-m$, we must have $p\nmid n$.) So we get $\sbe$.
 
 Since $p\nmid m$ is odd, we know $p\nmid\disc(R)=m,4m$. By Theorem 24 again, $p$ is unramified in $R$. So the two factors are distinct.
 
@@ -249,31 +319,31 @@ Since $p\nmid m$ is odd, we know $p\nmid\disc(R)=m,4m$. By Theorem 24 again, $p$
 
 \subsection*{Exercise 3.24 \color{red}(incomplete, missing (c))}
 
-(a) Let $M$ be any intermediate field of $K$ and $L$ with corresponding number ring $T$. Let $I:=Q\cap T$ be the unique prime ideal in $T$ lying under $Q$. Since $I\cap R=Q\cap T\cap R=Q\cap R=P$, so $I$ lies over $P$. Moreover, if $I'$ is another prime ideal in $T$ lying over $P$, then from $Q^n=PS\subset I'S$ we have $I'S\mid Q^n$, this means $I'S$ is the power of $Q$. In particular, $Q$ lies over $I'$. So $I=I'$. This shows that $I$ is the unique prime in $T$ lying over $P$. So $PT$ is the power of $I$. And from $1=f(Q/P)=f(Q/I)f(I/P)$ we get $f(I/P)=1$. Hence, $PT=I^{[M:K]}$. (We've used Theorem 21 (p. 46) repeatedly.)
+(a) Let $M$ be any intermediate field of $K$ and $L$ with the corresponding number ring $T$. Let $I:=Q\cap T$ be the unique prime ideal in $T$ lying under $Q$. Since $I\cap R=Q\cap T\cap R=Q\cap R=P$, so $I$ lies over $P$. Moreover, if $I'$ is another prime in $T$ lying over $P$, then from $Q^n=PS\subset I'S$ we have $I'S\mid Q^n$. This means $I'S$ is a power of $Q$. In particular, $Q$ lies over $I'$ and so $I=I'$. This shows that $I$ is the unique prime in $T$ lying over $P$. So $PT$ is a power of $I$. And from $1=f(Q/P)=f(Q/I)f(I/P)$ we get $f(I/P)=1$. Hence, $PT=I^{[M:K]}$.
 
-(b) Set $M:=L\cap L'$ with corresponding number ring $T$. Clearly $K\subset M$. We may consider the following diagram of field extensions
+(b) Set $M:=L\cap L'$ with the corresponding number ring $T$. Clearly $K\subset M$. We consider the following diagram of field extensions
 \begin{center}
     \begin{tikzpicture}
     \draw (0,-0.5) node (K) {$R\subset K$};
     \draw (-2,2) node (A) {$S\subset L$};
     \draw (2,2) node (B) {$L'\supset S'$};
-    \draw (0,1) node (M) {$L\cap L'$};
+    \draw (0,1) node (M) {$M$};
     \draw (M) -- (A) -- (K) --node {$m$}  (M) -- (B) -- (K);
     \end{tikzpicture}
 \end{center}
-It's sufficient to show $m:=[M:K]=1$. Since $P$ is totally ramified in $L$, by (a), $P$ is totally ramified in $M$. So $PT=I^m$ for some prime ideal $I$ in $T$. This means $e(I/P)=m$.
+It's sufficient to show $m:=[M:K]=1$. Since $P$ is totally ramified in $L$, by (a), $P$ is totally ramified in $M$. So $PT=I^m$ for some prime $I$ in $T$. This means $e(I/P)=m$.
 
-On the other hand, since $P$ is unramified in $L'$, we may write $PS'=Q'_1\cdots Q'_r$. ($S'$ is the number ring of $L'$.) Observe that $I^mS'=PTS'=PS'=Q'_1\cdots Q'_r$, so we have $Q'_1\cdots Q'_r\mid I^mS'=(IS')^m$. This gives us $Q'_i\mid IS'$ and so $Q'_i$ lies over $I$ for all $i=1,\ldots,r$. Fix $i$ and from $1=e(Q'_i/P)=e(Q'_i/I)e(I/P)=e(Q'_i/I)\cdot m$, we may conclude that $m=1$.
+On the other hand, since $P$ is unramified in $L'$, we may write $PS'=Q'_1\cdots Q'_r$ where $Q'_i$ are distinct. ($S':=\AA\cap L'$.) Observe that $I^mS'=PTS'=PS'=Q'_1\cdots Q'_r$, so we have $Q'_i \mid I^m S' = (IS')^m$ and so $Q'_i \mid IS'$. This means $Q'_i$ lies over $I$ for all $i=1,\ldots,r$. And from $1=e(Q'_i/P)=e(Q'_i/I)e(I/P)=e(Q'_i/I)\cdot m$, we have $m=1$.
 
-%(c) First we consider the case $m=p^r,\omega=e^{2\pi i/m}$. Since $(p)=p\ZZ[\omega]=(1-\omega)^{\phi(m)}$, by Theorem 22(a) (p. 46), we have $\|(1-\omega)\|^{\phi(m)}=\|(1-\omega)^{\phi(m)}\|=\|p\ZZ[\omega]\|=p^{[\QQ(\omega):\QQ]}$. Let $f:=f((1-\omega)/p)$, then $\|(1-\omega)\|=p^f$. So $\|(1-\omega)\|^{\phi(m)}=p^{f\phi(m)}=p^{[\QQ(\omega):\QQ]}$. This tells us $[\QQ(\omega):\QQ]\geq\phi(m)$. On the other hand, by the simple observation on p. 12 saying that the only candidates for the conjugates of $\omega$ are the $\omega^k$ where $1\leq k\leq m,\gcd(k,m)=1$. This means $[\QQ(\omega):\QQ]\leq\phi(m)$. Hence, we have $[\QQ(\omega):\QQ]=\phi(m)$. (Note that all the facts we've used didn't assume that $[\QQ(\omega):\QQ]=\phi(m)$.)
+%(c) First we consider the case $m=p^r,\omega=e^{2\pi i/m}$. Since $(p)=p\ZZ[\omega]=(1-\omega)^{\phi(m)}$, by Theorem 22 (a) (p. 46), we have $\|(1-\omega)\|^{\phi(m)}=\|(1-\omega)^{\phi(m)}\|=\|p\ZZ[\omega]\|=p^{[\QQ(\omega):\QQ]}$. Let $f:=f((1-\omega)/p)$, then $\|(1-\omega)\|=p^f$. So $\|(1-\omega)\|^{\phi(m)}=p^{f\phi(m)}=p^{[\QQ(\omega):\QQ]}$. This tells us $[\QQ(\omega):\QQ]\geq\phi(m)$. On the other hand, by the simple observation on p. 12 saying that the only candidates for the conjugates of $\omega$ are the $\omega^k$ where $1\leq k\leq m,\gcd(k,m)=1$. This means $[\QQ(\omega):\QQ]\leq\phi(m)$. Hence, we have $[\QQ(\omega):\QQ]=\phi(m)$. (Note that all the facts we've used didn't assume that $[\QQ(\omega):\QQ]=\phi(m)$.)
 
 \subsection*{Exercise 3.25}
 
 (a) Write $f(x)=\sum_{i=0}^n a_ix^i,g(x)=\sum_{i=0}^m b_ix^i$. WLOG, assume $n\geq m$. Then $\ovl{f}=\ovl{g}$ iff $a_i\equiv b_i\pmod{I}$ for $i=1,\ldots,m$ and $a_i\equiv 0\pmod{I}$ for $i=m+1,\ldots,n$ iff $a_i-b_i\in I$ for $i=1,\ldots,m$ and $a_i\in I$ for $i=m+1,\ldots,n$ iff $f-g\in I[x]$.
 
-(b) $\ovl{g}\mid\ovl{f}$ iff $\ovl{f}=\ovl{g}\cdot\ovl{h}$ for some $\ovl{h}\in (R/I)[x]$ iff $f-gh\in I[x]$ for some $h\in R[x]$ iff $f\in(I,g)$. (We've used (a) in the second iff.)
+(b) $\ovl{g}\mid\ovl{f} \iff \ovl{f}=\ovl{g}\cdot\ovl{h}$ for some $\ovl{h}\in (R/I)[x] \iff f-gh\in I[x]$ for some $h\in R[x] \iff f\in(I,g)$. (We've used (a) in the second if and only if.)
 
-(c) Consider the canonical ring homomorphism $\phi:R[x]\to(R/I)[x]/(\ovl{g})$ where $\phi(f):=\ovl{f}+(\ovl{g})$. This is clearly surjective. Moreover, $f\in\ker\phi$ iff $\ovl{f}+(\ovl{g})=0$ in $(R/I)[x]/(\ovl{g})$ iff $\ovl{f}\in(\ovl{g})$ iff $\ovl{g}\mid\ovl{f}$ iff $f\in(I,g)$. (We've used (b) in the last iff.) So $\ker\phi=(I,g)$. Hence we have $R[x]/(I,g)\simeq (R/I)[x]/(\ovl{g})$.
+(c) Consider the canonical ring homomorphism $\phi:R[x]\to(R/I)[x]/(\ovl{g})$ where $\phi(f):=\ovl{f}+(\ovl{g})$. This is clearly surjective. Moreover, $f\in\ker\phi \iff \ovl{f}+(\ovl{g})=0$ in $(R/I)[x]/(\ovl{g}) \iff \ovl{f}\in(\ovl{g}) \iff \ovl{g}\mid\ovl{f} \iff f\in(I,g)$. (We've used (b) in the last if and only if.) So $\ker\phi=(I,g)$ and hence $R[x]/(I,g)\simeq (R/I)[x]/(\ovl{g})$.
 
 \subsection*{Exercise 3.26 \color{red}(incomplete, missing (e))}
 
@@ -314,39 +384,67 @@ For the case where $m\equiv -1\pmod{9}$, set $\beta=(\alpha+1)^2/3$ and use a si
 
 \subsection*{Exercise 3.29}
 
-(a) Since $f$ has a root $r$ in $\ZZ/p\ZZ$, $\ovl{f}$ has an irreducible factor $x-r$ in $(\ZZ/p\ZZ)[x]$ with multiplicity $e$. Moreover, since $p\nmid \#(R/\ZZ[\alpha])$, by Theorem 27 (p. 55), $pR$ has an irreducible factor $P:=(p,\alpha-r)$ with $e(P/p)=e$ and $f(P/p)=\deg(x-r)=1$. This means $R/P\simeq \ZZ/p\ZZ$. Let $\phi:R/P\isoto\ZZ/p\ZZ$ where $\phi(1+P)=[1]_p\in\ZZ/p\ZZ$ and $\psi:R\to R/P$ be the quotient map. Define $\Phi=\phi\circ\psi:R\to R/P\isoto\ZZ/p\ZZ$, then $\Phi$ is a ring homomorphism. Moreover, since $\alpha-r\in P$, we have $\alpha+P=r+P$. So $\Phi(\alpha)=\phi(\alpha+P)=\phi(r+P)=[r]_p\in\ZZ/p\ZZ$.
+(a) Since $f$ has a root $r$ in $\ZZ/p\ZZ$, $\ovl{f}$ has an irreducible factor $x-r$ in $(\ZZ/p\ZZ)[x]$ with multiplicity (say) $e$. Moreover, since $p\nmid \#(R/\ZZ[\alpha])$, by Theorem 27 (p. 55), $pR$ has a prime divisor $P:=(p,\alpha-r)$ with $e(P/p)=e$ and $f(P/p)=\deg(x-r)=1$. This means $R/P\simeq \ZZ/p\ZZ$.
 
-(b) $f=\Irr_\QQ(\alpha)=x^3-x-1$. By Exercise 2.28(d) and Exercise 2.27(c), $\disc(\alpha)=\disc(\ZZ[\alpha])=\disc(R)$. So we can apply Theorem 27 (p. 55) for any $p$.
+Let $\phi:R/P\isoto\ZZ/p\ZZ$ where $\phi(1+P)=[1]_p\in\ZZ/p\ZZ$ and $\psi:R\to R/P$ be the quotient map. Define $\Phi=\phi\circ\psi:R\to R/P\isoto\ZZ/p\ZZ$, then $\Phi$ is a ring homomorphism. Moreover, since $\alpha-r\in P$, we have $\alpha+P=r+P$. So $\Phi(\alpha)=\phi(\alpha+P)=\phi(r+P)=[r]_p\in\ZZ/p\ZZ$.
 
-If $\sqrt{\alpha}\in\QQ(\alpha)$, then since $\sqrt{\alpha}$ satisfies $x^6-x^2-1$, we have $\sqrt{\alpha}\in R$. Take $p=5$, then $\ovl{f}$ has a root $2$ in $\ZZ/5\ZZ$. By (a), $\exists$ a ring homomorphism $\Phi:R\to\ZZ/5\ZZ$ s.t. $\Phi(\alpha)=[2]_5$. This is a contradiction becasue $\Phi(\sqrt{\alpha})^2=\Phi(\sqrt{\alpha}^2)=\Phi(\alpha)=2$ but $2$ is not a sqaure in $\ZZ/5\ZZ$.
+(b) By Exercise 2.28 (d) we have $\ZZ[\alpha]=R$. So we can apply Theorem 27 (p. 55) for any $p$. Let $f:=\Irr_\QQ(\alpha)=x^3-x-1$. We take $p=5$, then $\ovl{f}$ has a root $2$ in $\ZZ/5\ZZ$. By (a), there exists a ring homomorphism $\Phi:R\to\ZZ/5\ZZ$ s.t. $\Phi(\alpha)=[2]_5$.
 
-(c) If $\sqrt[3]{\alpha}\in\QQ(\alpha)$, then since $\sqrt[3]{\alpha}$ satisfies $x^9-x^3-1$, we have $\sqrt[3]{\alpha}\in R$. Take $p=7$, then $\ovl{f}$ has a root $5$ in $\ZZ/7\ZZ$. By (a), $\exists$ a ring homomorphism $\Phi:R\to\ZZ/7\ZZ$ s.t. $\Phi(\alpha)=[5]_7$. This is a contradiction becasue $\Phi(\sqrt[3]{\alpha})^3=\Phi(\alpha)=5$ but $5$ is not a cube in $\ZZ/7\ZZ$.
+Now, if $\sqrt{\alpha}\in\QQ(\alpha)$, then since $\sqrt{\alpha}$ satisfies $x^6-x^2-1$, we have $\sqrt{\alpha}\in R$. But this is a contradiction as $\Phi(\sqrt{\alpha})^2=\Phi(\sqrt{\alpha}^2)=\Phi(\alpha)=2$ and $2$ is not a sqaure in $\ZZ/5\ZZ$.
 
-Similarly, if $\sqrt{\alpha-2}\in\QQ(\alpha)$, then since $\sqrt{\alpha-2}$ satisfies $(x^2+2)^3-(x^2+2)-1$, we have $\sqrt{\alpha-2}\in R$. Take $p=7$, then $\ovl{f}$ has a root $5$ in $\ZZ/7\ZZ$. By (a), $\exists$ a ring homomorphism $\Phi:R\to\ZZ/7\ZZ$ s.t. $\Phi(\alpha)=[5]_7$. This is a contradiction becasue $\Phi(\sqrt{\alpha-2})^2+2=\Phi(\sqrt{\alpha-2}^2+2)=\Phi(\alpha)=5$ but $5-2=3$ is not a square in $\ZZ/7\ZZ$.
+(c) Take $p=7$, then $\ovl{f}$ has a root $5$ in $\ZZ/7\ZZ$. By (a), there exists a ring homomorphism $\Phi:R\to\ZZ/7\ZZ$ s.t. $\Phi(\alpha)=[5]_7$. Now, if $\sqrt[3]{\alpha}\in\QQ(\alpha)$, then since $\sqrt[3]{\alpha}$ satisfies $x^9-x^3-1$, we have $\sqrt[3]{\alpha}\in R$. But this is a contradiction as $\Phi(\sqrt[3]{\alpha})^3=\Phi(\alpha)=5$ and $5$ is not a cube in $\ZZ/7\ZZ$.
 
-(d) If $x,y,z\in R$ is a solution to the given equation. Since $f(x)=\Irr_\QQ(\alpha)=x^5+2x-2$. By Exercise 2.43(a) and Exercise 2.27(c), we have $\disc(\alpha)=\disc(\ZZ[\alpha])=4^42^5+5^5(-2)^4=2^4\cdot 3637=\#(R/\ZZ[\alpha])^2\disc(R)$. Take $p=5\nmid \#(R/\ZZ[\alpha])$. Then $\ovl{f}$ has a root $4$ in $\ZZ/5\ZZ$. By (a), $\exists$ a ring homomorphism $\Phi:R\to\ZZ/5\ZZ$ s.t. $\Phi(\alpha)=[4]_5$. So $\Phi(\alpha)=\Phi(x^4+y^4+z^4)=\Phi(x)^4+\Phi(y)^4+\Phi(z)^4\equiv 4\pmod{5}$. This is a contradiction becasue $a^4\equiv 0,1 \pmod{5}$, so there's no solution to the congruence equation $a^4+b^4+c^4\equiv 4\pmod{5}$.
+Similarly, if $\sqrt{\alpha-2}\in\QQ(\alpha)$, then since $\sqrt{\alpha-2}$ satisfies $(x^2+2)^3-(x^2+2)-1$, we have $\sqrt{\alpha-2}\in R$. But this is again a contradiction as $\Phi(\sqrt{\alpha-2})^2+2=\Phi(\sqrt{\alpha-2}^2+2)=\Phi(\alpha)=5$ and $5-2=3$ is not a square in $\ZZ/7\ZZ$.
 
-\subsection*{Exercise 3.30 \color{red}(incomplete, missing (c), (d), (e))}
+(d) Suppose $(x,y,z)\in R^3$ is a solution to the equation $x^4+y^4+z^4=\alpha$. Since $f(x)=\Irr_\QQ(\alpha)=x^5+2x-2$. By Exercise 2.43 (a) and Exercise 2.27 (c), we have $\disc(\alpha)=\disc(\ZZ[\alpha])=4^42^5+5^5(-2)^4=2^4\cdot 3637=\#(R/\ZZ[\alpha])^2\disc(R)$. ($3637$ is a prime number.)
 
-(a) Let $f(x)\in\ZZ[x]$ be given where $\deg f\geq1$. First, assume $f(0)=1$. For each $n\in\NN$, let $p_n$ be a prime divisor of $f(n!)$. Then $f(n!)\equiv 0 \pmod{p_n}$, so $n!$ is a solution to $f(x)$ mod $p_n$. We claim that the set $\Pcal=\{ p \mid p \text{ divides } f(n!) \text{ for some } n\in\NN\}$ consists of infinitely many primes. (Then we have infinitely many primes with the desired property.)
+Take $p=5\nmid \#(R/\ZZ[\alpha])$. Then $\ovl{f}$ has a root $4$ in $\ZZ/5\ZZ$. By (a), there exists a ring homomorphism $\Phi:R\to\ZZ/5\ZZ$ s.t. $\Phi(\alpha)=[4]_5$. So $\Phi(\alpha)=\Phi(x^4+y^4+z^4)=\Phi(x)^4+\Phi(y)^4+\Phi(z)^4\equiv 4\pmod{5}$. But this is a contradiction because $a^4\equiv 0,1 \pmod{5}$, so there's no solution to the congruence equation $a^4+b^4+c^4\equiv 4\pmod{5}$.
 
-If not, then write $\Pcal=\{p_1,\ldots,p_r\}$. WLOG, assume $p_1<p_2<\cdots<p_r$. Consider $f(p_r!)$, the set of prime divisors of $f(p_r!)$ is a non-empty subset of $\Pcal$. Take $p_i\in\Pcal$ s.t. $p_i\mid f(p_r!)$. Moreover, observe that $p_i\mid f(p_r!)-1$. So we have $p_i\mid 1$, a contradiction.
+\subsection*{Exercise 3.30 \color{red}(incomplete, missing (e))}
 
-For general $f$, set $g(x):=f(xf(0))/f(0)\in\ZZ[x]$. Then $g(0)=1$. By the previous proof, there exist infinitely many primes s.t. $g(x)$ has a root mod $p$. For each such $p$, let $x_p$ be a root of $g(x)$ in $\ZZ/p\ZZ$. And set $x'=x_pf(0)$, then $f(x')=f(x_pf(0))=f(0)g(x_p)\equiv 0\pmod{p}$. So $x'$ is a solution to $f(x)$ mod $p$.
+(a) Let $f(x)\in\ZZ[x]$ be given where $\deg f\geq1$. First, assume $f(0)=1$. We claim that the set
+$$
+\Pcal=\{ p \mid p \text{ divides } f(n!) \text{ for some } n\in\NN\}
+$$
+consists of infinitely many primes. (Then we will have infinite number of primes with the desired property.)
 
-(b) Let $K=\QQ(\alpha)$ and $f:=\Irr_\QQ(\alpha)$. By (a), there're infinitely many primes $p$ s.t. $\ovl{f}$ has a root in $\ZZ/p\ZZ$. Let $\pfk$ be the set consists of these $p$'s with the additional condition that $p\nmid \#(R/\ZZ[\alpha])$. This is still an infinite set. For each $p\in\pfk$, since $\ovl{f}$ has a linear factor in $(\ZZ/p\ZZ)[x]$, by Theorem 27 (p. 55), there's a prime ideal $P_p$ in $R$ lying over $(p)$ with $f(P_p/(p))=1$.
+If not, write $\Pcal=\{p_1,\ldots,p_r\}$. WLOG, assume $p_1<p_2<\cdots<p_r$. We consider $f(p_r!)$ and note that the set of prime divisors of $f(p_r!)$ is a non-empty subset of $\Pcal$. Take $p_i\in\Pcal$ s.t. $p_i\mid f(p_r!)$. Moreover, observe that $p_i\mid f(p_r!)-1$ as $p_i \mid p_r!$ and $f(0)=1$. So we have $p_i\mid 1$, a contradiction.
 
-Let $\Pfk:=\{P_p\mid p\in\pfk\}$. We claim that this is an infinite set. If not, then write $\Pfk=\{P_1,\ldots,P_r\}$ where $P_i$ lies over a unique rational prime $p_i$. Let $p\in\pfk\setminus\{p_1,\ldots,p_r\}$ and $P\in\Pfk$ be the corresponding prime ideal, then we have $P$ lies over $(p)$ and $P=P_i$ for some $i$. Since $P=P_i$ lies over $(p)$ and $(p_i)$, so $(p)=(p_i)$, which is absurd.
+For general $f$, set $g(x):=f(xf(0))/f(0)\in\ZZ[x]$. (Note that we may assume $f(0)\neq0$.) Then $g(0)=1$. By the previous proof, there exist infinitely many primes s.t. $g(x)$ has a root (say $x_p$) mod $p$. Set $x'_p=x_pf(0)$ for each $p$, then $f(x'_p)=f(x_pf(0))=f(0)g(x_p)\equiv 0\pmod{p}$. So $x'_p$ is a solution to $f(x)$ mod $p$.
+
+(b) Let $K=\QQ(\alpha),R:=\AA\cap K$ and $f:=\Irr_\QQ(\alpha)$. By (a), there're infinitely many primes $p$ s.t. $\ovl{f}$ has a root in $\ZZ/p\ZZ$. Define
+$$
+\pfk := \{p \mid \ovl{f} \text{ has a root in } \ZZ/p\ZZ \text{ and } p \nmid \#(R/\ZZ[\alpha]) \}
+$$
+which is still an infinite set. Then for each $p\in\pfk$, since $\ovl{f}$ has a linear factor in $(\ZZ/p\ZZ)[x]$, by Theorem 27 (p. 55), there's a prime ideal $P_p$ in $R$ lying over $p$ with $f(P_p/p)=1$. Let $\Pfk:=\{P_p \mid p\in\pfk\}$. Note that this is still an infinite set as there's a natural one-to-one map from $\pfk$ to $\Pfk$ (different $p\in\pfk$ correspond to different $P_p\in\Pfk$). So we are done.
+
+(c) Fix $m\in\NN$. Consider $K=\QQ(\omega)$ where $\omega:=e^{2\pi i/m}$. By (b), there're infinitely many primes $P$ in $K$ s.t. $f(P/p)=1$ where $p$ is the unique prime in $\ZZ$ lying under $P$. Define
+$$
+\pfk := \{p \mid f(P/p) = 1 \text{ and } p \nmid m \}
+$$
+which is still an infinite set. (If not, then there would be only finitely many primes in $K$ lying above them.) Then for each $p\in\pfk$, by Theorem 26 (p. 53), we have $f=1$ is the order of $p$ in $(\ZZ/m\ZZ)^\times$, i.e., $p\equiv1\pmod{m}$.
+
+(d) Let $M$ be the normal closure of $L$ over $K$ with the number ring $T$. Consider the tower of field extensions $\QQ \subset K \subset L \subset M$. By (b), there're infinitely many primes $U$ in $M$ s.t. $f(U/p)=1$ where $p$ is the unique prime in $\ZZ$ lying under $U$. Define
+$$
+\pfk := \{p \mid f(U/p) = 1 \text{ and } p \nmid \disc(T) \}
+$$
+which is still an infinite set. (Again, if not, then there would be only finitely many primes in $M$ lying above them.) Note that by Theorem 24 (p. 50), we have $e(U/p)=1$ for all $p\in \pfk$.
+
+Now, define
+$$
+\Pfk := \{P \subset K \mid P \supset p \text{ for some } p\in\pfk \}
+$$
+which is still an infinite set as $\pfk$ is. For any $P\in\Pfk$, let $Q$ be any prime in $L$ lying over $P$. Then we have $f(Q/P)=e(Q/P)=1$ as $M/K$ is normal and $f(U/p)=e(U/p)=1$. (See Exercise 3.10 if necessary.) This shows that every $P\in\Pfk$ splits completely in $L$.
 
 \subsection*{Exercise 3.31}
 
-(a) Let $\alpha I,\beta J$ be two fractional ideals of $K$ and suppose $\alpha I=\alpha'I'$ and $\beta J=\beta'J'$. We want to show $(\alpha I)(\beta J)=(\alpha'I')(\beta'J')$, i.e., $\alpha\beta IJ=\alpha'\beta'I'J'$. Let $\alpha\beta\sum r_is_i\in\alpha\beta IJ$ where $r_i\in I,s_i\in J$. Then each $\alpha r_i=\alpha'r_i'$ for some $r_i'\in I'$ and $\beta s_i=\beta's_i'$ for some $s_i'\in J'$. So $\alpha\beta \sum r_is_i=\sum (\alpha r_i)(\beta s_j) = \sum (\alpha'r_i')(\beta's_j') = \alpha'\beta' \sum r_i's_i' \in \alpha'\beta' I'J'$. This shows that $\alpha\beta IJ\subseteq \alpha'\beta'I'J'$. A similar argument can show the other containment. Hence, this operation is well-defined.
+(a) Let $\alpha I,\beta J$ be two fractional ideals of $K$ and suppose $\alpha I=\alpha'I'$ and $\beta J=\beta'J'$. We want to show $(\alpha I)(\beta J)=(\alpha'I')(\beta'J')$, i.e., $\alpha\beta IJ=\alpha'\beta'I'J'$. Let $\alpha\beta\sum r_is_i\in\alpha\beta IJ$ where $r_i\in I,s_i\in J$. Then each $\alpha r_i=\alpha'r_i'$ for some $r_i'\in I'$ and $\beta s_i=\beta's_i'$ for some $s_i'\in J'$. So $\alpha\beta \sum r_is_i=\sum (\alpha r_i)(\beta s_j) = \sum (\alpha'r_i')(\beta's_j') = \alpha'\beta' \sum r_i's_i' \in \alpha'\beta' I'J'$. This shows that $\alpha\beta IJ\sbe \alpha'\beta'I'J'$. A similar argument can show the other containment. Hence, this operation is well-defined.
 
 (b) Let $I=\alpha A$ be a fractional ideal in $K$. By Theorem 15 (p. 40), there exists an ideal $B$ in $R$ s.t. $AB=(r)$ is principal. Using the given definition of $I^{-1}$, it's easy to check that in fact $I^{-1}=(\alpha r)^{-1}B$. So $I^{-1}$ is also a fractional ideal in $K$. Moreover, $II^{-1}=(\alpha A)((\alpha r)^{-1}B)=r^{-1}\cdot(r)=R$.
 
 Note that $R=1\cdot R$ is a fractional ideal, and $IR=(\alpha A)(1R)=\alpha A=I$ for any fractional ideal $I$. So the fractional ideals in $K$ form a group under multiplication (which is well-defined by (a)), with the identity element $R$.
 
-(c) Let $I$ be a fractional ideal and write $I=b/a\cdot A$, where $a,b\in R$ and $A$ is an ideal in $R$. Then $(a)I=(b)A$. By Theorem 16 (p. 42), we may write uniquely that $(a)=\pfk_1\cdots\pfk_t$ and $(b)A=\qfk_1\cdots\qfk_s$ where $\pfk_i,\qfk_j$ are primes in $R$. From (b) we know $(\pfk_1\cdots\pfk_t)(\pfk_1\cdots\pfk_t)^{-1}=R$. So $I=\qfk_1\cdots\qfk_s(\pfk_1\cdots\pfk_t)^{-1}$. By canceling the common terms, we may write $I=P_1^{m_1}\cdots P_r^{m_r}$ where $P_k$'s are distinct primes in $R$ and $m_i\in\ZZ$. The uniqueness follows immediately.
+(c) Let $I$ be a fractional ideal and write $I=b/a\cdot A$, where $a,b\in R$ and $A$ is an ideal in $R$. Then $(a)I=(b)A$. By Theorem 16 (p. 42), we may write uniquely that $(a)=\pfk_1\cdots\pfk_t$ and $(b)A=\qfk_1\cdots\qfk_s$ where $\pfk_i,\qfk_j$ are primes in $R$. From (b) we know $(\pfk_1\cdots\pfk_t)(\pfk_1\cdots\pfk_t)^{-1}=R$. So $I=\qfk_1\cdots\qfk_s(\pfk_1\cdots\pfk_t)^{-1}$. By canceling the common terms, we may write $I=P_1^{m_1}\cdots P_r^{m_r}$ where $P_k$ are distinct primes in $R$ and $m_i\in\ZZ$. The uniqueness follows immediately.
 
 Let $G$ be the group of all fractional ideals and $H:=\{\alpha R\mid \alpha\in K^\times\}$ be its subgroup consisting of all principal fractional ideals. Now, given $b_1/a_1R, b_2/a_2R\in H$. Observe that $b_1/a_1R=b_2/a_2R \iff (a_2b_1)=(a_1b_2) \iff a_2b_1=a_1b_2\cdot u$ where $u\in R$ is a unit (or equivalently, $a_2b_1\cdot u^{-1}=a_1b_2$) $\iff b_1/a_1=b_2/a_2\cdot u$ (or equivalently, $b_1/a_1\cdot u^{-1}=b_2/a_2$). This gives us a motivation to define $U:=\{v/u\in K^\times\mid u,v\in R\text{ are units}\}$. It's easy to see that $U$ is a subgroup of $K^\times$. We claim that $H\simeq K^\times/U$.
 
@@ -372,11 +470,184 @@ Conversely, given a finitely generated $R$-submodule $M$ of $K$. Write $M=b_1/a_
 
 \subsection*{Exercise 3.33}
 
+(a) Clearly, $A^{-1}$ and $A^*$ are both additive subgroups of $L$. If $s\in S$ and $\alpha\in A^{-1}$, then $s\alpha A\sbe S$ as $\alpha A \sbe S$. This means $s\alpha \in A^{-1}$ and so $A^{-1}$ is an $S$-submodule. On the other hand, if $r\in R$ and $\alpha\in A^*$, then $\Tr^L_K (r\alpha a) = r \Tr^L_K(\alpha a) \in R$ for all $a\in A$ as $\Tr^L_K(\alpha a) \in R$. This means $r\alpha \in A^*$ and so $A^*$ is an $R$-submodule.
+
+Now, if $\alpha\in A^{-1} \implies \alpha A\sbe S \implies \Tr^L_K(\alpha A) \sbe R \implies \alpha \in A^*$. So $A^{-1} \sbe A^*$.
+
+(b) $(\Rightarrow)$ Suppose $A=\beta/\alpha \cdot I$ is a fractional ideal where $\alpha,\beta \in S$ and $I$ is an ideal in $S$. For $s\in S$, $sA = s \cdot \beta/\alpha \cdot I \sbe \beta/\alpha \cdot I = A$. And clearly $A \sbe SA$. So $SA=A$. On the other hand, we see that $\alpha A = \beta I \sbe S$ and so $0\neq\alpha\in S$.
+
+$(\Leftarrow)$ Suppose $SA=A$ and there exists $0\neq \alpha \in A^{-1}$. Write $A = 1/\alpha \cdot (\alpha A)$. We check that $\alpha A$ is an ideal in $S$. (So $A$ is a fractional ideal.) Note that since $\alpha \in A^{-1}$ so $\alpha A \sbe S$. Moreover, for any $s\in S$, we have $s(\alpha A) \sbe \alpha SA = \alpha A$.
+
+(c) (i) Suppose $A\subset B$. First, let $\beta \in B^{-1} \implies \beta A \sbe \beta B \sbe S \implies \beta \in A^{-1}$. So $B^{-1} \sbe A^{-1}$. Next, let $\beta \in B^* \implies \Tr^L_K(\beta B) \sbe R \implies \Tr^L_K(\beta A) \sbe R \implies \beta \in A^*$. So $B^* \sbe A^*$.
+
+(ii) From (a) we know $A^* \spe A^{-1}$. So by (i) we have $(A^*)^{-1} = \diff A \sbe (A^{-1})^{-1}$.
+
+(iii) This follows from Exercise 3.31 (b).
+
+(iv) By (ii) and (iii), $\diff I \sbe (I^{-1})^{-1} = I$.
+
+(v) From (b), it's sufficient to show that $S\diff I = \diff I$ and $(\diff I)^{-1} \neq \{0\}$. By (a), we have $S \diff I = S (I^*)^{-1} = (I^*)^{-1} = \diff I$. Moreover, by (i) and (iv), we have $\diff I \sbe I \implies (\diff I)^{-1} \spe I^{-1} \neq \{0\} \implies (\diff I)^{-1} \neq \{0\}$.
+
+(vi) Similar to (v), it's sufficient to show that $S\diff A = \diff A$ and $(\diff A)^{-1} \neq \{0\}$. By (a), we have $S \diff A = S (A^*)^{-1} = (A^*)^{-1} = \diff A$. Moreover, by (i) and (v), $A \sbe I \implies A^* \spe I^* \implies (A^*)^{-1} = \diff A \sbe (I^*)^{-1} = \diff I \implies (\diff A)^{-1} \spe (\diff I)^{-1} \neq \{0\} \implies (\diff A)^{-1} \neq \{0\}$.
+
+(vii) Write $I=\beta J$ where $\beta \in L$ and $J$ is an ideal in $S$. For $s\in S$ and $\alpha \in I^*$, $\Tr^L_K(s\alpha I) = \Tr^L_K(s\alpha \beta J) \sbe \Tr^L_K(\alpha\beta J) = \Tr^L_K(\alpha I) \sbe R$. So $s\alpha \in I^*$.
+
+(viii) We need to check that for any $\alpha \in I^*$, $\alpha \diff I \sbe S$. Let $\beta \in\diff I = (I^*)^{-1} \implies \beta I^* \sbe S \implies \alpha\beta \sbe S$.
+
+(ix) From (b), it's sufficient to show that $SI^* = I^*$ and $(I^*)^{-1} = \diff I \neq \{0\}$. By (vii) we have the former, and by (v) we have the latter.
+
+(x) Let $\alpha \in I$ and $\beta \in I^*$. Then $\Tr^L_K(\alpha\beta S) \sbe R$ as $\alpha \in I$ and $\beta S \sbe I^*$ by (vii). So $\alpha\beta \in S^*$. And by the additivity of trace we have $II^* \sbe S^*$.
+
+Let $\alpha \in I^{-1}$ and $\beta \in S^*$. Then $\Tr^L_K(\alpha\beta I)  = \Tr^L_K(\beta\alpha I) \sbe \Tr^L_K(\beta S) \sbe R$ as $\alpha I \sbe S$ and $\beta \in S^*$. So $\alpha\beta \in I^*$. And by the additivity of trace we have $I^{-1}S^* \sbe I^*$.
+
+(xi) Since both $I^{-1}$ and $S^*$ are fractional ideals by (ix), so from (x) $I^{-1}S^* \sbe I^*$ we have $S^* = II^{-1}S^* \sbe II^* \sbe S^*$. Hence $II^*=S^*$.
+
+(xii) Replace $I$ by $I^*$ in (xi) and done. (By (ix) we know $I^*$ is a fractional ideal so this is legitimate.)
+
+(xiii) By (xi) and (xii) we have $II^* = I^*(I^*)^*$. Multiplying $(I^*)^{-1}$ gives us $I=(I^*)^*$.
+
+(xiv) $I \diff S = I(S^*)^{-1} = I(II^*)^{-1} = II^{-1}(I^*)^{-1} = \diff I$. (We've used (xi).)
+
 \subsection*{Exercise 3.34}
+
+(a) Since $\alpha_1,\ldots,\alpha_n$ are linearly independent, so by Exercise 2.23 (a), we have the matrix $T := \Tr^L_K(\alpha_i\alpha_j) \in \GL_n(K)$ is invertible. Let $C:=[c_{ij}] \in \GL_n(K)$ be its inverse, then $TC=I_n$.
+
+For each $j=1,\ldots,n$, set $\beta_j:=\sum_{k=1}^n c_{kj}\alpha_k$. Then
+$$
+	\Tr^L_K(\alpha_i\beta_j)
+	= \Tr^L_K \left(\alpha_i \sum_{k=1}^n c_{kj}\alpha_k \right)
+	= \sum_{k=1}^n c_{kj} \Tr^L_K(\alpha_i\alpha_k) = [TC]_{ij}
+	= \begin{cases}
+		1, & i=j \\
+		0, & i\neq j
+	  \end{cases}
+$$
+
+We next check that $\beta_1,\ldots,\beta_n$ are linearly independent. Suppose $\sum_{j=1}^n d_j\beta_j = 0$. Then we have
+$$
+\sum_{j=1}^n d_j\beta_j
+= \sum_{j=1}^n d_j \sum_{k=1}^n c_{kj}\alpha_k
+=  \sum_{k=1}^n \left( \sum_{j=1}^n d_j c_{kj} \right) \alpha_k
+= 0
+$$
+Since $\alpha_1,\ldots,\alpha_n$ are linearly independent, so $\sum_{j=1}^n d_j c_{kj} = 0$ for all $k=1,\ldots,n$. This means
+$$
+C \cdot
+\begin{pmatrix}
+    d_1 \\
+    \vdots \\
+    d_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+    0 \\
+    \vdots \\
+    0
+\end{pmatrix}
+$$
+And since $C$ is invertible, so we have $d_j=0$ for all $j=1,\ldots,n$.
+
+(b) Since $\gamma \in A^*$, we know $\Tr^L_K(\gamma\alpha_j) \in R$ for all $j$. Let $\beta:=\sum_{j=1}^n \Tr^L_K(\gamma\alpha_j)\beta_j \in B$. Then for each $i=1,\ldots,n$,
+$$
+\Tr^L_K(\beta\alpha_i)
+= \Tr^L_K \left( \sum_{j=1}^n \Tr^L_K(\gamma\alpha_j) \beta_j \alpha_i \right)
+= \sum_{j=1}^n \Tr^L_K(\gamma\alpha_j) \Tr^L_K(\beta_j \alpha_i )
+= \Tr^L_K(\gamma\alpha_i)
+$$
+(We've used (a) in the last equality.) This implies $\Tr^L_K((\gamma-\beta)\alpha_i) = 0$ for all $i=1,\ldots,n$.
+
+Now, write $\gamma-\beta = \sum_{j=1}^n k_j\alpha_j$ where $k_j\in K$. We claim that all $k_j=0$. Note that for each $i=1,\ldots,n$, we have
+$$
+0
+= \Tr^L_K((\gamma-\beta)\alpha_i)
+=  \Tr^L_K \left(\sum_{j=1}^n k_j\alpha_j \alpha_i\right)
+= \sum_{j=1}^n k_j \Tr^L_K(\alpha_j\alpha_i)
+$$
+This means
+$$
+T \cdot
+\begin{pmatrix}
+    k_1 \\
+    \vdots \\
+    k_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+    0 \\
+    \vdots \\
+    0
+\end{pmatrix}
+$$
+And since $T$ is invertible, so we have $k_j=0$ for all $j=1,\ldots,n$, as desired.
+
+The above shows that $\gamma = \beta \in B$ and so $A^* \sbe B$. On the other hand, for each $\beta_j \in B$, we see that $\Tr^L_K(\beta_j A) = \Tr^L_K(\beta_j (\oplus R\alpha_i)) \sbe R$. This implies $\beta_j\in A^*$ for all $j=1,\ldots,n$ and so $B\sbe A^*$. Hence, $A^*=B$.
 
 \subsection*{Exercise 3.35}
 
+(a) Since $f(x)\in K[x]$ and $f(x)=(x-\alpha)g(x)$, so for each $i$, $\sigma_i(f(x)) = f(x) = (x-\sigma_i(\alpha))(\sigma_i(g(x))) = (x-\alpha_i)g_i(x)$.
+
+(b) Differentiating both sides of (a) gives us $f'(x) = g_i(x) + (x-\alpha_i)g_i'(x)$. So we have
+$$
+f'(\alpha_j) = g_i(\alpha_j) + (\alpha_j-\alpha_i)g_i'(\alpha_j)
+$$
+
+Case 1: Suppose $i\neq j$. From Exercise 2.20 we know $f'(\alpha_j) = \prod_{k\neq j} (\alpha_j-\alpha_k)$. On the other hand, since $g_i(x) = \prod_{k\neq i} (x-\alpha_k)$, we have $g_i'(x) = \sum_{l\neq i} \prod_{k\neq i,l} (x-\alpha_k)$ and so $(x-\alpha_i)g_i'(x) = \sum_{l\neq i} \prod_{k\neq l} (x-\alpha_k)$.
+
+Plugging $x=\alpha_j$ gives us
+$$
+(\alpha_j-\alpha_i) g_i'(\alpha_j)
+= \sum_{l\neq i} \prod_{k\neq l} (\alpha_j-\alpha_k)
+= \prod_{k\neq j} (\alpha_j-\alpha_k)
+= f'(\alpha_j)
+$$
+This implies that $g_i(\alpha_j) = 0$.
+
+Case 2: If $i=j$. Then it's easy to see that $f'(\alpha_j) = g_i(\alpha_j) + (\alpha_j-\alpha_i)g_i'(\alpha_j) = g_i(\alpha_j)$.
+
+(c) Write $NM=[c_{ij}]$. Then
+$$
+c_{ij}
+= \sum_{k=1}^n \sigma_i\left( \frac{\gamma_{k-1}}{f'(\alpha)} \right) \alpha_j^{k-1}
+= \frac{1}{ \sigma_i(f'(\alpha)) } \cdot \sum_{k=1}^n \sigma_i(\gamma_{k-1}) \alpha_j^{k-1}
+= \frac{ g_i(\alpha_j) }{ f'(\alpha_i) }
+=
+\begin{cases}
+		0, & i\neq j \\
+		1, & i = j
+\end{cases}
+$$
+by (b). So $NM=I_n$ is the identity matrix.
+
+From linear algebra, this implies $MN=I_n$ is also the identity matrix. By considering its $ij$-entry, we have
+$$
+\sum_{k=1}^n \alpha_k^{i-1}\sigma_k \left( \frac{\gamma_{j-1}}{f'(\alpha)} \right)
+= \sum_{k=1}^n \sigma_k \left( \frac{ \alpha^{i-1} \gamma_{j-1} }{ f'(\alpha) } \right)
+= \Tr^L_K \left( \alpha^{i-1} \cdot \frac{\gamma_{j-1}}{f'(\alpha)} \right)
+=
+\begin{cases}
+		0, & i\neq j \\
+		1, & i = j
+\end{cases}
+$$
+Since $\{1,\alpha,\ldots,\alpha^{n-1}\}$ is a basis of $L$ over $K$. So by the definition given in Exercise 3.34 (a), $\{\gamma_0/f'(\alpha),\ldots,\gamma_{n-1}/f'(\alpha)\}$ is the dual basis to $\{1,\alpha,\ldots,\alpha^{n-1}\}$.
+
+(d) Since $\alpha\in S$ is integral over $R$, so similar to Theorem 1 (p. 10) we know $f(x)\in R[x]$. We will check inductively that $\gamma_{n-1},\ldots,\gamma_0 \in R[\alpha]$. Since $f(x) = (x-\alpha)(\gamma_0+\cdots+\gamma_{n-1}x^{n-1})$, by comparing the coefficient of $x^n$, we have $\gamma_{n-1} = 1 \in R[\alpha]$. Next, by comparing the coefficient of $x^{n-1}$, we have $\gamma_{n-2}-\gamma_{n-1}\alpha \in R$ and so $\gamma_{n-2} \in R[\alpha]$. Inductively, one sees easily that $\gamma_{n-1},\ldots,\gamma_0 \in R[\alpha]$. This shows $R\gamma_0 + \cdots + R\gamma_{n-1} \sbe R[\alpha]$.
+
+Conversely, we note that by Exercise 3.34 (a), the dual basis $\{\gamma_0/f'(\alpha),\ldots,\gamma_{n-1}/f'(\alpha)\}$ is linearly independent over $K$. Hence so is $\{\gamma_0,\ldots,\gamma_{n-1}\}$. This shows that the $R$-module generated by $\gamma_0,\ldots,\gamma_{n-1}$ is free of rank $n$. So we have $R\gamma_0 + \cdots + R\gamma_{n-1} = R[\alpha]$. 
+
+(e) By Exercise 3.34 (b), we know $R[\alpha]^* = R\gamma_0/f'(\alpha) + \cdots + R\gamma_{n-1}/f'(\alpha)$. So by (d) we have $R[\alpha]^* = R[\alpha]/f'(\alpha)$.
+
+(f) From (e) we have $\diff R[\alpha] = (R[\alpha]/f'(\alpha))^{-1} = \{ \beta \in L \mid \beta \cdot R[\alpha]/f'(\alpha) \sbe S\}$. We check that this is $f'(\alpha)S$. If $ \beta \in L$ s.t. $\beta \cdot R[\alpha]/f'(\alpha) \sbe S$. Then in particular we have $\beta/f'(\alpha) \in S$ and so $\beta \in f'(\alpha)S$. Conversely, we see that $f'(\alpha)s \cdot R[\alpha]/f'(\alpha) = sR[\alpha] \sbe S$ for all $s\in S$. So we are done.
+
+(g) From (f) and Exercise 3.33 (c) (i), we have $f'(\alpha)S = \diff R[\alpha] \sbe \diff S$. So in particular $f'(\alpha) \in \diff S$.
+
 \subsection*{Exercise 3.36}
+
+\begin{comment}
+(a) It's sufficient to check that $\alpha_1,\ldots,\alpha_n$ are linearly independent over $K$. If not, then there exist $c_1,\ldots,c_n \in K$ not all zero s.t. $\sum c_i\alpha_i = 0$. By Exercise 2.25, we take $0 \neq m\in\ZZ$ s.t. $mc_i\in R$ for all $i$. Then $\sum mc_i\alpha_i = 0$. Since $\alpha_1,\ldots,\alpha_n$ are linearly independent mod $P$, so by considering mod $PS$ we have $mc_i \in P$ for all $i$.
+
+Now, with the notation as in the Lemma of Theorem 22 (b) (p. 48), we set $A=P$ and $B=(mc_1,\ldots,mc_n) \neq 0$. Then there exists $\gamma\in K$ s.t. $\gamma B\subset R$ and $\gamma B\not\subset A=P$. So we have all $\gamma mc_i \in R$ but there's some $\gamma mc_{i_0} \notin P$. But by considering the equation $\sum \gamma mc_i\alpha_i = 0$ mod $PS$, we have $\gamma mc_i \in P$ for all $i$, a contradiction.
+\end{comment}
 
 \subsection*{Exercise 3.37}
 
@@ -398,9 +669,9 @@ We describe the prime ideals involved in the factorizations in Theorem 25 (p. 52
 
 For $m=-1$. No primes divide $m$, so the first case doesn't occur. And when $p=2$, since $2=(1+i)(1-i)$, we have $(2,1+i)=(1+i)$.
 
-Now assume $p$ is odd and $n^2\equiv -1 \pmod{p}$ for some $n\in\ZZ$. So $p\mid n^2+1=(n+i)(n-i)$. From Exercise 1.8(b) we know $p$ is reducible in $\ZZ[i]$. Moreover, by considering the norm it's easy to see that $p$ can only be factored into two irreducible elements (thus, prime elements, becasue we're working in PID). Write $p=\alpha\beta$, then $\alpha,\beta\mid(n+i)(n-i)$. So they must divide $n+i$ or $n-i$. Note that they cannot divide the same one, otherwise we would have $p$ divides that element.
+Now assume $p$ is odd and $n^2\equiv -1 \pmod{p}$ for some $n\in\ZZ$. So $p\mid n^2+1=(n+i)(n-i)$. From Exercise 1.8(b) we know $p$ is reducible in $\ZZ[i]$. Moreover, by considering the norm it's easy to see that $p$ can only be factored into two irreducible elements (thus, prime elements, because we're working in PID). Write $p=\alpha\beta$, then $\alpha,\beta\mid(n+i)(n-i)$. So they must divide $n+i$ or $n-i$. Note that they cannot divide the same one, otherwise we would have $p$ divides that element.
 
-WLOG, say $\alpha\mid n+i$ and $\beta\mid n-i$ where $p=\alpha\beta$ is a product of irreducible elements. We claim that $(p,n+i)=(\alpha)$ and $(p,n-i)=(\beta)$. $\subseteq$ is clear by the selection of $\alpha,\beta$. Moreover, $\supseteq$ follows from the Bézout's identity. (Also note that since $p$ is clearly not a square in $\ZZ[i]$, so $\alpha\nsim\beta$. This means the two principal ideals are indeed distinct.)
+WLOG, say $\alpha\mid n+i$ and $\beta\mid n-i$ where $p=\alpha\beta$ is a product of irreducible elements. We claim that $(p,n+i)=(\alpha)$ and $(p,n-i)=(\beta)$. $\sbe$ is clear by the selection of $\alpha,\beta$. Moreover, $\spe$ follows from the Bézout's identity. (Also note that since $p$ is clearly not a square in $\ZZ[i]$, so $\alpha\nsim\beta$. This means the two principal ideals are indeed distinct.)
 
 For $m=-3$. When $p\mid -3$ (so $p=3$), since $3=(\sqrt{-3})(-\sqrt{-3})$, we have $(3,\sqrt{-3})=(-\sqrt{-3})$. On the other hand, the case where $p$ is odd and $n^2\equiv -3 \pmod{p}$ for some $n\in\ZZ$ is very similar to the case in $m=-1$. We skip the details.
 

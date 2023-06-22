@@ -56,10 +56,10 @@ Note that $(\alpha)=\{n(\alpha)+m(i\alpha)\mid n,m\in\ZZ\}$ forms a lattice in t
     \draw[->] (A) -- (C) node[midway, above] {$\vec v_2$};
 
 	\clip (-3,-3) rectangle (3,3);
-	\foreach \i in {-3,...,3} {
-		\draw[densely dotted,variable=\x] plot ({ \x },{ -2*(\x-5*\i/4) }); }
-	\foreach \j in {-3,...,3} {
-		\draw[densely dotted,variable=\x] plot ({ \x },{ \x/2-5*\j/4 }); }    
+		\foreach \i in {-3,...,3} {
+	\draw[densely dotted,variable=\x] plot ({ \x },{ -2*\x-5*\i/2 }); }
+		\foreach \j in {-3,...,3} {
+	\draw[densely dotted,variable=\x] plot ({ \x },{ \x/2-5*\j/4 }); }   
 
 	\draw[loosely dashed] (0,0) circle [radius=sqrt(5/4)];
     \end{tikzpicture}

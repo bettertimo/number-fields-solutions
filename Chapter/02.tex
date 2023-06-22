@@ -12,17 +12,17 @@
 
 If $a=0$, then $m=b^2n$. As $m$ is square-free, we must have $m=n$ (check this!). If $b=0$, then $m=a^2$. As $m$ is square-free, $m=1$ (check this!), which is not the case.
 
-Now, suppose $\exists \phi:\QQ(\sqrt{m})\isoto\QQ(\sqrt{n})$. Since $\phi(1)=1$, we have $\phi |_\QQ=\id_\QQ$. Note that $m=\phi(m)=(\phi(\sqrt{m}))^2$. So $\phi(\sqrt{m})=\pm \sqrt{m}\in \QQ(\sqrt{n})$. This means $\QQ(\sqrt{m})\subseteq\QQ(\sqrt{n})$. Similarly, by using $\phi^{-1}$, we have $\QQ(\sqrt{n})\subseteq\QQ(\sqrt{m})$. So $\QQ(\sqrt{m})=\QQ(\sqrt{n})$, a contradiction.
+Now, suppose $\exists \phi:\QQ(\sqrt{m})\isoto\QQ(\sqrt{n})$. Since $\phi(1)=1$, we have $\phi |_\QQ=\id_\QQ$. Note that $m=\phi(m)=(\phi(\sqrt{m}))^2$. So $\phi(\sqrt{m})=\pm \sqrt{m}\in \QQ(\sqrt{n})$. This means $\QQ(\sqrt{m})\sbe\QQ(\sqrt{n})$. Similarly, by using $\phi^{-1}$, we have $\QQ(\sqrt{n})\sbe\QQ(\sqrt{m})$. So $\QQ(\sqrt{m})=\QQ(\sqrt{n})$, a contradiction.
 
 \subsection*{Exercise 2.2}
 
 $I=(2,1+\sqrt{-3})$. Since $(2)=2\ZZ\oplus2\ZZ\sqrt{-3}$. So $1+\sqrt{-3}\notin(2)$ and hence $I\neq(2)$. Moreover, $I^2=(4,2+2\sqrt{-3},-2+2\sqrt{-3})$ and $2I=(4,2+2\sqrt{-3})$. So it's sufficient to show $-2+2\sqrt{-3}\in 2I$. But this is easily seen because $-2+2\sqrt{-3}=-1(4)+1(2+2\sqrt{-3})$. So we have two different factorizations of ideals $J:=I^2=2I$.
 
-Write $R=\ZZ[\sqrt{-3}]=\ZZ\oplus\ZZ\sqrt{-3}$. We first claim that $I$ is a prime ideal. Viewing $R$ and these ideals as additive groups. Since $\#(R/(2))=4$ and $(2)\subseteq I$, we have $\#(R/I)=1,2,4$. $1$ is impossible because if $I=R$ then $I^2=2I=R$ which is absurd. $4$ is also impossible because $(2)\varsubsetneq I$. Hence $\#(R/I)=2$ and so $R/I\simeq \ZZ/2\ZZ$, which is a field. This shows that $I$ is a maximal ideal and thus a prime ideal.
+Write $R=\ZZ[\sqrt{-3}]=\ZZ\oplus\ZZ\sqrt{-3}$. We first claim that $I$ is a prime ideal. Viewing $R$ and these ideals as additive groups. Since $\#(R/(2))=4$ and $(2)\sbe I$, we have $\#(R/I)=1,2,4$. $1$ is impossible because if $I=R$ then $I^2=2I=R$ which is absurd. $4$ is also impossible because $(2)\sbne I$. Hence $\#(R/I)=2$ and so $R/I\simeq \ZZ/2\ZZ$, which is a field. This shows that $I$ is a maximal ideal and thus a prime ideal.
 
-Now if $P\neq I$ is another prime ideal s.t. $(2)\subseteq P$. Then there exists $r\notin P$ and $r\in I$. (This is possible since we know $I$ is a maximal ideal so $I\varsubsetneq P$.) From $r\notin P$ we have $r^2\notin P$. On the other hand, from $r\in I$ we have $r^2\in I^2=2I \subseteq (2)\subseteq P$ so $r^2\in P$, which is absurd. This proves the uniqueness.
+Now if $P\neq I$ is another prime ideal s.t. $(2)\sbe P$. Then there exists $r\notin P$ and $r\in I$. (This is possible since we know $I$ is a maximal ideal so $I\sbne P$.) From $r\notin P$ we have $r^2\notin P$. On the other hand, from $r\in I$ we have $r^2\in I^2=2I \sbe (2)\sbe P$ so $r^2\in P$, which is absurd. This proves the uniqueness.
 
-If $(2)=P_1\cdots P_n$ is a product of prime ideals, then for each $i$ we have $(2)\subseteq P_i$ and so $P_i=I$. This means $(2)=I^n$. Note that $n$ cannot be $1$, so we may write $(2)=I^2J=2IJ$ for some ideal $J$. (If $n=2$, $J=R$.) This is absurd because we know $(2)=2R\varsupsetneq 2I \supseteq 2IJ$.
+If $(2)=P_1\cdots P_n$ is a product of prime ideals, then for each $i$ we have $(2)\sbe P_i$ and so $P_i=I$. This means $(2)=I^n$. Note that $n$ cannot be $1$, so we may write $(2)=I^2J=2IJ$ for some ideal $J$. (If $n=2$, $J=R$.) This is absurd because we know $(2)=2R\spne 2I \spe 2IJ$.
 
 \subsection*{Exercise 2.3}
 
@@ -67,7 +67,7 @@ $$
 =(\omega^2-\omega)^2=-3
 $$
 One may check that $\sqrt{-3}=-(\omega^2-\omega)=\omega-\omega^2$.
-On the other hand, condiser $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{2\pi i/5}$. So
+On the other hand, consider $\sqrt{5}$. In this case take $p=5$ and $\omega=e^{2\pi i/5}$. So
 $$\disc(\omega)=
 \begin{vmatrix}
     1 & \omega & \omega^2 & \omega^3 \\
@@ -146,7 +146,7 @@ Write $(1+\sqrt{2})^k=a_k+b_k\sqrt{2}$. Since $\Nr(1+\sqrt{2})=-1$, we have $$\N
 
 (a) $\Nr(a+b\sqrt{-5})=a^2-5b^2$. Suppose $a^2-5b^2=2,3$ has integral solution. Then $a^2-5b^2 \equiv a^2-b^2 \equiv 2 \pmod{4}$, which is impossible. And $a^2-5b^2 \equiv a^2 \equiv 3 \pmod{5}$, which is also impossible.
 
-(b) $2\cdot3=(1+\sqrt{-5})(1-\sqrt{-5})=6$. Since by Exercise 2.13, $\pm1$ are the only units in $\ZZ[\sqrt{-5}]$. So $2,3,1+\sqrt{-5},1-\sqrt{-5}$ are pairwise nonaassociated. Hence, the above factorizations are distinct.
+(b) $2\cdot3=(1+\sqrt{-5})(1-\sqrt{-5})=6$. Since by Exercise 2.13, $\pm1$ are the only units in $\ZZ[\sqrt{-5}]$. So $2,3,1+\sqrt{-5},1-\sqrt{-5}$ are pairwise non-associated. Hence, the above factorizations are distinct.
 
 \subsection*{Exercise 2.16}
 
@@ -271,7 +271,7 @@ We know $\disc(\alpha)=\pm \Nr(h'(\alpha))$, so it's enough to show $\Nr(h'(\alp
 
 \subsection*{Exercise 2.22}
 
-Extend all $\sigma_i$ to some normal extension $L$ of $\QQ$ so that they become automorphisms of $L$, still denote them as $\sigma_1,\ldots,\sigma_n$. Note that $\sigma_i(\alpha_j)\in \Ocal_L$. Moreover, observe that $P+N,PN$ remain unchanged by the actoin of each $\QQ$-automorphism of $L$. So by Galois theory we have $P+N,PN\in\QQ$. Hence, $P+N,PN\in\ZZ$. Hence, $d=(P+N)^2-4PN \equiv 0,1 \pmod{4}$.
+Extend all $\sigma_i$ to some normal extension $L$ of $\QQ$ so that they become automorphisms of $L$, still denote them as $\sigma_1,\ldots,\sigma_n$. Note that $\sigma_i(\alpha_j)\in \Ocal_L$. Moreover, observe that $P+N,PN$ remain unchanged by the action of each $\QQ$-automorphism of $L$. So by Galois theory we have $P+N,PN\in\QQ$. Hence, $P+N,PN\in\ZZ$. Hence, $d=(P+N)^2-4PN \equiv 0,1 \pmod{4}$.
 
 \subsection*{Exercise 2.23 \color{red}(incomplete, missing (a))}
 
@@ -369,9 +369,13 @@ $$
 
 Taking determinants and squaring give us $\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)\cdot C$. Note that these three are all integers by our adjustment. Hence, we have $\disc(m\gamma_1,\ldots,m\gamma_n)$ divides $\disc(m\beta_1,\ldots,m\beta_n)$. Using similar argument can show $\disc(m\beta_1,\ldots,m\beta_n)$ divides $\disc(m\gamma_1,\ldots,m\gamma_n)$ and so they are in fact the same. Hence, we have $$m^{2n}\disc(\beta_1,\ldots,\beta_n)=\disc(m\beta_1,\ldots,m\beta_n)=\disc(m\gamma_1,\ldots,m\gamma_n)=m^{2n}\disc(\gamma_1,\ldots,\gamma_n)$$ So the result follows.
 
-\subsection*{Exercise 2.27 \color{red}(incomplete, missing (a) and (b))}
+\subsection*{Exercise 2.27 \color{red}(incomplete, missing (a), (b) and (c))}
 
-(d) Let $\beta_1,\ldots,\beta_n$ be an integral basis and by wrting each $\alpha_i$ to the linear combination of $\beta_1,\ldots,\beta_n$ over $\ZZ$ we obtain
+\begin{comment}
+(a) It's enough to show that $G/H$ is a torsion $\ZZ$-module. (Then by the fundamental theorem of finitely generated abelian groups, $G/H$ is finite.) Suppose not, then there exists $g\in G$ s.t. $mg \notin H$ for all $m\in \ZZ \setminus\{0\}$. Write $H = \oplus_{i=1}^n \ZZ h_i$. We check that $\{g,h_1,\ldots,h_n\}$ is linearly independent over $\ZZ$. Suppose $m_0g + \sum_{i=1}^n m_ih_i = 0$ for some $m_i\in \ZZ$. Then since $m_0g \in H$, we must have $m_0 = 0$. And so $m_1=\cdots=m_n=0$. This completes the claim. Consequently, $H \oplus \ZZ g = ( \oplus_{i=1}^n \ZZ h_i ) \oplus \ZZ g \sbe G$ is of rank $n+1$, a contradiction.
+\end{comment}
+
+(d) Let $\beta_1,\ldots,\beta_n$ be an integral basis and by writing each $\alpha_i$ to the linear combination of $\beta_1,\ldots,\beta_n$ over $\ZZ$ we obtain
 $$
 \begin{pmatrix}
     \alpha_1  \\
@@ -394,9 +398,11 @@ $$
 \end{pmatrix}
 $$
 
-By applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations, taking determinants and squaring, we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(\beta_1,\ldots,\beta_n)\cdot \det(C^T)^2=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$ is the coefficients matrix above. If $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$, then we have $\det(C)=\pm 1$. (Here we've used the fact that the discriminant of any integral basis is nonzero.) This means $C$ is invertible and $C^{-1}\in\Mat_n(\ZZ)$. By appying $C^{-1}$ to the system of equations above we may express each $\beta_i$ to the linear combination of $\alpha_1,\ldots,\alpha_n$ over $\ZZ$ (in a unique way, of course). This shows $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
+By applying the $n$ embeddings of $K$ in $\CC$ to these $n$ equations, taking determinants and squaring, we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(\beta_1,\ldots,\beta_n)\cdot \det(C^T)^2=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$ is the coefficients matrix above.
 
-(e) Using the same notation in (d) we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$. All three of them are integers, so if $\disc(\alpha_1,\ldots,\alpha_n)$ is sqaure-free then we must have $\det(C)^2=1$. Thus $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$ and by (d) we have $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
+Now, if $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$, then we have $\det(C)=\pm 1$. (Here we've used the fact that the discriminant of any integral basis is nonzero.) This means $C$ is invertible and $C^{-1}\in\Mat_n(\ZZ)$. By applying $C^{-1}$ to the system of equations above we may express each $\beta_i$ to the linear combination of $\alpha_1,\ldots,\alpha_n$ over $\ZZ$ (in a unique way, of course). This shows $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
+
+(e) Using the same notation in (d) we have $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)\cdot \det(C)^2$ where $C\in\Mat_n(\ZZ)$. All three of them are integers. So if $\disc(\alpha_1,\ldots,\alpha_n)$ is square-free then we must have $\det(C)^2=1$. Thus $\disc(\alpha_1,\ldots,\alpha_n)=\disc(R)$, and by (d) we have $\{\alpha_1,\ldots,\alpha_n\}$ is an integral basis.
 
 \subsection*{Exercise 2.28}
 
@@ -449,7 +455,7 @@ Let $x=(\sqrt{3}+\sqrt{7})/2$, then it's easy to check that $x$ satisfies $x^4-5
     \draw (Q) -- (K) -- (E) -- (Q) -- (L) -- (E);
     \end{tikzpicture}
 \end{center}
-Let $R=\ZZ[\sqrt{3}],S=\ZZ[\sqrt{7}],T$ be the rings of algebraic integers of $\QQ(\sqrt{3}),\QQ(\sqrt{7}),\QQ(\sqrt{3},\sqrt{7})$, respectively. Then we have $x\in T$, and it's easy to see that $x\notin RS$. Thus, $RS\varsubsetneq T$. 
+Let $R=\ZZ[\sqrt{3}],S=\ZZ[\sqrt{7}],T$ be the rings of algebraic integers of $\QQ(\sqrt{3}),\QQ(\sqrt{7}),\QQ(\sqrt{3},\sqrt{7})$, respectively. Then we have $x\in T$, and it's easy to see that $x\notin RS$. Thus, $RS\sbne T$. 
 
 Note that we have $\disc(R)=12$ and $\disc(S)$=28, so $d:=\gcd(\disc(R),\disc(S))=4\neq1$.
 
@@ -494,7 +500,7 @@ Consider $\Bcal=\{1,f_1(\alpha)/d_1,\ldots,f_{k-1}(\alpha)/d_{k-1}\}$. This is c
     x &= m_0+\cdots+\frac{m_{n-1}f_{n-1}(\alpha)}{d_{n-1}} \\
     &= \frac{m'_0}{d}+\cdots+\frac{m'_{k-1}\alpha^{k-1}}{d}
 \end{align*}
-Since $k-1\leq m-1$, by comparing the coeffients we may conclude that $x$ is indeed a linear combination of elements in $\Bcal$ over $\ZZ$. Hence, we have $$R_k=\ZZ\oplus\ZZ\frac{f_1(\alpha)}{d_1}\oplus\cdots\oplus\ZZ\frac{f_{k-1}(\alpha)}{d_{k-1}}$$
+Since $k-1\leq m-1$, by comparing the coefficients we may conclude that $x$ is indeed a linear combination of elements in $\Bcal$ over $\ZZ$. Hence, we have $$R_k=\ZZ\oplus\ZZ\frac{f_1(\alpha)}{d_1}\oplus\cdots\oplus\ZZ\frac{f_{k-1}(\alpha)}{d_{k-1}}$$
 
 Let $m$ be any positive integer s.t. $mR_k\subset\ZZ[\alpha]$. Then we have $mf_{k-1}(\alpha)/d_{k-1}\in\ZZ[\alpha]$. Observing the coefficient of $\alpha^{k-1}$ we have $m/d_{k-1}\in\ZZ$, so $d_{k-1}\leq m$. Now we check $d_{k-1}$ satisfies $d_{k-1}R_k\subset \ZZ[\alpha]$. But this follows easily because we have $d_1\mid d_2\mid\cdots\mid d_{k-1}$.
 
@@ -502,7 +508,7 @@ Let $m$ be any positive integer s.t. $mR_k\subset\ZZ[\alpha]$. Then we have $mf_
 
 \subsection*{Exercise 2.40}
 
-(a) We first claim that $1,\alpha,\ldots,\alpha^{n-1}$ and $1,f_1(\alpha),\ldots,f_{n-1}(\alpha)$ generate the same additive subgroup. Denote them as $G_1,G_2$, respectively. It's easy to see $G_1\supseteq G_2$. On the other hand given $x\in G_1$, write $x=m_0+\cdots+m_{n-1}\alpha^{n-1}$, we want to find integers $m'_0,\ldots,m'_{n-1}$ s.t. $$x=m_0+m_1\alpha+\cdots+m_{n-1}\alpha^{n-1}=m'_0+m'_1f_1(\alpha)+\cdots+m'_{n-1}f_{n-1}(\alpha)$$ This can be done easily by comparing the coefficients and solving $m'_i$ in the order of $m'_{n-1},m'_{n-2},\ldots,m'_0$. Note that the resulting $m'_i$'s are indeed integers. Hence $x\in G_2$.
+(a) We first claim that $1,\alpha,\ldots,\alpha^{n-1}$ and $1,f_1(\alpha),\ldots,f_{n-1}(\alpha)$ generate the same additive subgroup. Denote them as $G_1,G_2$, respectively. It's easy to see $G_1\spe G_2$. On the other hand given $x\in G_1$, write $x=m_0+\cdots+m_{n-1}\alpha^{n-1}$, we want to find integers $m'_0,\ldots,m'_{n-1}$ s.t. $$x=m_0+m_1\alpha+\cdots+m_{n-1}\alpha^{n-1}=m'_0+m'_1f_1(\alpha)+\cdots+m'_{n-1}f_{n-1}(\alpha)$$ This can be done easily by comparing the coefficients and solving $m'_i$ in the order of $m'_{n-1},m'_{n-2},\ldots,m'_0$. Note that the resulting $m'_i$'s are indeed integers. Hence $x\in G_2$.
 
 By Exercise 2.26, we have $\disc(\alpha)=\disc(1,\alpha,\ldots,\alpha^{n-1})=\disc(1,f_1(\alpha),\ldots,f_{n-1}(\alpha))$. Since 
 \begin{align*}
@@ -530,7 +536,7 @@ Let's first compute some useful numbers. $\alpha:=\sqrt[3]{m}$. $\Irr_\QQ(\alpha
 
 (a) $\Irr_\QQ(\alpha)'=3x^2$. By Theorem 8 (p. 19), $\disc(\alpha)=-\Nr(3\alpha^2)=-3^3\Nr(\alpha^2)=-27m^2$.
 
-By Exercise 2.40(d), $d_1^6\mid -27m^2=-27h^2k^4$ where $h,k$ are reletively prime and square-free. If $3\mid k$ then $d_1=1,3$. In this case $9\mid m$. Otherwise if $3\nmid k$ then $d_1=1$.
+By Exercise 2.40(d), $d_1^6\mid -27m^2=-27h^2k^4$ where $h,k$ are relatively prime and square-free. If $3\mid k$ then $d_1=1,3$. In this case $9\mid m$. Otherwise if $3\nmid k$ then $d_1=1$.
 
 (b) In the case $9\mid m$. Write $f_1(x)=x+a\in\ZZ[x]$. If $d_1=3$, then $\beta:=f_1(\alpha)/d_1=(\alpha+a)/3\in R$. Observe that
 \begin{align*}
@@ -568,7 +574,7 @@ By writing $\alpha^2/k,(\alpha^2\pm k^2\alpha+k^2)/3k$ as the linear combination
 
 (f) By Exercise 40(a), we have $-27m^2=d_2^2\disc(R)$. So $-3(3m/d_2)^2=\disc(R)\in\ZZ$. This forces $3m/d_2\in\ZZ$, i.e., $d_2\mid 3m$.
 
-For the following problems, let's look at the big picture first. Since $m=hk^2$ where $h,k$ are relatively prime and sqaure-free, we may write $m=(p_1\cdots p_r)(q_1\cdots q_s)^2$ where $p_i,q_j$ are distinct primes. From (e) we know $k\mid d_2$ when $m\not\equiv \pm1 \pmod{9}$ and $3k\mid d_2$ when $m\equiv \pm1 \pmod{9}$. So
+For the following problems, let's look at the big picture first. Since $m=hk^2$ where $h,k$ are relatively prime and square-free, we may write $m=(p_1\cdots p_r)(q_1\cdots q_s)^2$ where $p_i,q_j$ are distinct primes. From (e) we know $k\mid d_2$ when $m\not\equiv \pm1 \pmod{9}$ and $3k\mid d_2$ when $m\equiv \pm1 \pmod{9}$. So
 $$
 d_2 =
 \begin{cases}
