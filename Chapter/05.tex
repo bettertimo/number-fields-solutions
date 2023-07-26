@@ -1,0 +1,352 @@
+\documentclass[../Marcus.tex]{subfiles}
+
+\begin{document}
+
+\chapter{The Ideal Class Group and the Unit Group}
+
+\subsection*{Exercise 5.1}
+
+\begin{align*}
+&|\ldots,\sigma(\alpha_i),\ldots,\Rcal\tau(\alpha_i),\Ical\tau(\alpha_i),\ldots|     \\
+={} &|\ldots,\sigma(\alpha_i),\ldots,\ovl{\tau}(\alpha_i),\Ical\tau(\alpha_i),\ldots|  
+&&\ovl{\tau}(\alpha_i) = \Ical \tau(\alpha_i) \times (-i) + \Rcal \tau(\alpha_i)       \\
+={} &\frac{1}{(2i)^s} |\ldots,\sigma(\alpha_i),\ldots,\ovl{\tau}(\alpha_i),\Ical\tau(\alpha_i)\cdot(2i),\ldots| 
+&&\Ical \tau(\alpha_i) \times (2i)    \\
+={} &\frac{1}{(2i)^s} |\ldots,\sigma(\alpha_i),\ldots,\ovl{\tau}(\alpha_i),\tau(\alpha_i),\ldots|  
+&&\tau(\alpha_i) = \ovl{\tau}(\alpha_i) + \Ical\tau(\alpha_i)\cdot(2i)
+\end{align*}
+
+\subsection*{Exercise 5.2}
+
+We let $V,W$ be the matrices formed by taking the $v_i,w_i$ as the rows, respectively. By writing the $v$'s (resp. $w$'s) in terms of the $w$'s (resp. $v$'s) over $\ZZ$, we have $V=CW$ (resp. $W=DV$) where $C,D \in \Mat_n(\ZZ)$. And by taking determinants to the equation $V=CDV$, we have $\det(V) = \det(C)\det(D)\det(V)$. Since $\det(V)\neq0$, this implies $\det(C)\det(D)=1$. And since $C \in \Mat_n(\ZZ)$, we have $\det(C)=\pm1$. Hence $|\det(V)| = |\det(C) \det(W)| = |\det(W)|$.
+
+\subsection*{Exercise 5.3}
+
+By Exercise 2.27 (b), there exists a generating set $\{\beta_1,\ldots,\beta_n\}$ of $\wedge$ and $d_1,\ldots,d_n \in \ZZ$ s.t. $\{d_1\beta_1,\ldots,d_n\beta_n\}$ is a generating set of $M$. Let $B,B'$ be the matrices formed by taking the $\beta_i,d_i\beta_i$ as the rows, respectively. Then $\vol(\RR^n/M) = |\det(B')| = |d_1\cdots d_n| |\det(B)| = \#(\wedge/M) \cdot \vol(\RR^n/\wedge)$.
+
+\subsection*{Exercise 5.4}
+
+Let $A$ be that set. We first check that for any $x=(x_1,\ldots,x_n),y=(y_1,\ldots,y_n) \in A$, their midpoint $(x+y)/2\in A$. Using the given inequality, we see that
+\begin{align*}
+&\sum_{i=1}^r \left| \frac{x_i+y_i}{2} \right| + 2\sum_{\substack{j=1 \\ \text{odd} }}^{n-1-r} \sqrt{ \left( \frac{x_{r+j}+y_{r+j}}{2} \right)^2 + \left( \frac{x_{r+j+1}+y_{r+j+1}}{2} \right)^2 }       \\
+\leq{} &\sum_{i=1}^r \left( \frac{ |x_i| }{2} + \frac{ |y_i| }{2} \right)
++ 2\sum_{\substack{j=1 \\ \text{odd} }}^{n-1-r} \frac{1}{2} \left( \sqrt{x_{r+j}^2+x_{r+j+1}^2} +  \sqrt{y_{r+j}^2+y_{r+j+1}^2} \right)      \\
+={} &\frac{1}{2} \left( \sum_{i=1}^r |x_i|
++ 2\sum_{\substack{j=1 \\ \text{odd} }}^{n-1-r}  \sqrt{x_{r+j}^2+x_{r+j+1}^2} 
++ \sum_{i=1}^r |y_i| 
++ 2\sum_{\substack{j=1 \\ \text{odd} }}^{n-1-r} \sqrt{y_{r+j}^2+y_{r+j+1}^2}   \right)   \\
+\leq{} &\frac{1}{2}(n+n) = n
+\end{align*}
+So indeed $(x+y)/2 \in A$.
+
+In general, we note that the line segment $L := \{(1-t)x+ty \mid 0\leq t \leq 1\}$ joining $x$ and $y$ contains a dense subset $D := \{(1-t)x+ty \mid 0 \leq t = k/2^m \leq 1\}$ (so $\ovl{D} \cap L = L$, i.e., the closure of $D$ in $L$ is $L$). Since we know $D \sbe A$ by the first part of the proof, so $L \sbe \ovl{D} \sbe \ovl{A} = A$.
+
+\subsection*{Exercise 5.5}
+
+$n=1$ is clear. Suppose we have $n^n/n! \geq 2^{n-1}$. We will claim that
+$$
+\frac{(n+1)^{n+1}}{(n+1)!} = \frac{(n+1)^n}{n!} \geq \frac{2n^n}{n!} \geq 2 \cdot 2^{n-1} = 2^n
+$$
+is true by showing the inequality $(x+1)^x \geq 2x^x$ holds for $x\geq 1$. That is, $(1+1/x)^x \geq 2$ for $x\geq 1$. Since this is obviously true for $x=1$, we then turn to show that it is increasing from $x=1$. And it's sufficient to show the same thing for $\ln(1+1/x)^x = x\ln(1+1/x)$. But note that
+$$
+x\ln\left(1+\frac{1}{x}\right)
+= \frac{ \ln(1+\frac{1}{x}) }{ \frac{1}{x} }
+= \frac{ \ln(1+\frac{1}{x}) -\ln1}{ 1+ \frac{1}{x} -1}
+=: \frac{ f(1+\frac{1}{x}) -f(1)}{ (1+ \frac{1}{x}) -1}
+$$
+is just the slope of the line passing through $(1,f(1))$ and $(1+1/x,f(1+1/x))$ where $f(x)=\ln x$. So as $x$ increases, so is the slope.
+
+Combining the inequality $n^n/n! \geq 2^{n-1}$ with the Corollary 2 of Theorem 37 (pp. 95-96), we have
+$$
+\sqrt{|\disc(R)|}
+\geq \frac{n^n}{n!} \left(\frac{\pi}{4}\right)^s
+\geq 2^{n-1} \left(\frac{\pi}{4}\right)^s
+= 2^{n-1-2s} \pi^s
+= 2^{r-1} \pi^s
+$$
+So $|\disc(R)| \geq 4^{r-1}\pi^{2s}$.
+
+In particular, if $R\neq\ZZ \implies n=r+2s>1 \implies r>1$ or $s\geq 1 \implies |\disc(R)| >1$. This shows Corollary 3 of Theorem 37 (p. 96).
+
+\subsection*{Exercise 5.6}
+
+In this exercise, all fields are real quadratic field. So we know $n=2$ and $s=0$ for all $m$.
+
+For $m=2$, we have $\|J\| \leq 1$. So every ideal class contains $R$ and hence $R$ is a PID. The same is also true for $m=3,5$.
+
+For $m=6$, we have $\|J\| \leq 2$. So consider the primes lying over $2$: $2R=(2,\sqrt{6})^2$. This means the possible prime divisors of $J\neq R$ is only $(2,\sqrt{6})$. We check that it is principal (and hence $R$ is a PID).
+
+We look for an element whose norm is $\pm2$. Clearly $2+\sqrt{6}$ works. So $\|(2+\sqrt{6})\| = |\Nr(2+\sqrt{6})| = 2$, which is a prime. This implies $(2+\sqrt{6})$ is a prime. And it lies over $2$ because we know $\|(2+\sqrt{6})\|$ is a power of $p$ where $p$ is the unique prime lying under $(2+\sqrt{6})$. Hence, $(2,\sqrt{6}) = (2+\sqrt{6})$ is principal.
+
+For $m=7$, we have $\|J\| \leq 2$. So consider the primes lying over $2$: $2R=(2,1+\sqrt{7})^2$. This means the possible prime divisors of $J\neq R$ is only $(2,1+\sqrt{7})$. We also check that it is principal.
+
+We look for an element whose norm is $\pm2$. Clearly $3+\sqrt{7}$ works. So $\|(3+\sqrt{7})\| = 2$, which is a prime. This implies $(3+\sqrt{7})$ is a prime lying over $2$. Hence, $(2,1+\sqrt{7}) = (3+\sqrt{7})$ is principal.
+
+For $m=173$, we have $\|J\| \leq 6$. So consider the primes lying over $2,3,5$: $2R,3R,5R$ are all primes, which are principal. So $J$ is principal. A similar situation happens for $m=293,437$.
+
+\subsection*{Exercise 5.7}
+
+For $m=10$, we have $\|J\| \leq 3$. So consider the primes lying over $2,3$:
+\begin{alignat*}{2}
+2R &= (2,\sqrt{10})^2 =: P_2^2  &&\implies \|P_2\| = 2    \\
+3R &= (3,1+\sqrt{10})(3,1-\sqrt{10}) =: P_3Q_3   &&\implies \|P_3\| = \|Q_3\| = 3
+\end{alignat*}
+We check that these three are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{10},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2-10b^2 = \pm2$. But by considering modulo $5$ this implies $a^2 \equiv 2,3 \pmod{5}$, a contradiction. A similar argument works for the other two primes.
+
+Now, we look for an element whose norm is $\pm6$. Clearly $4+\sqrt{10}$ works. And note that if $P$ is a prime divisor of $(4+\sqrt{10})$, then $\|P\| \mid \|(4+\sqrt{10})\| = 6$. So $P$ must lie over $2,3$. This implies that one of the prime divisors of $(4+\sqrt{10})$ is $P_2$, and the other one (call it $U$) is either $P_3$ or $Q_3$. So if we let $U'$ be the remaining prime, then $P_2U,P_2^2,UU'$ are all principal, which means $\ovl{P_2} \cdot \ovl{U} = \ovl{P_2}^2 = \ovl{U} \cdot \ovl{U'}$, which means $\ovl{P_2} = \ovl{U}= \ovl{U'} = \ovl{P_3} = \ovl{Q_3}$. Hence, $\ZZ[\sqrt{10}]$ has two ideal classes.
+
+\subsection*{Exercise 5.8}
+
+\begin{comment}
+For $m=223$, we have $\|J\| \leq 14$. So consider the primes lying over $2,3,5,7,11,13$:
+\begin{align*}
+2R &= (2,1+\sqrt{223})^2   \\
+3R &= (3,1+\sqrt{223})(3,1-\sqrt{223})    \\
+5R &= \text{prime}    \\
+7R &= \text{prime}    \\
+11R &= (11,5+\sqrt{223})(11,5-\sqrt{223})    \\
+13R &= \text{ prime}
+\end{align*}
+
+We look for an element whose norm is $\pm2$: $15+\sqrt{223}$ works. So $\|(15+\sqrt{223})\| = 2$, which is a prime. This implies $(15+\sqrt{223})$ is a prime lying over $2$. Hence, $(2,1+\sqrt{223}) = (15+\sqrt{223})$ is principal.
+\end{comment}
+
+\subsection*{Exercise 5.9}
+
+In this exercise, all fields are imaginary quadratic field. So we know $n=2$ and $s=1$ for all $m$.
+
+For $m=-1$, we have $\|J\| \leq 1$. So every ideal class contains $R$ and hence $R$ is a PID. The same is also true for $m=-2,-3,-7$.
+
+For $m=-11$, we have $\|J\| \leq 2$. So consider the primes lying over $2$: $2R$ is a prime, which is principal. So $J$ is principal and hence $R$ is a PID. A similar situation happens for $m=-19,-43,-67,-163$.
+
+\subsection*{Exercise 5.10}
+
+Suppose $R:=\AA\cap\QQ(\sqrt{m})$ is a PID.
+
+(a) Suppose $m\not\equiv 5 \pmod{8}$. We will show that $m=-1,-2,-7$. Since each prime $P$ lying over $2$ is principal, we may write $P=(\alpha)$. Note that we have $|\Nr(\alpha)| = \|P\| = 2$ whenever $m\not\equiv 5 \pmod{8}$.
+
+Case 1: $m$ is even. Write $\alpha = a+b\sqrt{m},a,b\in\ZZ$. Then $a^2 - mb^2 = 2$. This can only happen when $m=-2$.
+
+Case 2: $m$ is odd and $m\equiv3 \pmod{4}$. Write $\alpha = a+b\sqrt{m},a,b\in\ZZ$. Then $a^2 - mb^2 = 2$. This can only happen when $m=-1$.
+
+Case 3: $m$ is odd and $m\equiv1 \pmod{8}$. Write $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$. Then $a^2 - mb^2 = 8$. This can only happen when $m=-7$.
+
+(b) {\color{red}(There's a typo in here. Change $m<4p$ to $p<|\disc(R)|/4$.)}\footnote{Cohn, Harvey. \textit{Advanced number theory}. Courier Corporation, 2012, p. 151.} Suppose on the contrary that $m$ is a square mod $p$. Let $P$ be any prime lying over $p$. Note that no matter $p$ divides $m$ or not, we always have $\|P\|=p$. So if we write $P=(\alpha)$, then $|\Nr(\alpha)| = p$.
+
+Case 1: $m\equiv2,3 \pmod{4}$ (so $\disc(R)=4m$ and by assumption, $p<4|m|/4 = |m|$). Write $\alpha = a+b\sqrt{m},a,b\in\ZZ$. Then we have $a^2 - mb^2 = a^2 + |m|b^2 = p$. But as $p<|m|$, this is impossible.
+
+Case 2: $m\equiv1 \pmod{4}$ (so $\disc(R)=m$ and by assumption, $p<|m|/4$). Write $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$. Then we have $a^2 - mb^2 = a^2 + |m|b^2 = 4p$. But as $4p<|m|$, this is also impossible.
+
+The above two cases show that $m$ is not a square mod $p$.
+
+(c) Suppose $m<-19$, then by (a) we know $m\equiv5 \pmod{8}$. And since $m$ is square-free, we know $m\neq-27$. This means $m\leq-35$. On the other hand, since $m\equiv1 \pmod{4}$, $\disc(R)=m$. So by (b), for any odd prime $p$ with $p<|m|/4$, we have $m$ is not a square mod $p$. Since $|m|\geq35$, so the primes $p=3,5,7$ can be used.
+
+For $p=3$, this means $m \equiv 2 \pmod{3}$. For $p=5$, this means $m \equiv 2,3 \pmod{5}$. And for $p=7$, this means $m \equiv 3,5,6 \pmod{7}$. These three together with $m\equiv5 \pmod{8}$ give us six systems of congruence equations, which correspond to the solutions $m\equiv -43,-67,-163,-403,-547,-667 \pmod{840}$ by Chinese remainder theorem.
+
+(d) For $0>m\geq-19$, we shall by (a) only consider $m=-1,-2,-3,-7,-11,-19$, which have already been verified are PID in Exercise 5.9. For $-19 > m > -2000$, we see by (c) that the candidates are
+\begin{align*}
+m = &-43,-883,-1723,-67,-907,-1747,-163,-1003,\\
+&-1843,-403,-1243,-547,-1387,-667,-1507
+\end{align*}
+And by Exercise 5.9 again, $m=-43,-67,-163$ have already been verified are PID.
+
+Now, for the remaining numbers, we use (b): If there exists an odd prime $p<|m|/4$ s.t. $(m/p) = 1$, then that $m$ can be eliminated. And from the proof of (c) we know we should start from $p=11$. We in fact don't need to go too far:
+$$
+\begin{array}{c|c|c|c|c|c|c}
+m&-883&-1723&-907&-1747&-1003&-1843      \\
+\hline
+p&13&11&13&17&11&11   \\
+\hline
+m&-403&-1243&-547&-1387&-667&-1507     \\
+\hline
+p&11&17&11&13&11&13\\
+\end{array}
+$$
+
+\subsection*{Exercise 5.11}
+
+\subsection*{Exercise 5.12}
+
+\subsection*{Exercise 5.13}
+
+For $m=-14$, we have $\|J\| \leq 4$. So consider the primes lying over $2,3$:
+\begin{alignat*}{2}
+2R &= (2,\sqrt{-14})^2 =: P_2  &&\implies \|P_2\| = 2      \\
+3R &= (3,1+\sqrt{-14})(3,1-\sqrt{-14}) =: P_3Q_3    &&\implies \|P_3\| = \|Q_3\| = 3
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these three primes, and $\|J\| \leq 4$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{P_3},\ovl{Q_3}$. So the ideal class group has at most four elements. 
+
+We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{-14},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+14b^2 = \pm2$. But this is clearly impossible. A similar argument works for the other two primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_2}$ has order two, so three can be eliminated.
+
+Note that if $P_2P_3 = (\alpha)$ for some $\alpha=a+b\sqrt{-14},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\|\|P_3\| = 6$. So we have $a^2+14b^2 = \pm6$. But this is clearly impossible. This means $\ovl{P_2} = \ovl{P_2}^{-1} \neq \ovl{P_3}$. So two can also be eliminated.
+
+It remains to decide it is cyclic four or Klein four. We note that in the Klein four group, any two non-identity elements add up to the third non-identity element. But in our case $\ovl{P_3} \cdot \ovl{Q_3}$ is the identity. This shows that the ideal class group of $\ZZ[\sqrt{-14}]$ is cyclic four.
+
+For $m=-39$, we have $\|J\| \leq 3$. So consider the primes lying over $2,3$:
+\begin{alignat*}{2}
+2R &= \left(2,\frac{1+\sqrt{-39}}{2}\right) \left(2,\frac{1-\sqrt{-39}}{2}\right)  =: P_2Q_2  &&\implies \|P_2\| = \|Q_2\| = 2     \\
+3R &= (3,\sqrt{-39})^2 =: P_3^2  &&\implies \|P_3\| = 3
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these three primes, and $\|J\| \leq 3$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{Q_2},\ovl{P_3}$. So the ideal class group has at most four elements.
+
+We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+39b^2 = \pm8$. But this is clearly impossible. A similar argument works for the other two primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_3}$ has order two, so three can be eliminated.
+
+Note that if $P_2P_3 = (\alpha)$ for some $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$, then $|\Nr(\alpha)| = \|P_2\|\|P_3\| = 6$. So we have $a^2+39b^2 = \pm24$. But this is clearly impossible. This means $\ovl{P_3} = \ovl{P_3}^{-1} \neq \ovl{P_2}$. So two can also be eliminated.
+
+It remains to decide it is cyclic four or Klein four. Similar as before, since $\ovl{P_2} \cdot \ovl{Q_2}$ is the identity, so the ideal class group of $\AA \cap \QQ[\sqrt{-39}]$ is cyclic four.
+
+\subsection*{Exercise 5.14}
+
+For $m=-21$, we have $\|J\| \leq 5$. So consider the primes lying over $2,3,5$:
+\begin{alignat*}{2}
+2R &= (2,1+\sqrt{-21})^2 =: P_2^2  &&\implies \|P_2\| = 2    \\
+3R &= (3,\sqrt{-21})^2 =: P_3^2     &&\implies \|P_3\| = 3    \\
+5R &= (5,2+\sqrt{-21})(5,2-\sqrt{-21}) =: P_5Q_5  &&\implies \|P_5\| = \|Q_5\| = 5
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these four primes, and $\|J\| \leq 5$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{P_3},\ovl{P_5},\ovl{Q_5}$. So the ideal class group has at most five elements.
+
+We claim that the above four primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{-21},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+21b^2 = \pm2$. But this is clearly impossible. A similar argument works for the other primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_2}$ has order two, so three and five can be eliminated.
+
+Note that if $P_2P_3 = (\alpha)$ for some $\alpha=a+b\sqrt{-21},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\|\|P_3\| = 6$. So we have $a^2+21b^2 = \pm6$. But this is clearly impossible. This means $\ovl{P_2} = \ovl{P_2}^{-1} \neq \ovl{P_3}$. So two can also be eliminated.
+
+It remains to decide it is cyclic four or Klein four. We note that in our case, there're at least two different elements of order two, i.e., $\ovl{P_2}$ and $\ovl{P_3}$. This can only happen in the Klein four group. Hence the ideal class group of $\ZZ[\sqrt{-21}]$ is Klein four.
+
+For $m=-30$, we have $\|J\| \leq 6$. So consider the primes lying over $2,3,5$:
+\begin{alignat*}{2}
+2R &= (2,\sqrt{-30})^2 =: P_2^2  &&\implies \|P_2\| = 2   \\
+3R &= (3,\sqrt{-30})^2 =: P_3^2  &&\implies \|P_3\| = 3   \\
+5R &= (5,\sqrt{-30})^2 =: P_5^2  &&\implies \|P_5\| = 5
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these three primes, and $\|J\| \leq 6$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{P_3},\ovl{P_5},\ovl{P_2P_3}$. So the ideal class group has at most five elements.
+
+We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{-30},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+30b^2 = \pm2$. But this is clearly impossible. A similar argument works for the other primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_2}$ has order two, so three and five can be eliminated.
+
+Note that if $P_2P_3 = (\alpha)$ for some $\alpha=a+b\sqrt{-30},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\|\|P_3\| = 6$. So we have $a^2+30b^2 = \pm6$. But this is clearly impossible. This means $\ovl{P_2} = \ovl{P_2}^{-1} \neq \ovl{P_3}$. So two can also be eliminated.
+
+It remains to decide it is cyclic four or Klein four. Similar as before, since there're at least two different elements of order two, i.e., $\ovl{P_2}$ and $\ovl{P_3}$. So the ideal class group of $\ZZ[\sqrt{-30}]$ is Klein four.
+
+\subsection*{Exercise 5.15}
+
+Let $R:=\AA\cap\QQ(\sqrt{-103})$. We have $\|J\| \leq 6$. So consider the primes lying over $2,3,5$:
+\begin{alignat*}{2}
+2R &= \left(2,\frac{1+\sqrt{-103}}{2}\right) \left(2,\frac{1-\sqrt{-103}}{2}\right)  =: P_2Q_2    &&\implies \|P_2\| = \|Q_2\| = 2  \\
+3R &= \text{prime}      &&\implies \|3R\| = 3^2 \\
+5R &= \text{prime}      &&\implies \|5R\| = 5^2
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these four primes, and $\|J\| \leq 6$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{Q_2},\ovl{P_2}^2,\ovl{Q_2}^2$. We will claim that these five elements are different.
+
+We claim that $P_2,Q_2$ are not principal. If $P_2 = (\alpha)$ for some $\alpha=(a+b\sqrt{-103})/2,a,b\in \ZZ,a \equiv b\pmod{2}$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+103b^2 = \pm8$. But this is clearly impossible. A similar argument works for $Q_2$.
+
+We claim that $P_2^2,Q_2^2$ are not principal. If $P_2^2 = (\alpha)$ for some $\alpha=(a+b\sqrt{-103})/2,a,b\in \ZZ,a \equiv b\pmod{2}$, then $|\Nr(\alpha)| = \|P_2\|^2 = 4$. So we have $a^2+103b^2 = \pm16 \implies a=\pm4,b=0 \implies P_2^2 = (\alpha) = (2) = P_2Q_2 \implies P_2=Q_2$, which is absurd. A similar argument works for $Q_2^2$.
+
+The above two claims show that $\ovl{P_2},\ovl{Q_2},\ovl{P_2}^2,\ovl{Q_2}^2$ are non-identity elements. Note that in particular, we have $\ovl{P_2}\neq\ovl{Q_2}$. (Because if $\ovl{P_2}=\ovl{Q_2} \implies \ovl{(2)} = \ovl{P_2}\cdot\ovl{Q_2} = \ovl{P_2}^2$, a contradiction.) And moreover, $\ovl{P_2}\neq\ovl{P_2}^2$ and $\ovl{Q_2}\neq\ovl{Q_2}^2$.
+
+We next claim that $\ovl{Q_2}\neq\ovl{P_2}^2$ (by considering $P_2^3$). If $P_2^3 = (\alpha)$ for some $\alpha=(a+b\sqrt{-103})/2,a,b\in \ZZ,a \equiv b\pmod{2}$, then $|\Nr(\alpha)| = \|P_2\|^3 = 8$. So we have $a^2+103b^2 = \pm32$. But this is clearly impossible. So we know $P_2^3$ is not principal. In particular, this implies $\ovl{Q_2}\neq\ovl{P_2}^2$. (Because if $\ovl{Q_2}=\ovl{P_2}^2 \implies \ovl{(2)} = \ovl{P_2}\cdot\ovl{Q_2} = \ovl{P_2}^3$, a contradiction.) A similar argument shows that $\ovl{P_2}\neq\ovl{Q_2}^2$.
+
+Lastly, we claim that $\ovl{P_2}^2\neq\ovl{Q_2}^2$ (by considering $P_2^4$). If $P_2^4 = (\alpha)$ for some $\alpha=(a+b\sqrt{-103})/2,a,b\in \ZZ,a \equiv b\pmod{2}$, then $|\Nr(\alpha)| = \|P_2\|^4 = 16$. So we have $a^2+103b^2 = \pm64 \implies a=\pm8,b=0 \implies P_2^4 = (\alpha) = (4) = P_2^2Q_2^2 \implies P_2^2=Q_2^2 \implies P_2 = Q_2$, which is absurd. So we know $P_2^4$ is not principal. In particular, this implies $\ovl{P_2}^2\neq\ovl{Q_2}^2$. (Because if $\ovl{P_2}^2=\ovl{Q_2}^2 \implies \ovl{(4)} = \ovl{P_2}^2\cdot\ovl{Q_2}^2 = \ovl{P_2}^4$, a contradiction.)
+
+\subsection*{Exercise 5.16}
+
+\subsection*{Exercise 5.17}
+
+First, consider $R:=\ZZ[\omega]$. In this case $n=6,s=3,\disc(R) = -7^5$ (see Exercise 2.8 (a) if necessary). So we have $\|J\| \leq 4$. Consider the primes lying over $2,3$:
+\begin{alignat*}{2}
+2R &= P_2Q_2 \text{ with } f_2 = 3 &&\implies \|P_2\| = \|Q_2\| = 2^3    \\
+3R &= \text{ prime with } f_3 = 6 &&\implies \|3R\| = 3^6
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these three primes, and $\|J\| \leq 4$, we see that $\ovl{J}=\ovl{R}$. Hence $R=\ZZ[\omega]$ is a PID.
+
+Next, consider $R:=\AA\cap\QQ(\omega+\omega^{-1})=\ZZ[\omega+\omega^{-1}]$ by Exercise 2.35 (f). In this case $n=3,s=0,\disc(R) = 7^2$ by Exercise 2.35 (g). So we have $\|J\| \leq 1$ and hence $R=\ZZ[\omega+\omega^{-1}]$ is a PID.
+
+\subsection*{Exercise 5.18}
+
+We recall in Exercise 4.12 (b) we showed the following: Let $\omega:=e^{2\pi i/m}$. Suppose $p\nmid m$ is a prime and $f$ is the least positive integer s.t. $p^f \equiv \pm1\pmod{m}$. Then $p$ splits into $\phi(m)/(2f)$ primes in $\QQ(\omega+\omega^{-1})$ with inertial degree $f$.
+
+Let $R:=\ZZ[\omega+\omega^{-1}]$. For $m=11$, we have $n=5,s=0,\disc(R) = 11^4$ by Exercise 2.35 (g). So $\|J\| \leq 4$. Consider the primes lying over $2,3$: By the above statement, we see that $f_2=f_3=5$. So $2R,3R$ are both primes in $R$. Hence $R$ is a PID.
+
+For $m=13$, we have $n=6,s=0,\disc(R) = 13^5$ by Exercise 2.35 (g). So $\|J\| \leq 9$. Consider the primes lying over $2,3,5,7$: By the above statement, we see that $f_2=6,f_3=3,f_5=2,f_7=6$. So
+\begin{alignat*}{2}
+2R &= \text{prime with } f_2 = 6     &&\implies \|2R\| = 2^6       \\
+3R &= P_3Q_3 \text{ with } f_3=3  &&\implies \|P_3\|=\|Q_3\|=3^3       \\
+5R &= P_5Q_5U_5 \text{ with } f_5=2  &&\implies \|P_5\|=\|Q_5\|=\|U_5\|=5^2     \\
+7R &= \text{prime with } f_7 = 6     &&\implies \|7R\| = 7^6
+\end{alignat*}
+Since the possible prime divisors of $J\neq R$ are these seven primes, and $\|J\| \leq 9$, we see that $\ovl{J}=\ovl{R}$. Hence $R$ is a PID.
+
+\subsection*{Exercise 5.19}
+
+First, consider $R:=\ZZ[\sqrt[3]{2}]$. In this case $n=3,s=1,\disc(R) = -27\cdot(-2)^2$ by Exercise 2.28 (c). So we have $\|J\| \leq 2$. Consider the primes lying over $2$: $2R=(\sqrt[3]{2})^3$ (see p. 49 if necessary). Hence $R$ is a PID.
+
+Next, consider $R:=\ZZ[\alpha]$ where $\alpha^3=\alpha+1$. In this case $n=3,s=1$ (as $f(x)=x^3-x-1$ has one real root), $\disc(R) = \disc(\alpha) = -4\cdot(-1)^3-27\cdot(-1)^2$ by Exercise 2.28 (c) and (d). So we have $\|J\| \leq 1$ and hence $R$ is a PID.
+
+\subsection*{Exercise 5.20}
+
+Let $R:=\AA\cap\QQ(\alpha)$ where $\alpha^3=\alpha+7$. In this case $n=3,s=1$ (as $f(x)=x^3-x-7$ has one real root). Let's find $\disc(R)$. Note that by Exercise 2.28 (c), $\disc(\alpha) = \disc(1,\alpha,\alpha^2) = -4\cdot(-1)^3-27\cdot(-7)^2 = -1319$, which is square-free (in fact, a prime). So by Exercise 2.27 (e), $\{1,\alpha,\alpha^2\}$ is an integral basis of $R$, i.e., $R=\ZZ[\alpha]$. Hence, $\disc(R) = \disc(\alpha) = -1319$. So $\|J\| \leq 10$.
+
+Consider the primes lying over $2,3,5,7$: By Theorem 27 (p. 55), we factor $f(x)=x^3-x-7$ modulo $2,3,5,7$ and see that
+\begin{align*}
+2R &= \text{prime}    \\
+3R &= \text{prime}    \\
+5R &= \text{prime}    \\
+7R &= P_7Q_7U_7
+\end{align*}
+On the other hand, note that $(7) = (\alpha^3-\alpha) = (\alpha)(\alpha+1)(\alpha-1)$. These three factors must be distinct because we know $7$ splits completely in $R$. Moreover, they must all be prime. This shows that $P_7,Q_7,U_7$ are principal. Hence $R$ is a PID.
+
+\subsection*{Exercise 5.21}
+
+\subsection*{Exercise 5.22}
+
+\subsection*{Exercise 5.23}
+
+\subsection*{Exercise 5.24}
+
+\subsection*{Exercise 5.25}
+
+\subsection*{Exercise 5.26}
+
+\subsection*{Exercise 5.27}
+
+\subsection*{Exercise 5.28}
+
+\subsection*{Exercise 5.29}
+
+\subsection*{Exercise 5.30}
+
+\subsection*{Exercise 5.31}
+
+\subsection*{Exercise 5.32}
+
+\subsection*{Exercise 5.33}
+
+\subsection*{Exercise 5.34}
+
+\subsection*{Exercise 5.35}
+
+\subsection*{Exercise 5.36}
+
+\subsection*{Exercise 5.37}
+
+\subsection*{Exercise 5.38}
+
+\subsection*{Exercise 5.39}
+
+\subsection*{Exercise 5.40}
+
+\subsection*{Exercise 5.41}
+
+\subsection*{Exercise 5.42}
+
+\subsection*{Exercise 5.43}
+
+\subsection*{Exercise 5.44}
+
+\subsection*{Exercise 5.45}
+
+\subsection*{Exercise 5.46}
+
+\subsection*{Exercise 5.47}
+
+\subsection*{Exercise 5.48}
+\phantom{}
+
+\end{document}
