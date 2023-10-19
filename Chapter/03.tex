@@ -345,26 +345,49 @@ On the other hand, since $P$ is unramified in $L'$, we may write $PS'=Q'_1\cdots
 
 (c) Consider the canonical ring homomorphism $\phi:R[x]\to(R/I)[x]/(\ovl{g})$ where $\phi(f):=\ovl{f}+(\ovl{g})$. This is clearly surjective. Moreover, $f\in\ker\phi \iff \ovl{f}+(\ovl{g})=0$ in $(R/I)[x]/(\ovl{g}) \iff \ovl{f}\in(\ovl{g}) \iff \ovl{g}\mid\ovl{f} \iff f\in(I,g)$. (We've used (b) in the last if and only if.) So $\ker\phi=(I,g)$ and hence $R[x]/(I,g)\simeq (R/I)[x]/(\ovl{g})$.
 
-\subsection*{Exercise 3.26 \color{red}(incomplete, missing (e))}
+\subsection*{Exercise 3.26}
 
-(a) We've found an integral basis of $R$ in Exercise 2.41 (or just see the application of Theorem 13 (p. 28).) Using this together with Theorem 6 (p. 18), it's easy to find that $\disc(R)=-27m^2/k^2$ when $m\not\equiv \pm1 \pmod{9}$, and
-$-3m^2/k^2$ when $m\equiv \pm1 \pmod{9}$. (Write $m=hk^2$ where $h,k$ are relatively prime and square-free.)
+Write $m=hk^2$ where $h,k$ are relatively prime and square-free.
 
-From Exercise 2.41(a) we know $\disc(\ZZ[\alpha])=-27m^2$. So using the formula in Exercise 2.27(c), we obtain $\#(R/\ZZ[\alpha])=k$ when $m\not\equiv \pm1 \pmod{9}$, and $3k$ when $m\equiv \pm1 \pmod{9}$.
+(a) We've found an integral basis of $R$ in Exercise 2.41 (or just see the application of Theorem 13 (p. 28)). Using this together with Theorem 6 (p. 18), it's easy to find that
+$$
+\disc(R) =
+\begin{cases}
+-27m^2/k^2, & m\not\equiv \pm1 \pmod{9} \\
+-3m^2/k^2, & m\equiv \pm1 \pmod{9}
+\end{cases}
+$$
+And from Exercise 2.41(a) we know $\disc(\ZZ[\alpha])=-27m^2$. So using the formula in Exercise 2.27(c), we obtain
+$$
+\#(R/\ZZ[\alpha]) =
+\begin{cases}
+k, & m\not\equiv \pm1 \pmod{9} \\
+3k, & m\equiv \pm1 \pmod{9}
+\end{cases}
+$$
 
-Now, suppose $p\neq 3$ is a prime and $p^2\nmid m=hk^2$. For $p\nmid m$ we have $p\nmid k,3k$. And for $p\mid m$, this implies $p\mid h$, so we have $p\nmid k,3k$. By Theorem 27 (p. 55) we can decompose $pR$ by factoring $\Irr_\QQ(\alpha)=x^3-m$ in $(\ZZ/p\ZZ)[x]$.
+Now, suppose $p\neq 3$ is a prime and $p^2\nmid m=hk^2$. Then we have $p\nmid k$ and so $p\nmid \#(R/\ZZ[\alpha])$. Hence by Theorem 27 (p. 55) we can decompose $pR$ by factoring $\Irr_\QQ(\alpha)=x^3-m$ in $(\ZZ/p\ZZ)[x]$.
 
-(b) Since $\ZZ[\gamma]=\ZZ[\alpha^2/k]=\langle1,\alpha^2/k,m\alpha/k^2\rangle_\ZZ$, using Theorem 6 (p. 18) again we can easily find that $\disc(\ZZ[\gamma])=\disc(1,\alpha^2/k,m\alpha/k^2)=-27m^4/k^6$. So using the formula in Exercise 2.27(c) again, we obtain $\#(R/\ZZ[\gamma])=h$ when $m\not\equiv \pm1 \pmod{9}$, and $3h$ when $m\equiv \pm1 \pmod{9}$.
+(b) First, we note that $\QQ(\alpha) = \QQ(\gamma)$ (so we are changing the generator from $\alpha$ to $\gamma$ in Theorem 27). Using Theorem 6 (p. 18) again, we can easily find that $\disc(\ZZ[\gamma])=\disc(1,\alpha^2/k,m\alpha/k^2)=-27m^4/k^6$. So using the formula in Exercise 2.27(c) again, we obtain 
+$$
+\#(R/\ZZ[\gamma]) =
+\begin{cases}
+h, & m\not\equiv \pm1 \pmod{9} \\
+3h, & m\equiv \pm1 \pmod{9}
+\end{cases}
+$$
 
-Now, suppose $p^2\mid m=hk^2$. This implies $p\mid k$ and $p\nmid h$, so when $p\neq 3$ we have $p\nmid h,3h$. On the other hand, when $p=3$, this implies $9\mid m$. So we have $m\equiv 0\not\equiv \pm 1\pmod{9}$. In this case, $p=3\nmid h$.
+Now, suppose $p^2\mid m=hk^2$. Then we have $p\mid k$ and $p\nmid h$. So when $p\neq 3$ we have $p\nmid \#(R/\ZZ[\gamma])$. And for $p=3$ we have $m\equiv 0\not\equiv \pm 1\pmod{9}$. So $p=3\nmid h = \#(R/\ZZ[\gamma])$. Hence in either case we can (by Theorem 27) decompose $pR$ by factoring $\Irr_\QQ(\alpha)=x^3-m$ in $(\ZZ/p\ZZ)[x]$ as the followings:
 
-$g=\Irr_\QQ(\gamma)=\Irr_\QQ(\alpha^2/k)=x^3-h^2k$. From $p\mid k$ we have $\ovl{g}=x^3\in(\ZZ/p\ZZ)[x]$. So by Theorem 27, $pR=(p,\gamma)^3=(p,\alpha^2/k)^3$.
+Let $g(x):=\Irr_\QQ(\gamma)=\Irr_\QQ(\alpha^2/k)=x^3-h^2k$. From $p\mid k$ we have $\ovl{g}=x^3\in(\ZZ/p\ZZ)[x]$. So by Theorem 27, $pR=(p,\gamma)^3=(p,\alpha^2/k)^3$.
 
-(c) Suppose $m\not\equiv \pm1\pmod{9}$ and consider $p=3$. If $3$ divides $m$ exactly two times, this implies $3^2\mid m$. So by (b), $3R=(3,\alpha^2/k)^3$. On the other hand, for $3$ divides $m$ exactly zero or one time, both cases imply $3\nmid k=\#(R/\ZZ[\alpha])$. So we can apply Theorem 27 by factoring $g=\Irr_\QQ(\alpha)=x^3-m$ in $(\ZZ/3\ZZ)[x]$.
+(c) Suppose $m\not\equiv \pm1\pmod{9}$ and consider $p=3$. If $3 \mid k \implies 3^2 \mid m$. So from (b) we know $3R=(3,\alpha^2/k)^3$. On the other hand, if $3\nmid k = \#(R/\ZZ[\alpha])$, then we can apply Theorem 27 by factoring $g=\Irr_\QQ(\alpha)=x^3-m$ in $(\ZZ/3\ZZ)[x]$.
 
-Case 1: If $3\nmid m$ (zero time), then this splits to two subcases, $m\equiv 1,2\pmod{3}$. For the first subcase, $\ovl{g}=x^3+2=(x+2)^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha+2)^3$. For the second subcase, $\ovl{g}=x^3+1=(x+1)^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha+1)^3$.
+Case 1: If $3\nmid m$, then this splits to two subcases, $m\equiv 1,2\pmod{3}$. For the first subcase, $\ovl{g}=x^3+2=(x+2)^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha+2)^3$. For the second subcase, $\ovl{g}=x^3+1=(x+1)^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha+1)^3$.
 
-Case 2: If $3\mid h$ (one time), then $\ovl{g}=x^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha)^3$.
+Case 2: If $3\mid m$, then $\ovl{g}=x^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\alpha)^3$.
+
+In conclusion, if $m\not\equiv \pm1\pmod{9}$, then $3$ is totally ramified in $R$.
 
 (d) Let's first do the general case for $m\equiv 1 \pmod{9}$. Set $\beta=(\alpha-1)^2/3$. The following calculations are all due to Exercise 3.18.
 \begin{align*}
@@ -372,11 +395,17 @@ Case 2: If $3\mid h$ (one time), then $\ovl{g}=x^3\in(\ZZ/3\ZZ)[x]$. So $3R=(3,\
 \end{align*}
 The last equality is by Exercise 2.27(c). So we have $\#(R/\ZZ[\beta])=\pm k(m+8)/9\in\NN$.
 
-To use Theorem 27, we hope $3\nmid \pm k(m+8)/9$. This is equivalent to say that $27\nmid \pm k(m+8)$ because we know $9\mid \pm k(m+8)$. From $m\equiv 1 \pmod{9}$ we have $m\equiv 1,10,19 \pmod{27}$. $m+8\equiv 9,18,0 \pmod{27}$. So if the first two cases happen, then our hope is fulfilled. (Note that we have $3\nmid k$ because the condition on $m$.) But if it's the third one, i.e., $m\equiv 19\equiv -8 \pmod{27}$, then we wouldn't be able to use Theorem 27.
+To use Theorem 27, we hope $3\nmid \pm k(m+8)/9$, or equivalently, $27\nmid \pm k(m+8)$. From $m\equiv 1 \pmod{9}$ we have $m\equiv 1,10,19 \pmod{27} \implies m+8\equiv 9,18,0 \pmod{27}$. So if the first two cases happen, then our hope is fulfilled. (Note that we have $3\nmid k$ because $m\equiv 1 \pmod{9}$.) But if the third case happens, i.e., $m\equiv 19\equiv -8 \pmod{27}$, then we wouldn't be able to use Theorem 27.
 
 Now let's consider $m=10\equiv 1\pmod{9}$. Note that we can use Theorem 27 in this case by the above observation. By Exercise 2.41(d), $g=\Irr_\QQ(\beta)=\Irr_\QQ((\alpha-1)^2/3)=x^3-x^2+7x-3$. So $\ovl{g}=x^3+2x^2+x=x(x+1)^2\in(\ZZ/3\ZZ)[x]$. Hence, $3R=(3,\beta)(3,\beta+1)^2$.
 
 For the case where $m\equiv -1\pmod{9}$, set $\beta=(\alpha+1)^2/3$ and use a similar argument.
+
+(e) When $m\equiv \pm1\pmod{9}$, we know from (a) that $\disc(R) = -3m^2/k^2 = -3h^2k^2$. As $3\nmid m$, we have $9 \nmid \disc(R)$.
+
+Suppose $3R = P^3$ is a cube of a prime. By Exercise 3.20 there exist $\alpha_1,\alpha_2,\alpha_3 \in R$ which are independent mod $3$. And by Exercise 3.21(a), we have $\disc(\alpha_1,\alpha_2,\alpha_3) = c\cdot\disc(R)$ with $3\nmid c$. This implies that $9 \nmid \disc(\alpha_1,\alpha_2,\alpha_3)$. But by Exercise 3.21(b), we have $\disc(\alpha_1,\alpha_2,\alpha_3)$ is divisible by $3^{3-1} = 9$, which is absurd.
+
+Since $3 \mid \disc(R) = -3h^2k^2$, so by the converse of Theroem 24 (p. 50), $3$ is ramified in $R$. Hence $3R = P^2Q$ where $P,Q$ are distinct primes in $R$.
 
 \subsection*{Exercise 3.27}
 

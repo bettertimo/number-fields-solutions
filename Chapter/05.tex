@@ -91,7 +91,7 @@ For $m=10$, we have $\|J\| \leq 3$. So consider the primes lying over $2,3$:
 2R &= (2,\sqrt{10})^2 =: P_2^2  &&\implies \|P_2\| = 2    \\
 3R &= (3,1+\sqrt{10})(3,1-\sqrt{10}) =: P_3Q_3   &&\implies \|P_3\| = \|Q_3\| = 3
 \end{alignat*}
-We check that these three are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{10},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2-10b^2 = \pm2$. But by considering modulo $5$ this implies $a^2 \equiv 2,3 \pmod{5}$, a contradiction. A similar argument works for the other two primes.
+We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha=a+b\sqrt{10},a,b\in \ZZ$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2-10b^2 = \pm2$. But by considering modulo $5$ this implies $a^2 \equiv 2,3 \pmod{5}$, a contradiction. A similar argument works for the other two primes.
 
 Now, we look for an element whose norm is $\pm6$. Clearly $4+\sqrt{10}$ works. And note that if $P$ is a prime divisor of $(4+\sqrt{10})$, then $\|P\| \mid \|(4+\sqrt{10})\| = 6$. So $P$ must lie over $2,3$. This implies that one of the prime divisors of $(4+\sqrt{10})$ is $P_2$, and the other one (call it $U$) is either $P_3$ or $Q_3$. So if we let $U'$ be the remaining prime, then $P_2U,P_2^2,UU'$ are all principal, which means $\ovl{P_2} \cdot \ovl{U} = \ovl{P_2}^2 = \ovl{U} \cdot \ovl{U'}$, which means $\ovl{P_2} = \ovl{U}= \ovl{U'} = \ovl{P_3} = \ovl{Q_3}$. Hence, $\ZZ[\sqrt{10}]$ has two ideal classes.
 
@@ -131,7 +131,7 @@ Case 2: $m$ is odd and $m\equiv3 \pmod{4}$. Write $\alpha = a+b\sqrt{m},a,b\in\Z
 
 Case 3: $m$ is odd and $m\equiv1 \pmod{8}$. Write $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$. Then $a^2 - mb^2 = 8$. This can only happen when $m=-7$.
 
-(b) {\color{red}(There's a typo in here. Change $m<4p$ to $p<|\disc(R)|/4$.)}\footnote{Cohn, Harvey. \textit{Advanced number theory}. Courier Corporation, 2012, p. 151.} Suppose on the contrary that $m$ is a square mod $p$. Let $P$ be any prime lying over $p$. Note that no matter $p$ divides $m$ or not, we always have $\|P\|=p$. So if we write $P=(\alpha)$, then $|\Nr(\alpha)| = p$.
+(b) \textcolor{red}{(There's a typo in here. Change $m<4p$ to $p<|\disc(R)|/4$.)}\footnote{Cohn, Harvey. \textit{Advanced number theory}. Courier Corporation, 2012, p. 151.} Suppose on the contrary that $m$ is a square mod $p$. Let $P$ be any prime lying over $p$. Note that no matter $p$ divides $m$ or not, we always have $\|P\|=p$. So if we write $P=(\alpha)$, then $|\Nr(\alpha)| = p$.
 
 Case 1: $m\equiv2,3 \pmod{4}$ (so $\disc(R)=4m$ and by assumption, $p<4|m|/4 = |m|$). Write $\alpha = a+b\sqrt{m},a,b\in\ZZ$. Then we have $a^2 - mb^2 = a^2 + |m|b^2 = p$. But as $p<|m|$, this is impossible.
 
@@ -189,7 +189,7 @@ For $m=-39$, we have $\|J\| \leq 3$. So consider the primes lying over $2,3$:
 \end{alignat*}
 Since the possible prime divisors of $J\neq R$ are these three primes, and $\|J\| \leq 3$, we see that $\ovl{J}=\ovl{R},\ovl{P_2},\ovl{Q_2},\ovl{P_3}$. So the ideal class group has at most four elements.
 
-We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+39b^2 = \pm8$. But this is clearly impossible. A similar argument works for the other two primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_3}$ has order two, so three can be eliminated.
+We claim that the above three primes are not principal. For example, if $P_2 = (\alpha)$ for some $\alpha = (a+b\sqrt{-39})/2,a,b\in\ZZ,a \equiv b \pmod{2}$, then $|\Nr(\alpha)| = \|P_2\| = 2$. So we have $a^2+39b^2 = \pm8$. But this is clearly impossible. A similar argument works for the other two primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_3}$ has order two, so three can be eliminated.
 
 Note that if $P_2P_3 = (\alpha)$ for some $\alpha = (a+b\sqrt{m})/2,a,b\in\ZZ,a \equiv b \pmod{2}$, then $|\Nr(\alpha)| = \|P_2\|\|P_3\| = 6$. So we have $a^2+39b^2 = \pm24$. But this is clearly impossible. This means $\ovl{P_3} = \ovl{P_3}^{-1} \neq \ovl{P_2}$. So two can also be eliminated.
 
@@ -294,11 +294,87 @@ On the other hand, note that $(7) = (\alpha^3-\alpha) = (\alpha)(\alpha+1)(\alph
 
 \subsection*{Exercise 5.21}
 
+The three embeddings of $K$ into $\CC$ map $\sqrt[3]{m}$ to $\sqrt[3]{m},\sqrt[3]{m}\omega,\sqrt[3]{m}\omega^2$ where $\omega=(-1+\sqrt{-3})/2$. So $\NrKQ(\sqrt[3]{m} + a) = (\sqrt[3]{m}+a)(\sqrt[3]{m}\omega+a)(\sqrt[3]{m}\omega^2+a) = m+a^3$.
+
 \subsection*{Exercise 5.22}
+
+In this exercise, we have $n=3,s=1$. And by the application of Theorem 13 (p. 28), we know $R := \AA \cap \QQ(\sqrt[3]{m}) = \ZZ[\sqrt[3]{m}]$ when $m=3,5,6$. Moreover, recall that if $m = hk^2$ where $h, k$ are relatively prime and square-free and $m \not\equiv \pm1 \pmod{9}$, then $\disc(R) = -27m^2/k^2$ (see Exercise 3.26(a)). Since in our cases $m=3,5,6$ are square-free, so we have $\disc(R) = -27m^2$.
+
+From Exercise 3.26 we know how primes split in $R$. And by Exercise 5.21 we know the formula of norm of some particular elements in $R$:
+
+For $m=3$, we have $\|J\| \leq 4$. So consider the primes lying over $2,3$:
+\begin{alignat*}{2}
+2R &= P_2Q_2 \text{ with } f(P_2/2) = 1, f(Q_2/2) = 2 &&\implies \|P_2\| = 2, \|Q_2\| = 2^2    \\
+3R &= P_3^3 &&\implies \|P_3\| = 3
+\end{alignat*}
+We claim that the above three primes are principal. Since $\|(\sqrt[3]{3}-1)\| = |\Nr(\sqrt[3]{3}-1)| = 2$, so $(\sqrt[3]{3}-1) = P_2$ is principal. And since $2R = P_2Q_2$, so $Q_2$ is also principal.
+
+Since $\|(\sqrt[3]{3})\| = |\Nr(\sqrt[3]{3})| = 3$, so $(\sqrt[3]{3}) = P_3$ is principal.
+
+For $m=5$, we have $\|J\| \leq 7$. So consider the primes lying over $2,3,5,7$:
+\begin{alignat*}{2}
+2R &= P_2Q_2 \text{ with } f(P_2/2) = 1, f(Q_2/2) = 2 &&\implies \|P_2\| = 2, \|Q_2\| = 2^2    \\
+3R &= P_3^3 &&\implies \|P_3\| = 3    \\
+5R &= P_5^3 &&\implies \|P_5\| = 5    \\
+7R &= \text{prime} &&\implies \|7R\| = 7^3
+\end{alignat*}
+We claim that the above four primes are principal. Since $\|(\sqrt[3]{5}-2)\| = |\Nr(\sqrt[3]{5}-2)| = 3$, so $(\sqrt[3]{5}-2) = P_3$ is principal. Since $\|(\sqrt[3]{5}+1)\| = |\Nr(\sqrt[3]{5}+1)| = 6 = 2\cdot 3$, we have $(\sqrt[3]{5}+1) = P_2P_3$. And as $P_3$ is principal, so is $P_2$. And since $2R = P_2Q_2$, so $Q_2$ is also principal.
+
+Since $\|(\sqrt[3]{5})\| = |\Nr(\sqrt[3]{5})| = 5$, so $(\sqrt[3]{5}) = P_5$ is principal.
+
+For $m=6$, we have $\|J\| \leq 8$. So consider the primes lying over $2,3,5,7$:
+\begin{alignat*}{2}
+2R &= P_2^3 &&\implies \|P_2\| = 2   \\
+3R &= P_3^3 &&\implies \|P_3\| = 3    \\
+5R &= P_5Q_5 \text{ with } f(P_5/5) = 1, f(Q_5/5) = 2 &&\implies \|P_5\| = 5, \|Q_5\| = 5^2    \\
+7R &= P_7Q_7U_7 &&\implies \|P_7\| = \|Q_7\| = \|U_7\| = 7
+\end{alignat*}
+We claim that the above seven primes are principal. Since $\|(\sqrt[3]{6}-2)\| = |\Nr(\sqrt[3]{6}-2)| = 2$, so $(\sqrt[3]{6}-2) = P_2$ is principal. Since $\|(\sqrt[3]{6})\| = |\Nr(\sqrt[3]{6})| = 6 = 2\cdot 3$, we have $(\sqrt[3]{6}) = P_2P_3$. And as $P_2$ is principal, so is $P_3$.
+
+Since $\|(\sqrt[3]{6}-1)\| = |\Nr(\sqrt[3]{6}-1)| = 5$, so $(\sqrt[3]{6}-1) = P_5$ is principal. And since $5R = P_5Q_5$, so $Q_5$ is also principal.
+
+Since $\|(\sqrt[3]{6}+1)\| = |\Nr(\sqrt[3]{6}+1)| = 7$, we have $(\sqrt[3]{6}+1) = P_7,Q_7$ or $U_7$. WLOG, assume $P_7=(\sqrt[3]{6}+1)$ is principal. On the other hand, since $\|(\sqrt[3]{6}+2)\| = |\Nr(\sqrt[3]{6}+2)| = 14 = 2\cdot 7$, we have $(\sqrt[3]{6}+2) = P_2P_7,P_2Q_7$ or $P_2U_7$. But note that $P_2P_7$ is impossible because otherwise, $(\sqrt[3]{6}+2) = P_2P_7 \sbe P_7 = (\sqrt[3]{6}+1)$ and so $1 \in P_7$, which is absurd. Hence we have $(\sqrt[3]{6}+2)$ is either $P_2Q_7$ or $P_2U_7$. And since $P_2$ is principal, so either $Q_7$ or $U_7$ is principal. Finally, since $7R = P_7Q_7U_7$, so the remaining one is also principal.
 
 \subsection*{Exercise 5.23}
 
+(a) We omit the tedious calculation. Just remember that the three embeddings of $K$ into $\CC$ map $\alpha$ to $\alpha,\alpha\omega,\alpha\omega^2$ where $\omega=(-1+\sqrt{-3})/2$. And we have $\alpha^3 = m$ and $1+\omega+\omega^2=0$.
+
+(b) Suppose $m$ is square-free and let $\beta \in \AA \cap K$. From the application of Theorem 13 (p. 28), we have an integral basis of $\AA \cap K$. This gives us two cases:
+
+Case 1: $m\not\equiv\pm1\pmod{9}$. Then $\beta = a+b\alpha+c\alpha^2$ for some $a,b,c\in \ZZ$. So by (a) we have $\NrKQ(\beta) \equiv a^3 \pmod{m}$.
+
+Case 2: $m\equiv\pm1\pmod{9}$. Then
+$$
+\beta = a + b\alpha + c \cdot \frac{\alpha^2 \pm \alpha + 1}{3}
+= \left(a+\frac{c}{3}\right) + \left(b\pm\frac{c}{3}\right)\alpha + \left(\frac{c}{3}\right)\alpha^2
+$$
+for some $a,b,c\in \ZZ$. By (a) we have
+$$
+\NrKQ(\beta) \equiv a^3 + a^2c + \frac{ac^2}{3}(1 \mp m) + \frac{c^3}{27}(1\mp m)^2  \pmod{m}
+$$
+For the case $m\equiv 1\pmod{9}$, we write $m = 9k+1$ for some $k\in\ZZ$. Then from the above, we have
+\begin{align*}
+\NrKQ(\beta) 
+&\equiv a^3 + a^2c - 3kac^2 + 3k^2c^3  \pmod{9k+1}    \\
+&\equiv a^3 - 9ka^2c + 27k^2ac^2 - 27k^3c^3  \pmod{9k+1}    \\
+&= (a-3kc)^3 \pmod{m}
+\end{align*}
+(Note that $-1 \equiv 9k \pmod{9k+1}$.) So $\NrKQ(\beta)$ is a cube mod $m$. A similar argument shows that when $m\equiv -1\pmod{9}$, $m = 9k-1$ for some $k\in\ZZ$, then $\NrKQ(\beta) \equiv (a+3kc)^3 \pmod{m}$.
+
 \subsection*{Exercise 5.24}
+
+Note that $R := \AA \cap \QQ(\sqrt[3]{7}) = \ZZ[\sqrt[3]{7}]$ and $\disc(R) = -27 \cdot 7^2$. So $\|J\| \leq 10$. (See Exercise 5.22 for more details.) Consider the primes lying over $2,3,5,7$ (use Exercise 3.26):
+\begin{alignat*}{2}
+2R &= P_2Q_2 \text{ with } f(P_2/2) = 1, f(Q_2/2) = 2 &&\implies \|P_2\| = 2, \|Q_2\| = 2^2    \\
+3R &= P_3^3 &&\implies \|P_3\| = 3    \\
+5R &= P_5Q_5 \text{ with } f(P_5/5) = 1, f(Q_5/5) = 2 &&\implies \|P_5\| = 5, \|Q_5\| = 5^2    \\
+7R &= P_7^3 &&\implies \|P_7\| = 7
+\end{alignat*}
+Since $\|J\| \leq 10$, we shall only consider $P_2,Q_2,P_3,P_5,P_7$. By Exercise 5.21 we know the formula of norm of some particular elements in $R$:
+
+Since $\|(\sqrt[3]{7})\| = |\Nr(\sqrt[3]{7})| = 7$, so $(\sqrt[3]{7}) = P_7$ is principal. We next claim that the remaining primes are not principal. For example, if $P_2 = (\beta)$ for some $\beta \in R$, then $|\Nr(\beta)| = \|P_2\| = 2$. So we have $\Nr(\beta) = \pm2 \equiv 2,5 \pmod{7}$. But this contradicts to Exercise 5.23(b) because $2,5$ are not cubes mod $7$. A similar argument works for the other primes. So the ideal class group has at least two elements. Moreover, this also implies that $\ovl{P_3}$ has order three, so the ideal class group has at least three ideal elements.
+
+Since $\|(\sqrt[3]{7}-1)\| = |\Nr(\sqrt[3]{7}-1)| = 6 = 2\cdot 3$, we have $(\sqrt[3]{7}-1) = P_2P_3$. And since $\|(\sqrt[3]{7}+2)\| = |\Nr(\sqrt[3]{7}+2)| = 15 = 3\cdot5$, we have $(\sqrt[3]{7}+2) = P_3P_5$. Combining these two with the above factorizations, we see that $\ovl{P_2} = \ovl{P_3}^{-1} = \ovl{P_5}$ and $\ovl{Q_2} = \ovl{P_2}^{-1} = \ovl{P_3}$. Hence the ideal class group of $\ZZ[\sqrt[3]{7}]$ has three elements.
 
 \subsection*{Exercise 5.25}
 
@@ -308,7 +384,19 @@ On the other hand, note that $(7) = (\alpha^3-\alpha) = (\alpha)(\alpha+1)(\alph
 
 \subsection*{Exercise 5.28}
 
+(a) By the Corollary 2 of Theorem 35 (p. 92), the ideal class group of $R$ is a finite group. So $I^m = \alpha R$ for some $m\in\NN$ and $\alpha \in R$. Set $L:=K(\sqrt[m]{\alpha})$. Then $L/K$ is a finite extension and $\sqrt[m]{\alpha} \in S$ as $\sqrt[m]{\alpha}$ is integral over $R$. Now, note that $(IS)^m = I^mS = \alpha S = (\sqrt[m]{\alpha}S)^m$. So $IS = \sqrt[m]{\alpha}S$ is principal by the unique factorization of ideals.
+
+(b) Let $\{I_1,\ldots,I_h\}$ be a set of representatives from each ideal class of $R$ where $h$ is its class number. By (a), there exists a finite extension $L_i/K$ s.t. $I_i$ becomes principal in $L_i$. Let $L := L_1\cdots L_h$ be the compositum of $L_1,\ldots,L_h$. Then $L/K$ is a finite extension and each $I_i$ becomes principal in $L$
+
+In general, for any ideal $I$ of $K$, we have $\alpha I = \beta I_i$ for some non-zero $\alpha,\beta \in R$ and $i=1,\ldots,h$. So $\ovl{(\alpha)} \cdot \ovl{IS} = \ovl{(\beta)} \cdot \ovl{I_i S} = \ovl{(\beta)}$ as $I_iS$ is principal. Hence, $IS$ is principal.
+
+(c) Let $K:=\QQ(\sqrt{-21})$. From Exercise 5.14, we know the ideal class group of $\ZZ[\sqrt{-21}]$ is the Klein four group $\{\ovl{R},\ovl{P_2},\ovl{P_3},\ovl{P_5}\}$ where $P_2^2=2R$ and $P_3^2=3R$. So by the construction in (b), we see that $P_2,P_3$ become principal in $L:=K(\sqrt{2},\sqrt{3})$ where $[L:K]=4$. And since $\ovl{P_2}\cdot\ovl{P_3} = \ovl{P_5}$, so $P_5$ is also principal in $L$.
+
 \subsection*{Exercise 5.29}
+
+\begin{comment}
+(a) By induction, it's sufficient to consider the ideal $I=(\alpha,\beta)$ in $\AA$ which is generated by two elements $\alpha,\beta \in \AA$. Take a field $K/\QQ$ s.t. $\alpha,\beta \in \AA\cap K=:R$ and consider the ideal $I':=(\alpha,\beta)$ in $R$ generated by $\alpha,\beta$. By Exercise 5.28 (b), choose $L/K$ finite s.t. $I'$ becomes principal in $S:=\AA \cap L$, i.e., $I'S = \gamma S$ for some $\gamma \in S$. This implies $I = I'S \AA = \gamma S \AA = \gamma \AA$ is principal in $\AA$.
+\end{comment}
 
 \subsection*{Exercise 5.30}
 
@@ -322,15 +410,99 @@ On the other hand, note that $(7) = (\alpha^3-\alpha) = (\alpha)(\alpha+1)(\alph
 
 \subsection*{Exercise 5.35}
 
+(a) Since $u$ is a unit, so $1 = |\Nr(u)| = |u \cdot \rho e^{i\theta} \cdot \rho e^{-i\theta}| = u\rho^2$ and hence $u=\rho^{-2}$.
+
+We omit the tedious calculation. One may use Theorem 8 (p. 19) and the facts that $\sin\theta = (e^{i\theta}-e^{-i\theta})/(2i)$ and $\sin2\theta = 2\sin\theta\cos\theta$.
+
+(b) Set $x=\rho^3+\rho^{-3}$ and $c=\cos\theta$. From (a) we know $u=\rho^{-2}$, and this implies that $u^3+u^{-3} = (\rho^3+\rho^{-3})^2-2 = x^2-2$. Now, when $c=0$ (so that $\theta=\pm\pi/2$), then we have $|\disc(u)| = 4(\rho^3+\rho^{-3})^2 = 4(u^3+u^{-3}+2)$. So the result is clear. Assume $c\neq0$. Then we see that the quadratic equation $f(x)=(1-c^2)(x-2c)^2-x^2$ has maximum $4(1-c^4)$. In others words, we have
+$$
+(1-c^2)(x-2c)^2-x^2 \leq 4(1-c^4) < 4
+$$
+So
+$$
+|\disc(u)| = 4(1-c^2)(x-2c)^2 < 4(x^2+4) = 4(u^3+u^{-3} +6) 
+$$
+
+(c) From (b) and Exercise 2.27(c), we have
+$$
+d := |\disc(R)| \leq |\disc(u)| < 4(u^3+u^{-3}+6)
+$$
+This gives the first inequality. For the second one, it's equivalent to the inequality $1<u^3$, which follows from the hypothesis that $u>1$.
+
+(d) Suppose now $d\geq33$. By (c) we have $33 \leq d < 4(u^3+u^{-3}+6)$. So $u^3+u^{-3} > 9/4$. Solving the equality $u^3+u^{-3} = 9/4$ for $u^3$, it follows that $u^3 = (9+\sqrt{17})/8 > 13/8 > 4/3$. And this is equivalent to $-6-u^{-3} > -27/4$. So by (c),
+$$
+u^3 > \frac{d}{4} -6 - u^{-3} > \frac{d-27}{4}
+$$
+
 \subsection*{Exercise 5.36}
+
+Let $K:=\QQ(\alpha)$ and $R:=\AA \cap K = \ZZ[\alpha]$.
+
+(a) $d := |\disc(R)| = |\disc(\alpha)| = 108 \geq 33$. So by Exercise 5.35(d), we have $u^3 > (108-27)/4 > 20$.
+
+(b) From Exercise 5.23(a) we find that $\NrKQ(-1+\alpha) = 1$, so $\beta$ is a unit in $R$. Since by Theorem 38 (p. 100) we know $U = \{\pm u^k \mid k \in\ZZ\}$, so $\beta = u^k$ for some $k\in\NN$. The result $u^3 > 20$ in (a) implies that $u^2 > 20^{2/3}$. So we have $u^0 = 1 < \beta < 20^{2/3} < u^2$. This shows that $k=1$ and hence $\beta=u$.
 
 \subsection*{Exercise 5.37}
 
+(a) Note that the constant term of $g(x) := f(x+r)$ is $f(r) = \pm 1$ and $\alpha-r$ is a root of $g(x)$. So the norm of $\alpha-r$ is necessarily $\pm1$, which implies that $\alpha-r$ is a unit in $\AA$.
+
+(b) By Exercise 2.41 (or just see the application of Theorem 13 (p. 28)), we know $R:= \AA\cap\QQ(\alpha) = \ZZ[\alpha]$. Note $\alpha$ is a root of the monic polynomial $f(x)=x^3-7$ and $f(2)=1$. So by (a) we know $\alpha-2$ is a unit in $R$.
+
+By Exercise 2.41(a) we have $d := |\disc(R)| = |\disc(\alpha)| = 1323 \geq 33$. So by Exercise 5.35(d), $u^3 > (1323-27)/4 = 324$. Therefore, $u^2 > 324^{2/3} > 47$. Let $\beta:=(2-\alpha)^{-1}$, which is a unit in $R$. And note that $u^0 = 1 < \beta < 47 < u^2$, so $\beta=u$ is the fundamental unit in $R$.
+
+(c) Similarly to (b), we see that $R:= \AA\cap\QQ(\alpha) = \ZZ[\alpha]$. Note $\alpha^2$ is a root of the monic polynomial $f(x)=x^3-9$ and $f(2)=-1$. So by (a) we know $\alpha^2-2$ is a unit in $R$.
+
+By Exercise 2.41(a) we have $d := |\disc(R)| = |\disc(\alpha)| = 243 \geq 33$. So by Exercise 5.35(d), $u^3 > (243-27)/4 = 54$. Therefore, $u^2 > 54^{2/3} > 14$. Let $\beta:=(\alpha^2-2)^{-1}$, which is a unit in $R$. And note that $u^0 = 1 < \beta < 14 < u^2$, so $\beta=u$ is the fundamental unit in $R$.
+
 \subsection*{Exercise 5.38}
+
+(a) Let $f(x):=x^3+x-3$. Note that its discriminant $-4(1)^3-27(-3)^2 < 0$. So $f$ has only one real root $\alpha$. (This guarantees the desired structure of the unit group in (b) and (c) because there's only one real embedding.)
+
+A simple calculation shows that $f(1.2) < 0 $ and $f(1.3) > 0$. So by the intermediate value theorem, $\alpha$ is between $1.2$ and $1.3$.
+
+(b) Clearly $f$ is irreducible over $\QQ$. By Exercise 2.28(c), $\disc(\alpha) = -(4(1)^3+27(-3)^2) = -247 = -13\times 19$ which is square-free. So by Exercise 2.27(e), $\{1,\alpha,\alpha^2\}$ is an integral basis for $R$, which implies that $\disc(R) = \disc(\ZZ[\alpha]) = \disc(\alpha)$.
+
+(c) Note $\alpha$ is a root of the monic polynomial $f(x)=x^3+x-3$ and $f(1)=-1$. So by Exercise 5.37(a) we know $\alpha-1$ is a unit in $R$.
+
+By (b) we have $d := |\disc(R)| = |\disc(\alpha)| = 247 \geq 33$. So by Exercise 5.35(d), $u^3 > (247-27)/4 = 55$. Therefore, $u^2 > 55^{2/3} > 14$. Let $\beta:=(\alpha-1)^{-1}$, which is a unit in $R$. And note that by (a) we have
+$$
+u^0 = 1 < 0.3^{-1} < \beta < 0.2^{-1} < 14 < u^2
+$$
+So $\beta=u$ is the fundamental unit in $R$.
 
 \subsection*{Exercise 5.39}
 
+Let $f(x):=x^3-2x-3$. Note that its discriminant $-4(-2)^3-27(-3)^2 < 0$. So $f$ has only one real root $\alpha$. And a simple calculation shows that $f(1.8) < 0 $ and $f(1.9) > 0$. So by the intermediate value theorem, $\alpha$ is between $1.8$ and $1.9$.
+
+Clearly $f$ is irreducible over $\QQ$. By Exercise 2.28(c), $\disc(\alpha) = -(4(-2)^3+27(-3)^2) = -211$ which is square-free (in fact, a prime). So by Exercise 2.27(e), $\{1,\alpha,\alpha^2\}$ is an integral basis for $R$, which implies that $\disc(R) = \disc(\ZZ[\alpha]) = \disc(\alpha)$.
+
+Note $\alpha$ is a root of the monic polynomial $f(x)=x^3-2x-3$ and $f(2)=1$. So by Exercise 5.37(a) we know $\alpha-2$ is a unit in $R$.
+
+By (b) we have $d := |\disc(R)| = |\disc(\alpha)| = 211 \geq 33$. So by Exercise 5.35(d), $u^3 > (211-27)/4 = 46$. Therefore, $u^2 > 46^{2/3} > 12$. Let $\beta:=(2-\alpha)^{-1}$, which is a unit in $R$. And note that by (a) we have
+$$
+u^0 = 1 < 0.2^{-1} < \beta < 0.1^{-1} < 12 < u^2
+$$
+So $\beta=u$ is the fundamental unit in $R$.
+
 \subsection*{Exercise 5.40}
+
+\begin{comment}
+(a) Let $f(x):=x^3+ax-1$. The only possible rational roots of $f$ are $\pm1$, which clearly do not satisfy $f$. So $f$ is irreducible over $\QQ$. Note that its discriminant $-4a^3-27(-1)^2 = -4a^3-27 < 0$ for all $a\in\NN$. So $f$ has only one real root $\alpha$.
+
+(b) By Exercise 2.28(c), $\disc(\alpha) = -(4a^3+27)$.
+
+(c) Suppose $\disc(\alpha) = -(4a^3+27)$ is square-free. Then by Exercise 2.27(e), $\{1,\alpha,\alpha^2\}$ is an integral basis for $R$, which implies that $\disc(R) = \disc(\ZZ[\alpha]) = \disc(\alpha)$. Now, by (b) we have $d := |\disc(R)| = |\disc(\alpha)| = 4a^3+27 \geq 33$ for all $a \geq 2$. (Since $u>1$ so we can only consider $a\geq2$.) So by Exercise 5.35(d), $u^3 > (d-27)/4 = a^3$. Therefore, $u>a$. 
+
+On the other hand, note $\alpha$ is a root of the monic polynomial $f(x)=x^3+ax-1$ and $f(0)=-1$. So by Exercise 5.37(a) we know $\alpha$ is a unit in $R$. Moreover, we see that $f(0)<0$ and $f(1)=a>0$. So by the intermediate value theorem, $\alpha$ is between $0$ and $1$.
+
+Since $\alpha^{-1}>1$ is a unit, so $\alpha^{-1} = u^k > a$ for some $k\in\NN$. Moreover, the two facts $\alpha > \alpha^3$ and $\alpha^3+a\alpha-1=0$ give us $\alpha^{-1} < a+1$. So we have $\alpha^{-1}$ is between $a$ and $a+1$.
+
+Suppose now $a\geq2$, then we have
+$$
+u^0 = 1 < a < \alpha^{-1} = u^k < a+1 < u+1 < u^2
+$$
+(As $u>a\geq2$, it's easy to check that $u+1<u^2$.) So $\alpha^{-1}=u$ is the fundamental unit in $R$.
+\end{comment}
 
 \subsection*{Exercise 5.41}
 
@@ -347,6 +519,5 @@ On the other hand, note that $(7) = (\alpha^3-\alpha) = (\alpha)(\alpha+1)(\alph
 \subsection*{Exercise 5.47}
 
 \subsection*{Exercise 5.48}
-\phantom{}
 
 \end{document}

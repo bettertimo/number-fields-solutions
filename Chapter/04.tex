@@ -255,7 +255,18 @@ Consider the field extension $(\AA \cap L)/Q$ over $(\AA \cap K)/P$ with degree 
 
 (a) Suppose $K\subset L\subset M$ and $M$ is normal over $K$, then $LM=M$. (So $V=U$.) Then by Exercise 4.10 (e), we have $\phi(V/Q)|_M=\phi(U/Q)=\phi(U/P)^{f(Q/P)}$.
 
-(b) By the uniqueness of Frobenius automorphisms (Theorem 32 (p. 77)), it's sufficient to show that $\phi(U/P)|_L$ has the same property with $\phi(Q/P)$, i.e., $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$ for all $\alpha\in \AA \cap L$. Fix such $\alpha$, we know $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}\in L$. On the other hand, since $\alpha\in \AA \cap L \subset \AA \cap M$, we have $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|}=\phi(U/P)(\alpha)-\alpha^{\|P\|}\in U$. So $\phi(U/P)|_L(\alpha)-\alpha^{\|P\|} \in L\cap U=Q$ and hence $\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q}$.
+(b) By the uniqueness of Frobenius automorphisms (Theorem 32 (p. 77)), it's sufficient to show that $\phi(U/P)|_L$ has the same property with $\phi(Q/P)$, i.e.,
+$$
+\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{Q} \text{ for all } \alpha\in \AA \cap L.
+$$
+By definition, we have
+$$
+\phi(U/P)(\alpha)\equiv\alpha^{\|P\|} \pmod{U} \text{ for all } \alpha\in \AA \cap M.
+$$
+And this immediately implies
+$$
+\phi(U/P)|_L(\alpha)\equiv\alpha^{\|P\|} \pmod{U \cap L = Q} \text{ for all } \alpha\in \AA \cap L.
+$$
 
 \subsection*{Exercise 4.12}
 

@@ -36,7 +36,7 @@ case2: $m \equiv 1 \pmod{4}$. Observe that $\alpha=r+s\sqrt{m}=(2r+2s\sqrt{m})/2
 
 Each $a_i$ is a root of a monic polynomial in $\ZZ[x]$. Let $e_i$ be the degree of such polynomial $f_i(x)$. We claim that $$G:=\{a_0^{m_0}a_1^{m_1}\cdots a_{n-1}^{m_{n-1}}\alpha^m \mid 1\leq m_i \leq e_i-1,1\leq m\leq n-1\}$$ is a set of generators of $\ZZ[a_0,\ldots,a_{n-1},\alpha]$. Indeed, given $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$. If $k_i\geq e_i$ for some $k_i$, then we may express $a_i^{k_i}$ as a linear combination of $1,a_i,a_i^2,\ldots,a_i^{e_i-1}$ over $\ZZ$ by exploiting $f_i(x)$. And if $k\geq n$, exploiting the equation $\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0$. In either case, we may reduce the exponents $k_0,\ldots,k_{n-1},k$ and express $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$ as a linear combination of the elements in $G$ over $\ZZ$.
 
-Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Theorem 2(3) (p. 11), $\alpha$ is an algenraic integer.  
+Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Theorem 2(3) (p. 11), $\alpha$ is an algebraic integer.  
 
 \subsection*{Exercise 2.5}
 
@@ -144,7 +144,7 @@ Write $(1+\sqrt{2})^k=a_k+b_k\sqrt{2}$. Since $\Nr(1+\sqrt{2})=-1$, we have $$\N
 
 \subsection*{Exercise 2.15}
 
-(a) $\Nr(a+b\sqrt{-5})=a^2-5b^2$. Suppose $a^2-5b^2=2,3$ has integral solution. Then $a^2-5b^2 \equiv a^2-b^2 \equiv 2 \pmod{4}$, which is impossible. And $a^2-5b^2 \equiv a^2 \equiv 3 \pmod{5}$, which is also impossible.
+(a) $\Nr(a+b\sqrt{-5}) = a^2+5b^2 = 2,3$ clearly has no integral solution.
 
 (b) $2\cdot3=(1+\sqrt{-5})(1-\sqrt{-5})=6$. Since by Exercise 2.13, $\pm1$ are the only units in $\ZZ[\sqrt{-5}]$. So $2,3,1+\sqrt{-5},1-\sqrt{-5}$ are pairwise non-associated. Hence, the above factorizations are distinct.
 
@@ -532,9 +532,9 @@ Combining $d_1\mid d_1,d_1^2\mid d_2,\ldots,d_1^{n-1}\mid d_{n-1}$ we get $$d_1^
 
 \subsection*{Exercise 2.41}
 
-Let's first compute some useful numbers. $\alpha:=\sqrt[3]{m}$. $\Irr_\QQ(\alpha)=x^3-m$ and $\Irr_\QQ(\alpha^2)=x^3-m^2$. So $\Tr(\alpha)=0,\Tr(\alpha^2)=0$ and $\Nr(\alpha)=m,\Nr(\alpha^2)=m^2$.
+Let's first compute some useful quantities. Let $\alpha:=\sqrt[3]{m}$. $\Irr_\QQ(\alpha)=x^3-m$ and $\Irr_\QQ(\alpha^2)=x^3-m^2$. So $\Tr(\alpha)=0,\Tr(\alpha^2)=0$ and $\Nr(\alpha)=m,\Nr(\alpha^2)=m^2$.
 
-(a) $\Irr_\QQ(\alpha)'=3x^2$. By Theorem 8 (p. 19), $\disc(\alpha)=-\Nr(3\alpha^2)=-3^3\Nr(\alpha^2)=-27m^2$.
+(a) \textcolor{red}{(There's a typo in here. Change $-27^2m$ to $-27m^2$.)} $\Irr_\QQ(\alpha)'=3x^2$. By Theorem 8 (p. 19), $\disc(\alpha)=-\Nr(3\alpha^2)=-3^3\Nr(\alpha^2)=-27m^2$.
 
 By Exercise 2.40(d), $d_1^6\mid -27m^2=-27h^2k^4$ where $h,k$ are relatively prime and square-free. If $3\mid k$ then $d_1=1,3$. In this case $9\mid m$. Otherwise if $3\nmid k$ then $d_1=1$.
 
