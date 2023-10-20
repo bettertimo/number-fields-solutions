@@ -34,9 +34,9 @@ case2: $m \equiv 1 \pmod{4}$. Observe that $\alpha=r+s\sqrt{m}=(2r+2s\sqrt{m})/2
 
 \subsection*{Exercise 2.4}
 
-Each $a_i$ is a root of a monic polynomial in $\ZZ[x]$. Let $e_i$ be the degree of such polynomial $f_i(x)$. We claim that $$G:=\{a_0^{m_0}a_1^{m_1}\cdots a_{n-1}^{m_{n-1}}\alpha^m \mid 1\leq m_i \leq e_i-1,1\leq m\leq n-1\}$$ is a set of generators of $\ZZ[a_0,\ldots,a_{n-1},\alpha]$. Indeed, given $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$. If $k_i\geq e_i$ for some $k_i$, then we may express $a_i^{k_i}$ as a linear combination of $1,a_i,a_i^2,\ldots,a_i^{e_i-1}$ over $\ZZ$ by exploiting $f_i(x)$. And if $k\geq n$, exploiting the equation $\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0$. In either case, we may reduce the exponents $k_0,\ldots,k_{n-1},k$ and express $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$ as a linear combination of the elements in $G$ over $\ZZ$.
+Each $a_i$ is a root of some monic polynomial $f_i(x)$ in $\ZZ[x]$ with degree, say $e_i$. We claim that $$G:=\{a_0^{m_0}a_1^{m_1}\cdots a_{n-1}^{m_{n-1}}\alpha^m \mid 0\leq m_i \leq e_i-1,0\leq m\leq n-1\}$$ is a set of generators of $\ZZ[a_0,\ldots,a_{n-1},\alpha]$. Indeed, given $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$. If $k_i\geq e_i$ for some $k_i$, then we may express $a_i^{k_i}$ as a linear combination of $1,a_i,a_i^2,\ldots,a_i^{e_i-1}$ over $\ZZ$ by exploiting $f_i(x)$. And if $k\geq n$, use the equation $\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0$ and do a similar thing. In either case, we may reduce the exponents $k_0,\ldots,k_{n-1},k$ and express $a_0^{k_0}a_1^{k_1}\cdots a_{n-1}^{k_{n-1}}\alpha^k$ as a linear combination of the elements in $G$ over $\ZZ$.
 
-Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Theorem 2(3) (p. 11), $\alpha$ is an algebraic integer.  
+Thus, $\ZZ[a_0,\ldots,a_{n-1},\alpha]$ has a finitely generated additive group. And by Theorem 2(3) (p. 11), $\alpha$ is an algebraic integer.
 
 \subsection*{Exercise 2.5}
 
