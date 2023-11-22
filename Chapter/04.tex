@@ -36,12 +36,12 @@ For (a), (b), (c) and (d), write $b=\prod p_i^{r_i}$ and $b'=\prod q_j^{s_j}$.
 \begin{align*}
     \left(\dfrac{aa'}{b}\right) &= \left(\dfrac{aa'}{\prod p_i^{r_i}}\right) \overset{\df}{=} \prod\left(\dfrac{aa'}{p_i}\right)^{r_i} \\
     &= \prod \left(\dfrac{a}{p_i}\right)^{r_i}\left(\dfrac{a'}{p_i}\right)^{r_i}
-    \overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a'}{\prod p_i^{r_i}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a'}{b}\right)
+    \overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a'}{\prod p_i^{r_i}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a'}{b}\right).
 \end{align*}
 And for the second one,
 \begin{align*}
     \left(\dfrac{a}{bb'}\right) &= \left(\dfrac{a}{\prod p_i^{r_i}\prod q_j^{s_j}}\right) \overset{\df}{=} \prod\left(\dfrac{a}{p_i}\right)^{r_i}\prod\left(\dfrac{a}{q_j}\right)^{s_j} \\
-    &\overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a}{\prod q_j^{s_j}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a}{b'}\right)
+    &\overset{\df}{=} \left(\dfrac{a}{\prod p_i^{r_i}}\right)\left(\dfrac{a}{\prod q_j^{s_j}}\right) = \left(\dfrac{a}{b}\right)\left(\dfrac{a}{b'}\right).
 \end{align*}
 
 (b) We know $(a/p)=(a'/p)$ for Legendre symbols if $a\equiv a'\pmod{p}$. Note that if $a\equiv a'\pmod{b}$, then $a\equiv a'\pmod{p_i}$ for all $i$. So $(a/b)\overset{\df}{=}\prod (a/p_i)^{r_i}=\prod (a'/p_i)^{r_i}\overset{\df}{=}(a'/b)$.
@@ -54,7 +54,7 @@ And for the second one,
 
 (f) We don't need to bother factoring $2413$, just simply apply the results we have shown. (In fact, $2413 = 19\times 127$.)
 \begin{align*}
-    \left(\dfrac{2413}{4903}\right) &\overset{(e)}{=} \left(\dfrac{4903}{2413}\right) \overset{(b)}{=} \left(\dfrac{77}{2413}\right) \overset{(a)}{=} \left(\dfrac{7}{2413}\right)\left(\dfrac{11}{2413}\right) \\ &\overset{(e)}{=} \left(\dfrac{2413}{7}\right)\left(\dfrac{2413}{11}\right) \overset{(b)}{=} \left(\dfrac{5}{7}\right)\left(\dfrac{4}{11}\right) = -1
+    \left(\dfrac{2413}{4903}\right) &\overset{(e)}{=} \left(\dfrac{4903}{2413}\right) \overset{(b)}{=} \left(\dfrac{77}{2413}\right) \overset{(a)}{=} \left(\dfrac{7}{2413}\right)\left(\dfrac{11}{2413}\right) \\ &\overset{(e)}{=} \left(\dfrac{2413}{7}\right)\left(\dfrac{2413}{11}\right) \overset{(b)}{=} \left(\dfrac{5}{7}\right)\left(\dfrac{4}{11}\right) = -1.
 \end{align*}
 
 \subsection*{Exercise 4.5}
@@ -181,11 +181,11 @@ Consider the compositum $K'L'$, which is a subfield of the $pq$-th cyclotomic fi
 \end{center}
 We claim that this $K'L'$ is what we want. Suppose $U$ is a prime in $K'L'$ lying over $p$. Then $U$ also lies over $P'$ and $Q'$. Note that we have
 $$
-e(U/p) = e(U/Q')e(Q'/p) \geq e \quad \text{and} \quad f(U/p) = f(U/P')f(P'/p) \geq f
+e(U/p) = e(U/Q')e(Q'/p) \geq e \quad \text{and} \quad f(U/p) = f(U/P')f(P'/p) \geq f.
 $$
 Suppose there are $s$ primes in $K'L'$ lying over $p$ (so $s\geq r$), then
 $$
-ref = [K' : \QQ][L' : \QQ] \geq [K'L' : \QQ] = s \cdot e(U/p) \cdot f(U/p) \geq ref
+ref = [K' : \QQ][L' : \QQ] \geq [K'L' : \QQ] = s \cdot e(U/p) \cdot f(U/p) \geq ref.
 $$
 So everything is an equality. In particular, we have $s=r$, $e(U/p) = e$ and $f(U/p) = f$, as desired.
 
@@ -193,7 +193,7 @@ So everything is an equality. In particular, we have $s=r$, $e(U/p) = e$ and $f(
 $$
 \begin{cases}
 x \equiv 3^5 \equiv 26 \pmod{31} \\
-x \equiv 1 \pmod{2}
+x \equiv 1 \pmod{2}.
 \end{cases}
 $$
 A simple calculation shows that $x=57$ works. Finally, find a prime $p \equiv 57 \pmod{31\cdot2}$. We can take $p=181$.
@@ -205,7 +205,7 @@ A simple calculation shows that $x=57$ works. Finally, find a prime $p \equiv 57
     D' &= D(Q'/P) = D(\sigma(Q)/P) = D(\sigma(Q)/P) \\
 	&= \{\tau\in G\mid \tau\sigma(Q)=\sigma(Q)\} = \{\tau\in G\mid \sigma^{-1}\tau\sigma(Q)=Q\} \\
     &= \{\tau\in G\mid \sigma^{-1}\tau\sigma \in D(Q/P)\}   \\
-	&= \sigma D(Q/P) \sigma^{-1} = \sigma D\sigma^{-1}
+	&= \sigma D(Q/P) \sigma^{-1} = \sigma D\sigma^{-1}.
 \end{align*}
 
 For the inertia groups,
@@ -216,14 +216,14 @@ For the inertia groups,
     &= \{\tau\in G \mid \sigma^{-1}\tau\sigma\sigma^{-1}(\alpha) \equiv \sigma^{-1}(\alpha) \pmod{Q}, \forall\alpha\in S\} \\
     &= \{\tau\in G\mid \sigma^{-1}\tau\sigma(\beta) \equiv \beta \pmod{Q}, \forall\beta\in S\} \\
     &= \{\tau\in G\mid \sigma^{-1}\tau\sigma\in E(Q/P)\} \\
-    &= \sigma E(Q/P)\sigma^{-1} = \sigma E\sigma^{-1}
+    &= \sigma E(Q/P)\sigma^{-1} = \sigma E\sigma^{-1}.
 \end{align*}
 
 (b) By the uniqueness of Frobenius automorphisms (Theorem 32 (p. 77)), it's sufficient to show that $\sigma\phi\sigma^{-1}$ has the same property with $\phi'$, i.e., $\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{Q'=\sigma(Q)}$ for all $\alpha\in S$. But notice that
 \begin{align*}
     &\sigma\phi\sigma^{-1}(\alpha)\equiv\alpha^{\|P\|} \pmod{\sigma(Q)}, \forall\alpha\in S \\
     \iff{} &\phi\sigma^{-1}(\alpha) \equiv \sigma^{-1}(\alpha)^{\|P\|} \pmod{Q}, \forall\alpha\in S \\
-    \iff{} &\phi(\beta) \equiv \beta^{\|P\|} \pmod{Q}, \forall\beta\in S
+    \iff{} &\phi(\beta) \equiv \beta^{\|P\|} \pmod{Q}, \forall\beta\in S.
 \end{align*}
 Since the last statement holds, the result follows.
 
@@ -241,12 +241,12 @@ Since the last statement holds, the result follows.
 
 Let $\ovl{\phi}(V/Q)|_M$ be the map induced from $\phi(V/Q)|_M$. Note that $\ovl{\phi}(V/Q)$ generates the Galois group of $(\AA \cap LM)/V$ over $(\AA \cap L)/Q$ and maps an element in $(\AA \cap LM)/V$ to its $\|Q\|$ power. Now, view $(\AA \cap LM)/V$ as a field extension of $(\AA \cap M)/U$. Then for each $x+U \in (\AA \cap M)/U$, we have
 $$
-\ovl{\phi}(V/Q)|_M(x+U)=\ovl{\phi}(V/Q)(x+U)=(x+U)^{\|Q\|}=x^{\|Q\|}+U
+\ovl{\phi}(V/Q)|_M(x+U)=\ovl{\phi}(V/Q)(x+U)=(x+U)^{\|Q\|}=x^{\|Q\|}+U.
 $$
 
 On the other hand, let $\ovl{\phi}(U/P)$ be the map induced from $\phi(U/P)$. Note that $\ovl{\phi}(U/P)$ generates the Galois group of $(\AA \cap M)/U$ over $(\AA \cap K)/P$ and maps an element in $(\AA \cap M)/U$ to its $\|P\|$ power. So for each $x+U \in (\AA \cap M)/U$, we have
 $$
-\ovl{\phi}(U/P)^{f(Q/P)}(x+U)=x^{\|P\|^{f(Q/P)}}+U
+\ovl{\phi}(U/P)^{f(Q/P)}(x+U)=x^{\|P\|^{f(Q/P)}}+U.
 $$
 
 Consider the field extension $(\AA \cap L)/Q$ over $(\AA \cap K)/P$ with degree $f(Q/P)$, then we have $\|Q\|=\|P\|^{f(Q/P)}$. This implies that $\ovl{\phi}(V/Q)|_M=\ovl{\phi}(U/P)^{f(Q/P)}$, as desired.

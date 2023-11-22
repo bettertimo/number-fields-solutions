@@ -38,7 +38,7 @@ Fix an integral basis $\{\beta_1,\ldots,\beta_n\}$ of $R$. Since $I \sbe R$, we 
 
 Fix $m,n\in\NN$ and write $1=\alpha+\beta$ where $\alpha\in I,\beta\in J$. Raising both sides to $m+n$ powers and using binomial theorem, we have
 \begin{multline*}
-    1=\alpha^{m+n}+\binom{m+n}{1}\alpha^{m+n-1}\beta+\cdots+\binom{m+n}{n}\alpha^m\beta^n \\ +\binom{m+n}{n+1}\alpha^{m-1}\beta^{n+1}+\cdots+\binom{m+n}{m+n-1}\alpha\beta^{m+n-1}+\beta^{m+n}
+    1=\alpha^{m+n}+\binom{m+n}{1}\alpha^{m+n-1}\beta+\cdots+\binom{m+n}{n}\alpha^m\beta^n \\ +\binom{m+n}{n+1}\alpha^{m-1}\beta^{n+1}+\cdots+\binom{m+n}{m+n-1}\alpha\beta^{m+n-1}+\beta^{m+n}.
 \end{multline*}
 This expression can be written as $\alpha^m\cdot\jk + \beta^n\cdot\jk$ and hence $1\in I^m+J^n$.
 
@@ -48,8 +48,8 @@ This expression can be written as $\alpha^m\cdot\jk + \beta^n\cdot\jk$ and hence
 
 (a) Write $I=I_1^{\alpha_1}\cdots I_s^{\alpha_s}$ and $J=J_1^{\beta_1}\cdots J_t^{\beta_t}$ into prime factorizations in $R$. Then
 \begin{align*}
-    IS &= (I_1S)^{\alpha_1}\cdots (I_sS)^{\alpha_s}=(I_{11}\cdots I_{1n_1})^{\alpha_1}\cdots (I_{s1}\cdots I_{sn_s})^{\alpha_s} \\
-    JS &= (J_1S)^{\beta_1}\cdots (J_tS)^{\beta_t}=(J_{11}\cdots J_{1m_1})^{\beta_1}\cdots (J_{t1}\cdots J_{tm_t})^{\beta_t}
+    IS &= (I_1S)^{\alpha_1}\cdots (I_sS)^{\alpha_s}=(I_{11}\cdots I_{1n_1})^{\alpha_1}\cdots (I_{s1}\cdots I_{sn_s})^{\alpha_s}, \\
+    JS &= (J_1S)^{\beta_1}\cdots (J_tS)^{\beta_t}=(J_{11}\cdots J_{1m_1})^{\beta_1}\cdots (J_{t1}\cdots J_{tm_t})^{\beta_t},
 \end{align*}
 where all primes are now in $S$.
 
@@ -61,7 +61,11 @@ We next claim that for each fixed $k$, one has that $I_{ik}=J_{1k'}$ for some $k
 
 Note that from our two claims together with $IS\mid JS$, we have $\alpha_1\leq \beta_1$. And by repeating this argument, the result follows.
 
-(b) Take $J:=IS\cap R$. It's easy to see that $J$ is an ideal in $R$. Moreover, from $$JS = (IS\cap R)S \sbe IS^2\cap RS = IS\cap S = IS$$ we have $IS\mid JS$. So by (a), we have $I\mid J$. Hence $J=IS\cap R\sbe I$. Conversely, $I\sbe IS\cap R$ is clear. So we have $I=IS\cap R$.
+(b) Take $J:=IS\cap R$. It's easy to see that $J$ is an ideal in $R$. Moreover, from 
+$$
+JS = (IS\cap R)S \sbe IS^2\cap RS = IS\cap S = IS,
+$$
+we have $IS\mid JS$. So by (a), we have $I\mid J$. Hence $J=IS\cap R\sbe I$. Conversely, $I\sbe IS\cap R$ is clear. So we have $I=IS\cap R$.
 
 (c) We claim that $I=(I\cap R)S$ iff $I=JS$ for some ideal $J$ in $R$.
 
@@ -71,7 +75,10 @@ $(\Leftarrow)$ By (b), we have $(I\cap R)S = (JS\cap R)S = JS = I$.
 
 \subsection*{Exercise 3.10}
 
-Let $e=e(U/P),e_1=e(U/Q),e_2=e(Q/P)$. Then we have $QT=U^{e_1}\cdot\jk1$ and $PS=Q^{e_2}\cdot\jk2$. So $$PT = PST = Q^{e_2}\cdot\jk2\cdot T = (QT)^{e_2}\cdot\jk2 = U^{e_1e_2}\cdot(\jk1)^{e_2}\cdot\jk2$$
+Let $e=e(U/P),e_1=e(U/Q),e_2=e(Q/P)$. Then we have $QT=U^{e_1}\cdot\jk1$ and $PS=Q^{e_2}\cdot\jk2$. So 
+$$
+PT = PST = Q^{e_2}\cdot\jk2\cdot T = (QT)^{e_2}\cdot\jk2 = U^{e_1e_2}\cdot(\jk1)^{e_2}\cdot\jk2.
+$$
 
 It's remaining to show that $U \nmid \jk1 , \jk2$, or equivalently, $\jk1,\jk2 \nsbe U$. For $\jk1$, this follows easily from the definition. For $\jk2$, let $Q_i\subset S$ be any prime divisor of $\jk2$ (so in particular $Q_i \neq Q$), we want to show that $Q_i \nsbe U$. But if $Q_i \sbe U$, then $U$ lies over $Q_i$. And since $U$ lies over $Q$, so by Theorem 20 (p. 45), we have $Q=Q_i$, a contradiction.
 
@@ -79,7 +86,11 @@ For the inertial degree, we may consider the tower of field extensions $R/P\subs
 
 \subsection*{Exercise 3.11}
 
-From Theorem 22 (c) (p. 46) we know $\|(\alpha)\|=|\Nr(\alpha)|$. And since $(\alpha)\sbe I \sbe R$, so by the third isomorphism theorem, we have $(R/(\alpha))/(I/(\alpha))\simeq R/I$. This implies $$\#(R/I)\cdot\#(I/(\alpha))=\#(R/(\alpha))$$ Hence $\|I\|=\#(R/I)\mid \#(R/(\alpha))=\|(\alpha)\|=|\Nr(\alpha)|$. And the equality holds iff $\#(I/(\alpha))=1$ iff $I=(\alpha)$.
+From Theorem 22 (c) (p. 46) we know $\|(\alpha)\|=|\Nr(\alpha)|$. And since $(\alpha)\sbe I \sbe R$, so by the third isomorphism theorem, we have $(R/(\alpha))/(I/(\alpha))\simeq R/I$. This implies 
+$$
+\#(R/I)\cdot\#(I/(\alpha))=\#(R/(\alpha)).
+$$ 
+Hence $\|I\|=\#(R/I)\mid \#(R/(\alpha))=\|(\alpha)\|=|\Nr(\alpha)|$. And the equality holds iff $\#(I/(\alpha))=1$ iff $I=(\alpha)$.
 
 \subsection*{Exercise 3.12}
 
@@ -94,7 +105,7 @@ $$
 \begin{array}{ccc}
     \{\sigma\mid \sigma(Q)=Q\} & \longleftrightarrow & \{\tau\mid \tau(Q)=Q'\} \\
     \sigma & \longmapsto & \phi\circ\sigma \\
-    \phi^{-1}\circ\tau & \longmapsfrom & \tau
+    \phi^{-1}\circ\tau & \longmapsfrom & \tau.
     \end{array}
 $$
 It's easy to see that this is a bijection. So these two sets have the same cardinality.
@@ -103,7 +114,7 @@ Write $G=\cup_{i=1}^r \Gcal_i$ where $\Gcal_i:=\{\sigma\mid \sigma(Q_1)=Q_i\}$. 
 
 (b) By $(*)$,
 $$
-P^f=R\cap P^fS=R\cap(PS)^f=R\cap(Q_1\cdots Q_r)^{ef}
+P^f=R\cap P^fS=R\cap(PS)^f=R\cap(Q_1\cdots Q_r)^{ef}.
 $$
 So it's remaining to show $(Q_1\cdots Q_r)^{ef}=\prod_{\sigma\in G}\sigma(Q)$. WLOG, we assume $Q=Q_1$. From (a) we know there are $ef$ $\sigma$'s sending $Q_1$ to $Q_i$ for all $i=1,\ldots,r$. So $\prod_{\sigma\in G}\sigma(Q_1)=Q_1^{ef}\cdots Q_r^{ef}=(Q_1\cdots Q_r)^{ef}$.
 
@@ -112,7 +123,7 @@ $$
 \prod_{\sigma\in G}\sigma(I_i)
 = \sigma_1(I_i)\cdots\sigma_n(I_i)
 = (I_i\cdot\jk)^{e_if_i}
-= (J_iS)^{f_i}=J_i^{f_i}S
+= (J_iS)^{f_i}=J_i^{f_i}S.
 $$
 
 Let $J:=\prod_{i=1}^s J_i^{f_i}$ be the ideal in $R$, then
@@ -120,7 +131,7 @@ $$
 \prod_{\sigma\in G}\sigma(I)
 = \prod_{\sigma\in G}\sigma(I_1)\cdots\sigma(I_s)
 = \prod_{i=1}^s\left(\prod_{\sigma\in G}\sigma(I_i)\right)
-= \prod_{i=1}^s J_i^{f_i}S=JS
+= \prod_{i=1}^s J_i^{f_i}S=JS.
 $$
 By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\prod_{\sigma\in G}\sigma(I)=\Nr^L_K(I)\cdot S$.
 
@@ -133,7 +144,7 @@ By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\pr
     &= \prod_{\sigma\in G}\sigma(I)\prod_{\sigma\in G}\sigma(J)\cap R
 	\overset{(c)}{=} \left(\Nr^L_K(I)\cdot S\right)\left(\Nr^L_K(J)\cdot S\right)\cap R   \\
     &= \Nr^L_K(I)\Nr^L_K(J)S\cap R
-	\overset{(*)}{=} \Nr^L_K(I)\Nr^L_K(J)
+	\overset{(*)}{=} \Nr^L_K(I)\Nr^L_K(J).
 \end{align*}
 
 (e) We will use the fact that $\Nr^L_K(\alpha)\in R$.
@@ -144,7 +155,7 @@ By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\pr
 	= R\cap \prod_{\sigma\in G}\sigma(\alpha)\sigma(S)    \\
     &\overset{\df}{=} R\cap \Nr^L_K(\alpha)\cdot S
 	= R\cap\left(\Nr^L_K(\alpha)\cdot R\right)\cdot S
-    \overset{(*)}{=} \Nr^L_K(\alpha)\cdot R
+    \overset{(*)}{=} \Nr^L_K(\alpha)\cdot R.
 \end{align*}
 
 \subsection*{Exercise 3.15}
@@ -160,7 +171,7 @@ By $(*)$, $J=JS\cap R=\prod_{\sigma\in G}\sigma(I)\cap R=\Nr^L_K(I)$. So $JS=\pr
     &= \prod_{i=1}^r P_i^{f(Q_i/P_i)f(I_i/Q_i)}
 	= \prod_{i=1}^r P_i^{f(I_i/P_i)}
 	= \prod_{i=1}^r \Nr^M_K(I_i)
-	= \Nr^M_K(I)
+	= \Nr^M_K(I).
 \end{align*}
 
 (b) Let $M$ be the normal closure of $L$ over $K$. Then we have a tower of field extensions $K\subset L\subset M$. By field theory since $M/K$ is normal, we have $M/L$ is also normal. Let $R,S,T$ be the number rings of $K,L,M$, respectively. Our goal is to show $\Nr^L_K(\alpha S)=\Nr^L_K(\alpha)R$.
@@ -174,7 +185,7 @@ Write $\alpha S=Q_1\cdots Q_r$ where $Q_i$ are prime in $S$. Then $\alpha S\cdot
 	= \Nr^L_K\left(\prod_{k=1}^{n_i} Q_i^{e_if_i}\right)     \\
     &= \Nr^L_K\left(Q_i^{e_if_in_i}\right)
 	= \Nr^L_K\left(Q_i^{[M:L]}\right)
-	= \Nr^L_K(Q_i)^{[M:L]}
+	= \Nr^L_K(Q_i)^{[M:L]}.
 \end{align*}
 So
 \begin{align*}
@@ -183,7 +194,7 @@ So
 	= \prod_{i=1}^r \Nr^M_K(Q_iT)    \\
 	&= \prod_{i=1}^r \Nr^L_K(Q_i)^{[M:L]}
     = \Nr^L_K\left(\prod_{i=1}^r Q_i\right)^{[M:L]}
-	= \Nr^L_K(\alpha S)^{[M:L]}
+	= \Nr^L_K(\alpha S)^{[M:L]}.
 \end{align*}
 On the other hand, since $M/K$ is normal, by Exercise 3.14 (e), we have
 \begin{align*}
@@ -193,7 +204,7 @@ On the other hand, since $M/K$ is normal, by Exercise 3.14 (e), we have
 	= \Nr^L_K\left(\Nr^M_L(\alpha)\right)R     \\
     &= \Nr^L_K\left(\alpha^{[M:L]}\right)R
 	= \left(\Nr^L_K(\alpha)\right)^{[M:L]}R
-	= \left(\Nr^L_K(\alpha)R\right)^{[M:L]} 
+	= \left(\Nr^L_K(\alpha)R\right)^{[M:L]}. 
 \end{align*}
 We've used the fact that $\alpha\in S$ in the fourth equality.
 
@@ -208,7 +219,7 @@ In general, write $I=Q_1\cdots Q_r$ into prime factorization. Then
 	= \Nr^L_\QQ(Q_1)\cdots\Nr^L_\QQ(Q_r)    \\
 	&= \|Q_1\|\ZZ\cdots\|Q_r\|\ZZ
 	= \|Q_1\cdots Q_r\|\ZZ
-	= \|I\|\ZZ
+	= \|I\|\ZZ.
 \end{align*}
 
 \subsection*{Exercise 3.16}
@@ -217,7 +228,7 @@ In general, write $I=Q_1\cdots Q_r$ into prime factorization. Then
 
 (b) Let $f:=f(Q/P)$. Note that $\phi([Q])=[\Nr^L_K(Q)]=[P^f]=[P]^f$, and from group theory we know $\ord(\phi([Q]))\mid \ord([Q])$. Thus
 $$
-d_P=\ord([P])\mid \ord([P]^f)\cdot f = \ord(\phi([Q]))\cdot f\mid \ord([Q])\cdot f=d_Q\cdot f
+d_P=\ord([P])\mid \ord([P]^f)\cdot f = \ord(\phi([Q]))\cdot f\mid \ord([Q])\cdot f=d_Q\cdot f.
 $$
 
 \subsection*{Exercise 3.17}
@@ -226,18 +237,29 @@ $$
 
 By observing the degrees of the tower of field extensions $\QQ\subset \QQ(\sqrt{-23})\subset \QQ(\omega)$, we have $\phi(23)=22=[\QQ(\omega):\QQ(\sqrt{-23})]\cdot 2$, so $[\QQ(\omega):\QQ(\sqrt{-23})]=11$. And since $f(Q/P)=11$, by Theorem 21 (p. 46), we have $e(Q/P)=1$ and $P\ZZ[\omega]=(2,\theta)\ZZ[\omega]=Q$.
 
-(b) We first show that $$P^3=\left(8,2+2\sqrt{-23},-11+\sqrt{-23},\frac{-17-5\sqrt{-23}}{2}\right)=\left(\frac{-3+\sqrt{-23}}{2}\right)=(\theta-2)$$ This is straightforward by simple calculation, observe that
+(b) We first show that 
+$$
+P^3=\left(8,2+2\sqrt{-23},-11+\sqrt{-23},\frac{-17-5\sqrt{-23}}{2}\right)=\left(\frac{-3+\sqrt{-23}}{2}\right)=(\theta-2).
+$$ 
+This is straightforward by simple calculation, observe that
 \begin{align*}
-    2+2\sqrt{-23} &= \left(\frac{-3+\sqrt{-23}}{2}\right)\left(\frac{5-\sqrt{-23}}{2}\right) \\
-    \frac{-17-5\sqrt{-23}}{2} &= \left(\frac{-3+\sqrt{-23}}{2}\right)(-2+\sqrt{-23})
+    2+2\sqrt{-23} &= \left(\frac{-3+\sqrt{-23}}{2}\right)\left(\frac{5-\sqrt{-23}}{2}\right), \\
+    \frac{-17-5\sqrt{-23}}{2} &= \left(\frac{-3+\sqrt{-23}}{2}\right)(-2+\sqrt{-23}),
 \end{align*}
-and on the other hand, $$\frac{-3+\sqrt{-23}}{2}=(8)(-4)+(-11+\sqrt{-23})(-2)+\left(\frac{-17-5\sqrt{-23}}{2}\right)(-1)$$ So we have $P^3=(\theta-2)$.
+and on the other hand, 
+$$
+\frac{-3+\sqrt{-23}}{2}=(8)(-4)+(-11+\sqrt{-23})(-2)+\left(\frac{-17-5\sqrt{-23}}{2}\right)(-1),
+$$ 
+So we have $P^3=(\theta-2)$.
 
 We next show that $P$ is not principal in $R$, if $P=(2,\theta)=(\alpha)=\alpha R$ is principal, then by Theorem 22(c) (p. 46), $\|(\alpha)\|=|\Nr^K_\QQ(\alpha)|$. It's easy to see that $\|(\alpha)\|=\#(R/(2,\theta))=2$. (See the argument on p. 42.) So $\Nr^K_\QQ(\alpha)=\pm 2$.
 
 On the other hand, since $\alpha\in R$, write $\alpha=a+b((1+\sqrt{-23})/2)$ where $a,b\in\ZZ$. So $\Nr^K_\QQ(\alpha)=a^2+ab+6b^2=\pm 2$. We claim that this is impossible by showing that this equation has no integral solutions.
 
-Suppose $(a,b)$ is an integral solution, if none of $a,b$ is zero, then $a^2+6b^2\geq 7$, so $\pm2 = a^2+ab+6b^2 \geq 7+ab$. From this we get $-ab\geq 5,9$. Observe that $$\pm2 = a^2+ab+6b^2 = (a+b)^2+5b^2-ab \geq -ab \geq 5,9$$
+Suppose $(a,b)$ is an integral solution, if none of $a,b$ is zero, then $a^2+6b^2\geq 7$, so $\pm2 = a^2+ab+6b^2 \geq 7+ab$. From this we get $-ab\geq 5,9$. Observe that 
+$$
+\pm2 = a^2+ab+6b^2 = (a+b)^2+5b^2-ab \geq -ab \geq 5,9,
+$$
 This is a contradiction, so we have at least one of $a,b$ is zero. But this is impossible by simple calculation. Hence $a^2+ab+6b^2=\pm2$ has no integral solutions.
 
 (c) If $Q$ is principal, then $[Q]$ is the identity element in $G(\ZZ[\omega])$. By (a) and Exercise 16(b), $d_P\mid d_Q\cdot f(Q/P)=1\cdot 11$. So $d_P=1,11$. By (b) we have $P$ is not principal, so $d_P=11$. This is a contradiction because by (b) we know $[P]^3=[(\theta-2)]$ so $d_P=3$.
@@ -253,7 +275,7 @@ Let $\sigma_1,\ldots,\sigma_n$ be the $n$ embeddings of $K$ into $\CC$. For each
     \disc(r\alpha_1,\alpha_2,\ldots,\alpha_n) &= |\sigma(r\alpha_1),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2 \\
     &= |r\sigma(\alpha_1),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2 \\
     &= r^2|\sigma(\alpha_1),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2 \\
-    &= r^2\disc(\alpha_1,\ldots,\alpha_n)
+    &= r^2\disc(\alpha_1,\ldots,\alpha_n).
 \end{align*}
 
 (b) We use the fact that the determinant remains unchanged under the operation of adding a scalar multiple of one column to another column. Since $\beta$ is a linear combination of $\alpha_2,\ldots,\alpha_n$ over $\QQ$. We know $\sigma_i(\beta)$ is a linear combination of $\sigma_i(\alpha_2),\ldots,\sigma_i(\alpha_n)$ over $\QQ$ for all $i$. Thus,
@@ -261,7 +283,7 @@ Let $\sigma_1,\ldots,\sigma_n$ be the $n$ embeddings of $K$ into $\CC$. For each
     \disc(\alpha_1+\beta,\alpha_2,\ldots,\alpha_n) &= |\sigma(\alpha_1+\beta),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2 \\
     &=|\sigma(\alpha_1)+\sigma(\beta),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2  \\
     &= |\sigma(\alpha_1),\sigma(\alpha_2),\ldots,\sigma(\alpha_n)|^2 \\
-    &= \disc(\alpha_1,\ldots,\alpha_n)
+    &= \disc(\alpha_1,\ldots,\alpha_n).
 \end{align*}
 
 \subsection*{Exercise 3.19}
@@ -284,11 +306,27 @@ Let $I$ be any prime in $T$, the number ring of $M$, lying over $P$. Note that $
 
 \subsection*{Exercise 3.20}
 
-Let $B_i:=\{\beta^{(i)}_1,\ldots,\beta^{(i)}_{f_i}\}$ and consider $$\sum_{i,j,k} c_{ijk}\alpha_{ij}\beta^{(i)}_k=s\in PS$$ where $c_{ijk}\in R$ and the sum is taken over all $1\leq i\leq r,1\leq j\leq e_i,1\leq k\leq f_i$. Now fix an index $i$. We want to show all $c_{ijk}\in P$, so when we mod $P$, the corresponding elements of $\alpha_{ij}\beta^{(i)}_k$ are linearly independent over $R/P$.
+Let $B_i:=\{\beta^{(i)}_1,\ldots,\beta^{(i)}_{f_i}\}$ and consider 
+$$
+\sum_{i,j,k} c_{ijk}\alpha_{ij}\beta^{(i)}_k=s\in PS
+$$ 
+where $c_{ijk}\in R$ and the sum is taken over all $1\leq i\leq r,1\leq j\leq e_i,1\leq k\leq f_i$. Now fix an index $i$. We want to show all $c_{ijk}\in P$, so when we mod $P$, the corresponding elements of $\alpha_{ij}\beta^{(i)}_k$ are linearly independent over $R/P$.
 
-Consider the equation mod $Q_i$. Since among all $\alpha_{ij}$, only $\alpha_{i1}\notin Q_i$. So we get $$c_{i11}\alpha_{i1}\beta^{(i)}_1+\cdots+c_{i1f_i}\alpha_{i1}\beta^{(i)}_{f_i}\equiv0\pmod{Q_i}$$ Note that since the corresponding quotient ring is a field, so we can cancel out $\alpha_{i1}$. Moreover, since $\{\beta^{(i)}_1,\ldots,\beta^{(i)}_{f_i}\}$ corresponds a basis for $S/Q_i$ over $R/P$, we have $c_{i11}=\cdots=c_{i1f_i}\in P$.
+Consider the equation mod $Q_i$. Since among all $\alpha_{ij}$, only $\alpha_{i1}\notin Q_i$. So we get 
+$$
+c_{i11}\alpha_{i1}\beta^{(i)}_1+\cdots+c_{i1f_i}\alpha_{i1}\beta^{(i)}_{f_i}\equiv0\pmod{Q_i}.
+$$ 
+Note that since the corresponding quotient ring is a field, so we can cancel out $\alpha_{i1}$. Moreover, since $\{\beta^{(i)}_1,\ldots,\beta^{(i)}_{f_i}\}$ corresponds a basis for $S/Q_i$ over $R/P$, we have $c_{i11}=\cdots=c_{i1f_i}\in P$.
 
-Now consider the equation mod $Q^2_i$. Since among all $\alpha_{ij}$, only $\alpha_{i1},\alpha_{i2}\notin Q^2_i$. So we get $$c_{i11}\alpha_{i1}\beta^{(i)}_1+c_{i21}\alpha_{i2}\beta^{(i)}_1+\cdots+c_{i1f_i}\alpha_{i1}\beta^{(i)}_{f_i}+c_{i2f_i}\alpha_{i2}\beta^{(i)}_{f_i}\equiv0\pmod{Q^2_i}$$ First note that since $c_{i11}=\cdots=c_{i1f_i}\in P$, we have $c_{i11}\alpha_{i1},\ldots,c_{i1f_i}\alpha_{i1}\in PS\subset Q^2_i$, so the corresponding terms disappear. Also, we know $Q_i^2\subset Q_i$. These give us $$c_{i21}\alpha_{i2}\beta^{(i)}_1+\cdots+c_{i2f_i}\alpha_{i2}\beta^{(i)}_{f_i}\equiv0\pmod{Q_i}$$ And using the same argument in the first step, we have $c_{i21}=\cdots=c_{i2f_i}\in P$.
+Now consider the equation mod $Q^2_i$. Since among all $\alpha_{ij}$, only $\alpha_{i1},\alpha_{i2}\notin Q^2_i$. So we get 
+$$
+c_{i11}\alpha_{i1}\beta^{(i)}_1+c_{i21}\alpha_{i2}\beta^{(i)}_1+\cdots+c_{i1f_i}\alpha_{i1}\beta^{(i)}_{f_i}+c_{i2f_i}\alpha_{i2}\beta^{(i)}_{f_i}\equiv0\pmod{Q^2_i}.
+$$ 
+First note that since $c_{i11}=\cdots=c_{i1f_i}\in P$, we have $c_{i11}\alpha_{i1},\ldots,c_{i1f_i}\alpha_{i1}\in PS\subset Q^2_i$, so the corresponding terms disappear. Also, we know $Q_i^2\subset Q_i$. These give us 
+$$
+c_{i21}\alpha_{i2}\beta^{(i)}_1+\cdots+c_{i2f_i}\alpha_{i2}\beta^{(i)}_{f_i}\equiv0\pmod{Q_i}.
+$$ 
+And using the same argument in the first step, we have $c_{i21}=\cdots=c_{i2f_i}\in P$.
 
 Since the same holds for each $i$, and by repeating this process, we now know all $c_{ijk}\in P$, this completes the proof. 
 
@@ -315,7 +353,11 @@ Since $2\nmid m=\disc(R)$. By Theorem 24 (p. 50), $2$ is unramified in $R$. So t
 
 Since $p\nmid m$ is odd, we know $p\nmid\disc(R)=m,4m$. By Theorem 24 again, $p$ is unramified in $R$. So the two factors are distinct.
 
-(3.4) Suppose $m\equiv 5\pmod{8}$. This implies $m\equiv 1\pmod{4}$ and so $R=\ZZ[{(1+\sqrt{m})/2}]$. Consider the polynomial $$f(x)=x^2-x+\frac{1-m}{4}\in\ZZ[x]$$ Since $f((1+\sqrt{m})/2)=0$, $f$ has a root in $R$, and so a root in $R/P$. On the other hand, $\ovl{f}(x)=x^2+x+1\in\ZZ/2\ZZ[x]$ has no root in $\ZZ/2\ZZ$. So $R/P\not\simeq\ZZ/2\ZZ$.
+(3.4) Suppose $m\equiv 5\pmod{8}$. This implies $m\equiv 1\pmod{4}$ and so $R=\ZZ[{(1+\sqrt{m})/2}]$. Consider the polynomial 
+$$
+f(x)=x^2-x+\frac{1-m}{4}\in\ZZ[x].
+$$ 
+Since $f((1+\sqrt{m})/2)=0$, $f$ has a root in $R$, and so a root in $R/P$. On the other hand, $\ovl{f}(x)=x^2+x+1\in\ZZ/2\ZZ[x]$ has no root in $\ZZ/2\ZZ$. So $R/P\not\simeq\ZZ/2\ZZ$.
 
 \subsection*{Exercise 3.24 \color{red}(incomplete, missing (c))}
 
@@ -353,16 +395,16 @@ Write $m=hk^2$ where $h,k$ are relatively prime and square-free.
 $$
 \disc(R) =
 \begin{cases}
--27m^2/k^2, & m\not\equiv \pm1 \pmod{9} \\
--3m^2/k^2, & m\equiv \pm1 \pmod{9}
+-27m^2/k^2, & m\not\equiv \pm1 \pmod{9}. \\
+-3m^2/k^2, & m\equiv \pm1 \pmod{9}.
 \end{cases}
 $$
 And from Exercise 2.41(a) we know $\disc(\ZZ[\alpha])=-27m^2$. So using the formula in Exercise 2.27(c), we obtain
 $$
 \#(R/\ZZ[\alpha]) =
 \begin{cases}
-k, & m\not\equiv \pm1 \pmod{9} \\
-3k, & m\equiv \pm1 \pmod{9}
+k, & m\not\equiv \pm1 \pmod{9}. \\
+3k, & m\equiv \pm1 \pmod{9}.
 \end{cases}
 $$
 
@@ -372,8 +414,8 @@ Now, suppose $p\neq 3$ is a prime and $p^2\nmid m=hk^2$. Then we have $p\nmid k$
 $$
 \#(R/\ZZ[\gamma]) =
 \begin{cases}
-h, & m\not\equiv \pm1 \pmod{9} \\
-3h, & m\equiv \pm1 \pmod{9}
+h, & m\not\equiv \pm1 \pmod{9}. \\
+3h, & m\equiv \pm1 \pmod{9}.
 \end{cases}
 $$
 
@@ -391,7 +433,7 @@ In conclusion, if $m\not\equiv \pm1\pmod{9}$, then $3$ is totally ramified in $R
 
 (d) Let's first do the general case for $m\equiv 1 \pmod{9}$. Set $\beta=(\alpha-1)^2/3$. The following calculations are all due to Exercise 3.18.
 \begin{align*}
-    &\disc(\beta) = \disc(\ZZ[\beta]) = \disc(1,\beta,\beta^2) = \disc\left(1,\frac{(\alpha-1)^2}{3},\frac{(\alpha-1)^4}{3^2}\right) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,\alpha^4-4\alpha^3+6\alpha^2-4\alpha+1) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,6\alpha^2+(m-4)\alpha+(1-4m)) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,6\alpha^2+(m-4)\alpha+(1-4m)-6(\alpha^2-2\alpha+1)+(5+4m)) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,(m+8)\alpha) = \frac{(m+8)^2}{3^6}\disc(1,\alpha,\alpha^2-2\alpha+1) \\ ={} &\frac{(m+8)^2}{3^6}\disc(1,\alpha,\alpha^2-2\alpha+1+(2+k^2)\alpha+(k^2-1)) \\ ={} &\frac{(m+8)^2}{3^6}\disc\left(1,\alpha,\alpha^2+k^2\alpha+k^2\right) = \frac{k^2(m+8)^2}{3^4}\disc\left(1,\alpha,\frac{\alpha^2+k^2\alpha+k^2}{3k}\right) \\ ={} &\frac{k^2(m+8)^2}{3^4}\disc(R) = \#(R/\ZZ[\beta])^2\disc(R)
+    &\disc(\beta) = \disc(\ZZ[\beta]) = \disc(1,\beta,\beta^2) = \disc\left(1,\frac{(\alpha-1)^2}{3},\frac{(\alpha-1)^4}{3^2}\right) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,\alpha^4-4\alpha^3+6\alpha^2-4\alpha+1) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,6\alpha^2+(m-4)\alpha+(1-4m)) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,6\alpha^2+(m-4)\alpha+(1-4m)-6(\alpha^2-2\alpha+1)+(5+4m)) \\ ={} &\frac{1}{3^6}\disc(1,\alpha^2-2\alpha+1,(m+8)\alpha) = \frac{(m+8)^2}{3^6}\disc(1,\alpha,\alpha^2-2\alpha+1) \\ ={} &\frac{(m+8)^2}{3^6}\disc(1,\alpha,\alpha^2-2\alpha+1+(2+k^2)\alpha+(k^2-1)) \\ ={} &\frac{(m+8)^2}{3^6}\disc\left(1,\alpha,\alpha^2+k^2\alpha+k^2\right) = \frac{k^2(m+8)^2}{3^4}\disc\left(1,\alpha,\frac{\alpha^2+k^2\alpha+k^2}{3k}\right) \\ ={} &\frac{k^2(m+8)^2}{3^4}\disc(R) = \#(R/\ZZ[\beta])^2\disc(R).
 \end{align*}
 The last equality is by Exercise 2.27(c). So we have $\#(R/\ZZ[\beta])=\pm k(m+8)/9\in\NN$.
 
@@ -547,8 +589,8 @@ $$
 	= \Tr^L_K \left(\alpha_i \sum_{k=1}^n c_{kj}\alpha_k \right)
 	= \sum_{k=1}^n c_{kj} \Tr^L_K(\alpha_i\alpha_k) = [TC]_{ij}
 	= \begin{cases}
-		1, & i=j \\
-		0, & i\neq j
+		1, & i=j. \\
+		0, & i\neq j.
 	  \end{cases}
 $$
 
@@ -557,7 +599,7 @@ $$
 \sum_{j=1}^n d_j\beta_j
 = \sum_{j=1}^n d_j \sum_{k=1}^n c_{kj}\alpha_k
 =  \sum_{k=1}^n \left( \sum_{j=1}^n d_j c_{kj} \right) \alpha_k
-= 0
+= 0.
 $$
 Since $\alpha_1,\ldots,\alpha_n$ are linearly independent, so $\sum_{j=1}^n d_j c_{kj} = 0$ for all $k=1,\ldots,n$. This means
 $$
@@ -572,7 +614,7 @@ C \cdot
     0 \\
     \vdots \\
     0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 And since $C$ is invertible, so we have $d_j=0$ for all $j=1,\ldots,n$.
 
@@ -581,7 +623,7 @@ $$
 \Tr^L_K(\beta\alpha_i)
 = \Tr^L_K \left( \sum_{j=1}^n \Tr^L_K(\gamma\alpha_j) \beta_j \alpha_i \right)
 = \sum_{j=1}^n \Tr^L_K(\gamma\alpha_j) \Tr^L_K(\beta_j \alpha_i )
-= \Tr^L_K(\gamma\alpha_i)
+= \Tr^L_K(\gamma\alpha_i).
 $$
 (We've used (a) in the last equality.) This implies $\Tr^L_K((\gamma-\beta)\alpha_i) = 0$ for all $i=1,\ldots,n$.
 
@@ -590,7 +632,7 @@ $$
 0
 = \Tr^L_K((\gamma-\beta)\alpha_i)
 =  \Tr^L_K \left(\sum_{j=1}^n k_j\alpha_j \alpha_i\right)
-= \sum_{j=1}^n k_j \Tr^L_K(\alpha_j\alpha_i)
+= \sum_{j=1}^n k_j \Tr^L_K(\alpha_j\alpha_i).
 $$
 This means
 $$
@@ -605,7 +647,7 @@ T \cdot
     0 \\
     \vdots \\
     0
-\end{pmatrix}
+\end{pmatrix}.
 $$
 And since $T$ is invertible, so we have $k_j=0$ for all $j=1,\ldots,n$, as desired.
 
@@ -617,7 +659,7 @@ The above shows that $\gamma = \beta \in B$ and so $A^* \sbe B$. On the other ha
 
 (b) Differentiating both sides of (a) gives us $f'(x) = g_i(x) + (x-\alpha_i)g_i'(x)$. So we have
 $$
-f'(\alpha_j) = g_i(\alpha_j) + (\alpha_j-\alpha_i)g_i'(\alpha_j)
+f'(\alpha_j) = g_i(\alpha_j) + (\alpha_j-\alpha_i)g_i'(\alpha_j).
 $$
 
 Case 1: Suppose $i\neq j$. From Exercise 2.20 we know $f'(\alpha_j) = \prod_{k\neq j} (\alpha_j-\alpha_k)$. On the other hand, since $g_i(x) = \prod_{k\neq i} (x-\alpha_k)$, we have $g_i'(x) = \sum_{l\neq i} \prod_{k\neq i,l} (x-\alpha_k)$ and so $(x-\alpha_i)g_i'(x) = \sum_{l\neq i} \prod_{k\neq l} (x-\alpha_k)$.
@@ -627,7 +669,7 @@ $$
 (\alpha_j-\alpha_i) g_i'(\alpha_j)
 = \sum_{l\neq i} \prod_{k\neq l} (\alpha_j-\alpha_k)
 = \prod_{k\neq j} (\alpha_j-\alpha_k)
-= f'(\alpha_j)
+= f'(\alpha_j).
 $$
 This implies that $g_i(\alpha_j) = 0$.
 
@@ -654,8 +696,8 @@ $$
 = \Tr^L_K \left( \alpha^{i-1} \cdot \frac{\gamma_{j-1}}{f'(\alpha)} \right)
 =
 \begin{cases}
-		0, & i\neq j \\
-		1, & i = j
+		0, & i\neq j. \\
+		1, & i = j.
 \end{cases}
 $$
 Since $\{1,\alpha,\ldots,\alpha^{n-1}\}$ is a basis of $L$ over $K$. So by the definition given in Exercise 3.34 (a), $\{\gamma_0/f'(\alpha),\ldots,\gamma_{n-1}/f'(\alpha)\}$ is the dual basis to $\{1,\alpha,\ldots,\alpha^{n-1}\}$.

@@ -6,7 +6,10 @@
 
 \subsection*{Exercise 1.1}
 
-Direct computation is straightforward but laborious. We use the observation that $\mathbf{N}(z)=z\ovl{z}$ whenever $z\in\ZZ[i]$. Given $\alpha,\beta\in\ZZ[i]$, then $$\mathbf{N}(\alpha\beta)=\alpha\beta\ovl{\alpha\beta}=\alpha\ovl{\alpha}\beta\ovl{\beta}=\mathbf{N}(\alpha)\mathbf{N}(\beta)$$
+Direct computation is straightforward but laborious. We use the observation that $\mathbf{N}(z)=z\ovl{z}$ whenever $z\in\ZZ[i]$. Given $\alpha,\beta\in\ZZ[i]$, then
+$$
+\mathbf{N}(\alpha\beta)=\alpha\beta\ovl{\alpha\beta}=\alpha\ovl{\alpha}\beta\ovl{\beta}=\mathbf{N}(\alpha)\mathbf{N}(\beta).
+$$
 
 If $\alpha\mid\gamma$ in $\ZZ[i]$. Write $\gamma=\alpha\beta$ where $\beta\in\ZZ[i]$, then $\mathbf{N}(\gamma)=\mathbf{N}(\alpha)\mathbf{N}(\beta)$. Since $\mathbf{N}(\beta)\in\ZZ$, we have $\mathbf{N}(\alpha)\mid\mathbf{N}(\gamma)$ in $\ZZ$.
 
@@ -87,7 +90,14 @@ $(\Rightarrow)$ Suppose $a+bi$ is irreducible. We may assume $a+bi\not\sim 1+i$ 
 
 \subsection*{Exercise 1.10}
 
-Write $$a+b\omega=a+b\left(\frac{-1}{2}+\frac{\sqrt{3}}{2}i\right)=\left(a-\frac{b}{2}\right)+\left(\frac{\sqrt{3}b}{2}\right)i=u+vi$$ where $u,v\in\RR$. Then $$u^2+v^2=\left(a-\frac{b}{2}\right)^2+\left(\frac{\sqrt{3}b}{2}\right)^2=a^2-ab+\frac{b^2}{4}+\frac{3b^2}{4}=a^2-ab+b^2=\mathbf{N}(a+b\omega)$$
+Write
+$$
+a+b\omega=a+b\left(\frac{-1}{2}+\frac{\sqrt{3}}{2}i\right)=\left(a-\frac{b}{2}\right)+\left(\frac{\sqrt{3}b}{2}\right)i=u+vi
+$$
+where $u,v\in\RR$. Then
+$$
+u^2+v^2=\left(a-\frac{b}{2}\right)^2+\left(\frac{\sqrt{3}b}{2}\right)^2=a^2-ab+\frac{b^2}{4}+\frac{3b^2}{4}=a^2-ab+b^2=\mathbf{N}(a+b\omega).
+$$
 
 \subsection*{Exercise 1.11}
 
@@ -99,7 +109,10 @@ Let $\alpha\in\ZZ[\omega]$ be a unit, then $\alpha\mid 1$ in $\ZZ[\omega]$. By E
 
 Consider $\mathbf{N}(a+b\omega)=a^2-ab+b^2=1$. WLOG, assume $|a|\geq|b|\geq0$. By a simple calculation it's easy to see that $(a,b)=(\pm1,0),(0,\pm1),(1,1),(-1,-1)$ are all of the integral solutions when $|b|\leq1$. The corresponding elements are $\pm1,\pm\omega,\pm\omega^2$. So these six are units in $\ZZ[i]$.
 
-It's remaining to show $a^2-ab+b^2=1$ has no integral solutions when $|b|\geq 2$. This follows easily when $ab<0$, i.e., they have the different signs. So assume $a,b$ are both positive or both negative. In this case we have $|ab|=|a||b|=ab$. Now the result follows by the observation that $$a^2-ab+b^2=|a|^2-|a||b|+|b|^2=|a|(|a|-|b|)+|b|^2\geq |b|^2\geq 4$$
+It's remaining to show $a^2-ab+b^2=1$ has no integral solutions when $|b|\geq 2$. This follows easily when $ab<0$, i.e., they have the different signs. So assume $a,b$ are both positive or both negative. In this case we have $|ab|=|a||b|=ab$. Now the result follows by the observation that 
+$$
+a^2-ab+b^2=|a|^2-|a||b|+|b|^2=|a|(|a|-|b|)+|b|^2\geq |b|^2\geq 4.
+$$
 
 \subsection*{Exercise 1.13}
 
@@ -113,8 +126,15 @@ See Exercise 1.7 for analog.
 
 \subsection*{Exercise 1.16}
 
-Consider the equation $$(x-1)(x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1})=x^p-1$$ By differentiating both sides, we get $$(x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1})+(x-1)\left ( (x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1}) \right )'=px^{p-1}$$
-Take $x=1$, then $(1-\omega)(1-\omega^2)\cdots(1-\omega^{p-1})=p$
+Consider the equation 
+$$
+(x-1)(x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1})=x^p-1.
+$$ 
+By differentiating both sides, we get 
+$$
+(x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1})+(x-1)\left ( (x-\omega)(x-\omega^2)\cdots(x-\omega^{p-1}) \right )'=px^{p-1}.
+$$
+Take $x=1$, then $(1-\omega)(1-\omega^2)\cdots(1-\omega^{p-1})=p$.
 
 \subsection*{Exercise 1.17}
 
